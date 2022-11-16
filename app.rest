@@ -1,0 +1,59 @@
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+	"userName": "test",
+	"email": "test@test.pl",
+	"password": "testtest"
+}
+
+###
+
+POST http://localhost:3000/import
+Content-Type: application/json
+
+{
+	"id": 7177,
+	"stage": "draft",
+	"categoryId": "",
+	"brandId": "Rea",
+	"title": "Podomítková sprchová baterie Rea Rainforce",
+	"shortdesc": "Představujeme",
+	"longdesc": "Představujeme vám krásnou a moderní",
+	"packageSize": "smallbox",
+	"barcode": 5902557302505,
+	"price": 3090,
+	"vat": 21,
+	"media": [
+		{
+			"url": "https://tutumi.prod.merce.com/picture/origxorig/filters:quality(80)/dedc9541044b066b08bb7918f6764210",
+			"main": true
+		},
+		{
+			"url": "https://tutumi.prod.merce.com/picture/origxorig/filters:quality(80)/413ce99abc8475b60f22cd31f7422a0c",
+			"main": false
+		},
+		{
+			"url": "https://tutumi.prod.merce.com/picture/origxorig/filters:quality(80)/f16b1a741bd923807fded58b44bea76b",
+			"main": false
+		},
+		{
+			"url": "https://tutumi.prod.merce.com/picture/origxorig/filters:quality(80)/9e46f0d623648c30d6f0fd85a3e54dc0",
+			"main": false
+		}
+	],
+	"dimensions": {
+		"weight": 5
+	},
+	"freeDelivery": false,
+	"deliveryDelay": 0
+}
+
+###
+
+POST http://localhost:3000/import/pl
+Content-Type: application/json
+
+{
+	"url": "https://files.lazienka-rea.com.pl/catalogde.xml"
+}
