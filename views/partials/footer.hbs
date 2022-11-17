@@ -1,21 +1,80 @@
 <footer class='footer-container' id='contact'>
-	<div class="contact">
-		<section class="address-container">
-			<h3 class="address__header">Pozostań w kontakcie</h3>
-			<h4 class="address__subheader">Sklep stacjonarny:</h4>
-			<p class="address__text">CH Fasty</br>
-				Email: salonlazienekrea@wp.pl</br>
-				Telefon: 85 662 19 76</p>
-			<h4 class="address__subheader">Sklep Internetowy:</h4>
-			<p class="address__text">Rea, Tutumi, Toolight, Bluegarden</br>
-				Telefon: 85 733 77 77</p>
-			<h4 class="address__subheader">Biuro:</h4>
-			<p class="address__text">Hurtownia</br>
-				Email: salonlazienekrea@wp.pl</br>
-				Strona: https://www.reahurt.pl/</p>
-		</section>
-		<section class="contact-container">
-			<button class="contact-cta">Napisz do nas</button>
-		</section>
+	<div class="footer-overlay">
 	</div>
+	<section class="contact-container">
+		<div class="address">
+			<h3 class="address__header">Pozostań w kontakcie</h3>
+			<div class="address__row">
+				<div class="row__heading">
+					<span class="address__icon material-symbols-outlined">storefront</span>
+					<h4 class="address__subheader">Sklep stacjonarny:</h4>
+				</div>
+				<div class="row__content">
+					<p class="address__text"><strong>CH Fasty</strong></p>
+					<p class="address__text"><strong>Email:</strong> <a
+							href="mailto:salonlazienekrea@wp.pl">salonlazienekrea@wp.pl</a></p>
+					<p class="address__text"><strong>Telefon:</strong> <a
+							href="tel:+48856621976">85 662 19 76</a></p>
+				</div>
+			</div>
+			<div class="address__row">
+				<div class="row__heading">
+					<span class="address__icon material-symbols-outlined">public</span>
+					<h4 class="address__subheader">Sklep Internetowy:</h4>
+				</div>
+				<div class="row__content">
+					<p class="address__text"><strong>Rea, Tutumi, Toolight, Bluegarden</strong></p>
+					<p class="address__text"><strong>Telefon:</strong> <a
+							href="tel:+48857337777">85 733 77 77</a></p>
+				</div>
+			</div>
+			<div class="address__row">
+				<div class="row__heading">
+
+					<span class="address__icon material-symbols-outlined">apartment</span>
+					<h4 class="address__subheader">Biuro:</h4>
+				</div>
+				<div class="row__content">
+					<p class="address__text"><strong>Hurtownia</strong></p>
+					<p class="address__text"><strong>Email:</strong> <a
+							href="mailto:salonlazienekrea@wp.pl">salonlazienekrea@wp.pl</a></p>
+					<p class="address__text"><strong>Strona:</strong> <a
+							href="https://www.reahurt.pl/"
+							target="_blank">https://www.reahurt.pl/</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="contact-form">
+			<h3 class="address__header">Skontaktuj się z nami</h3>
+			<form action="/send" class="form__body">
+				<div class="body__input-container">
+					<label for="name" class="form-input__label">Imię i Nazwisko</label>
+					<input type="text" id="name" placeholder="Jan Kowalski"
+							class="form-input__field" required>
+				</div>
+				<div class="body__input-container">
+					<label for="email" class="form-input__label">Email</label>
+					<input type="text" id="email" placeholder="jankowalski@email.com"
+							class="form-input__field" required>
+				</div>
+				<div class="body__input-container">
+					<label for="subject" class="form-input__label">Temat</label>
+					<input type="text" id="subject" placeholder="Mój temat" class=form-input__field
+							required>
+				</div>
+				<div class="body__input-container">
+					<label for="content" class="form-input__label">Treść wiadomości</label>
+					<textarea name="content" id="content"
+							class="form-input__field form-input__field--area"
+							rows="5" placeholder="Treść..." required></textarea>
+				</div>
+				<button class="contact-cta button--secondary">Napisz do nas</button>
+			</form>
+		</div>
+	</section>
+	<section class="copyright-container">
+		<p class="copyright">© Podlasiak Sp. z o.o.</p>
+	</section>
 </footer>
+
+
