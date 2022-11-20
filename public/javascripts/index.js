@@ -12,6 +12,36 @@ const render = () => {
 };
 document.addEventListener('DOMContentLoaded', render);
 
+//////////////////////////////////////////////////////////////////////////////////
+
+const languageBar = document.querySelector('.language-flag');
+
+if (languageBar) {
+	const flags = document.querySelectorAll('.lang');
+	const tile = document.querySelector('.language-title');
+
+	flags.forEach((flag) => {
+		flag.addEventListener('mouseenter', () => {
+			const countryName = flag.firstElementChild.getAttribute('alt');
+			tile.firstElementChild.innerHTML = `${countryName}`;
+			tile.classList.add('language-title--active');
+			tile.setAttribute(
+				'style',
+				`top: ${flag.getBoundingClientRect().top - 10}px; right: ${
+					languageBar.getBoundingClientRect().right -
+					languageBar.getBoundingClientRect().right +
+					105
+				}px`
+			);
+		});
+		flag.addEventListener('mouseleave', () => {
+			tile.classList.remove('language-title--active');
+		});
+	});
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
 const header = document.querySelector('.header-container');
 
 if (header) {
@@ -23,6 +53,7 @@ if (header) {
 		if (position >= 30) {
 			arrow.classList.add('arrow-cont--active');
 			navbar.classList.add('main-navbar--active');
+
 			logo.setAttribute('src', '/images/logo_podlasiak.png');
 		}
 		if (position < 30) {
@@ -34,34 +65,7 @@ if (header) {
 	window.addEventListener('scroll', navbarScrollHandler);
 }
 
-// const languageBar = document.querySelector('.language-flag');
-//
-// if (languageBar) {
-// 	const setLanguageBarPosition = () => {
-// 		const headerHeight = header.getBoundingClientRect().height;
-// 		const barHeight = languageBar.getBoundingClientRect().height;
-// 		languageBar.setAttribute(
-// 			'style',
-// 			`top: ${(headerHeight - barHeight) / 2}px`
-// 		);
-// 	};
-//
-// 	window.onload = () => setLanguageBarPosition();
-// 	window.addEventListener('resize', setLanguageBarPosition);
-// }
-
-const hamburger = document.querySelector('.navbar__icon');
-
-if (hamburger) {
-	const menuHandler = (e) => {
-		e.target.classList.toggle('navbar__icon--active');
-	};
-	hamburger.addEventListener('click', menuHandler);
-}
-
-const navbar = document.querySelectorAll('.menu-link');
-
-const highlightHandler = () => {};
+//////////////////////////////////////////////////////////////////////////////////
 
 const icon = document.getElementById('icon');
 const icon1 = document.getElementById('a');
@@ -74,4 +78,18 @@ icon.addEventListener('click', function () {
 	icon2.classList.toggle('c');
 	icon3.classList.toggle('b');
 	nav.classList.toggle('navbar--active');
+	const logo = document.querySelector('.logo-icon');
+	logo.setAttribute('src', '/images/logo_podlasiak.png');
+});
+
+const menuItems = document.querySelectorAll('.menu-link');
+
+menuItems.forEach((item) => {
+	const nav = document.querySelector('.navbar');
+	item.addEventListener('click', () => {
+		nav.classList.remove('navbar--active');
+		icon1.classList.toggle('a');
+		icon2.classList.toggle('c');
+		icon3.classList.toggle('b');
+	});
 });
