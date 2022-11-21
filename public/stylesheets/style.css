@@ -968,41 +968,6 @@ template {
   clear: both;
 }
 
-.main-navbar--active {
-  position: fixed;
-  background-color: white;
-  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.02), 0px 6.7px 5.3px rgba(0, 0, 0, 0.028), 0px 12.5px 10px rgba(0, 0, 0, 0.035), 0px 22.3px 17.9px rgba(0, 0, 0, 0.042), 0px 41.8px 33.4px rgba(0, 0, 0, 0.05), 0px 100px 80px rgba(0, 0, 0, 0.07);
-}
-
-.main-navbar--active .hamburger-icon:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.main-navbar--active .icon-1.a, .main-navbar--active .icon-3.b, .main-navbar--active .icon-2.c {
-  background-color: #000000;
-}
-
-.main-navbar--active .icon-1, .main-navbar--active .icon-2, .main-navbar--active .icon-3 {
-  background-color: #000000;
-}
-
-.main-navbar--active .main-navbar__container {
-  padding: 12px 0;
-}
-
-.main-navbar--active .logo-icon {
-  width: 160px;
-}
-
-.main-navbar--active .menu-link{
-  --tw-text-opacity: 1;
-  color: rgb(38 38 38 / var(--tw-text-opacity));
-}
-
-.main-navbar--active .menu-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
 .logo-icon {
   position: relative;
   z-index: 1000;

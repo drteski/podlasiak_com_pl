@@ -22,19 +22,20 @@ if (languageBar) {
 
 	flags.forEach((flag) => {
 		flag.addEventListener('mouseenter', () => {
+			const languageBarPosition = languageBar.offsetTop;
 			const countryName = flag.firstElementChild.getAttribute('alt');
 			tile.firstElementChild.innerHTML = `${countryName}`;
 			tile.classList.add('language-title--active');
 			tile.setAttribute(
 				'style',
-				`top: ${flag.getBoundingClientRect().top - 10}px; right: ${
+				`top: ${flag.offsetTop + languageBarPosition - 10}px; right: ${
 					languageBar.getBoundingClientRect().right -
 					languageBar.getBoundingClientRect().right +
 					100
 				}px`
 			);
 		});
-		flag.addEventListener('mouseleave', () => {
+		flag.addEventListener('mouseleave', (e) => {
 			tile.classList.remove('language-title--active');
 		});
 	});
