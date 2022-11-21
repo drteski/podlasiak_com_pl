@@ -1,0 +1,127 @@
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  background: url('/images/slider1.jpg') no-repeat 50% 60%;
+  background-size: cover;
+  scroll-margin-top: 96px;
+}
+
+.footer-overlay {
+  @apply bg-black opacity-50 top-0 left-0 absolute h-full w-full;
+}
+
+.contact-container {
+  z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 96px 0 48px;
+  @apply text-white flex relative flex-wrap;
+}
+
+.address, .contact-form {
+  width: 50%;
+}
+
+
+.address__header {
+  @apply text-3xl font-black pb-8;
+}
+
+.row__heading {
+  @apply flex items-center pb-4;
+}
+
+.row__content {
+  @apply ml-11;
+}
+
+.address__row:not(:last-child) {
+  @apply mb-6;
+}
+
+.address__icon {
+  @apply text-4xl pr-2;
+}
+
+.address__subheader {
+  @apply text-xl;
+}
+
+.address__text {
+  @apply pb-2;
+}
+
+.address__text a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  @apply flex flex-col;
+}
+
+.body__input-container {
+  @apply flex flex-col;
+}
+
+.body__input-container:nth-child(4) {
+  margin-bottom: 1rem;
+}
+
+.form-input__label {
+  @apply text-sm font-light py-2;
+}
+
+.form-input__field {
+  transition: all ease 0.3s;
+  border: 3px solid rgba(255, 255, 255, 0.0);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  @apply p-4 rounded;
+  &--area {
+    resize: none;
+  }
+}
+
+.form-input__field:hover {
+  border: 3px solid rgba(255, 255, 255, 0.0);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-input__field:focus {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.copyright-container {
+  z-index: 2;
+  @apply bg-gray-800 relative;
+}
+
+.copyright {
+  max-width: 1440px;
+  margin: 0 auto;
+  @apply text-white block py-6 text-xs font-light;
+}
+
+@media screen and (max-width: 1500px) {
+  .contact-container, .copyright {
+    margin: 0 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container, .copyright {
+    max-width: 1440px;
+    margin: 0 32px;
+  }
+  
+  .address, .contact-form {
+    width: 100%;
+  }
+  
+  .address {
+    margin-bottom: 32px;
+  }
+}

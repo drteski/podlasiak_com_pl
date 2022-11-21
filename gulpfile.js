@@ -32,7 +32,7 @@ gulp.task(
 	'watch',
 	gulp.series('style', 'js', (done) => {
 		gulp.watch('public/javascripts/dev.js', gulp.series('js'));
-		gulp.watch('public/stylesheets/*.scss', gulp.series('style'));
+		gulp.watch('public/stylesheets/*/**.scss', gulp.series('style'));
 		done();
 	})
 );
