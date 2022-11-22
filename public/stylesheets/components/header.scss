@@ -1,367 +1,366 @@
 .button--secondary {
-	transition: all ease 0.3s;
-	background-color: rgba(255, 255, 255, 0.1);
-	@apply px-10 py-6 rounded;
+  transition: all ease 0.3s;
+  background-color: $lightOverlayColor;
+  @apply px-10 py-6 rounded;
 }
 
 .button--secondary:hover {
-	background-color: rgba(255, 255, 255, 0.2);
+  background-color: $lightOverlayColor;
 }
 
 .header-container {
-	position: relative;
-	z-index: 2;
-	overflow: hidden;
-	width: 100%;
-	height: 100vh;
-	background: url('/images/slider2.jpg') no-repeat center;
-	background-size: cover;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url('/images/slider2.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .header-overlay {
-	@apply bg-black opacity-30 top-0 left-0 absolute h-full w-full pointer-events-none;
-	z-index: 3;
+  @apply bg-black opacity-30 top-0 left-0 absolute h-full w-full pointer-events-none;
+  z-index: 3;
 }
 
 .main-navbar {
-	position: relative;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	width: 100%;
-	transition: all ease 0.5s;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all ease 0.5s;
 }
 
 
 .main-navbar__container {
-	position: relative;
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 32px 0;
-	transition: all ease 0.5s;
-	@apply flex justify-between items-center relative;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 0;
+  transition: all ease 0.5s;
+  @apply flex justify-between items-center relative;
 }
 
 .navbar {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-link {
-	transition: all ease 0.3s;
-	@apply text-white px-8 py-4 rounded block;
+  transition: all ease 0.3s;
+  @apply text-white px-8 py-4 rounded block;
 }
 
 
 .menu-link:hover {
-	background-color: rgba(255, 255, 255, 0.15);
+  background-color: $lightOverlayColor;
 }
 
 
 .icon-1, .icon-2, .icon-3 {
-	position: absolute;
-	top: 50%;
-	left: 25%;
-	width: 32px;
-	height: 3px;
-	transition: all 300ms cubic-bezier(.84, .06, .52, 1.8);
-	background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 32px;
+  height: 3px;
+  transition: all 300ms cubic-bezier(.84, .06, .52, 1.8);
+  background-color: $primaryColor;
 }
 
 .icon-1 {
-	transform: translateY(-10px);
-	animation-delay: 100ms;
+  transform: translateY(-10px);
+  animation-delay: 100ms;
 }
 
 .icon-3 {
-	transform: translateY(10px);
-	animation-delay: 250ms;
+  transform: translateY(10px);
+  animation-delay: 250ms;
 }
 
 .hamburger-icon {
-	position: absolute;
-	z-index: 1000;
-	right: 0;
-	display: none;
-	width: 60px;
-	height: 60px;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-	@apply rounded;
-
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.2);
-	}
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  display: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @apply rounded;
+  
+  &:hover {
+    background-color: $lightOverlayColor;
+  }
 }
 
 .icon-1.a {
-	transform: rotate(40deg);
-	background-color: #ffffff;
+  transform: rotate(40deg);
+  background-color: $primaryColor;
 }
 
 .icon-3.b {
-	transform: rotate(-40deg);
-	background-color: #ffffff;
+  transform: rotate(-40deg);
+  background-color: $primaryColor;
 }
 
 .icon-2.c {
-	opacity: 0;
-	background-color: #ffffff;
+  opacity: 0;
+  background-color: $primaryColor;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 
-//.main-navbar--active {
-//	position: fixed;
-//	background-color: white;
-//	box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-//	0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-//	0px 12.5px 10px rgba(0, 0, 0, 0.035),
-//	0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-//	0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-//	0px 100px 80px rgba(0, 0, 0, 0.07);
-//
-//}
-//
-//.main-navbar--active .hamburger-icon:hover {
-//	background-color: rgba(0, 0, 0, 0.05);
-//}
-//
-//
-//.main-navbar--active .icon-1.a, .main-navbar--active .icon-3.b, .main-navbar--active .icon-2.c {
-//	background-color: #000000;
-//}
-//
-//
-//.main-navbar--active .icon-1, .main-navbar--active .icon-2, .main-navbar--active .icon-3 {
-//	background-color: #000000;
-//}
-//
-//.main-navbar--active .main-navbar__container {
-//	padding: 12px 0;
-//}
-//
-//.main-navbar--active .logo-icon {
-//	width: 160px;
-//}
-//
-//
-//.main-navbar--active .menu-link {
-//	@apply text-gray-900;
-//}
-//
-//.main-navbar--active .menu-link:hover {
-//	background-color: rgba(0, 0, 0, 0.05);
-//}
+.main-navbar--active {
+  background-color: $primaryColor;
+  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0px 12.5px 10px rgba(0, 0, 0, 0.035),
+  0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0px 100px 80px rgba(0, 0, 0, 0.07);
+  
+}
+
+
+.main-navbar--active .hamburger-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.main-navbar--active .icon-1.a, .main-navbar--active .icon-3.b, .main-navbar--active .icon-2.c {
+  background-color: $secondaryColor;
+}
+
+
+.main-navbar--active .icon-1, .main-navbar--active .icon-2, .main-navbar--active .icon-3 {
+  background-color: $secondaryColor;
+}
+
+
+.main-navbar--active .menu-link {
+  @apply text-gray-900;
+}
+
+.main-navbar--active .menu-link:hover {
+  background-color: $darkOverlayColor;
+}
+
+.main-navbar--active .logo-icon {
+  fill: $accentColor;
+}
 
 .logo-icon {
-	position: relative;
-	z-index: 1000;
-	display: block;
-	width: 200px;
-	transition: all ease 0.3s;
+  position: relative;
+  z-index: 1000;
+  display: block;
+  width: 200px;
+  transition: all ease 0.3s;
+  fill: $primaryColor;
+}
+
+.logo-icon--active {
+  fill: $accentColor;
 }
 
 .logo-icon:hover {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 
 @keyframes bounce {
-	0% {
-		top: 85vh;
-	}
-	30% {
-		top: 88vh;
-	}
-	100% {
-		top: 85vh;
-	}
+  0% {
+    top: 85vh;
+  }
+  30% {
+    top: 88vh;
+  }
+  100% {
+    top: 85vh;
+  }
 }
 
 .arrow-cont {
-	position: absolute;
-	z-index: 19;
-	left: calc(50% - 25px);
-	display: block;
-	transition: all ease 0.2s;
-	opacity: 1;
+  position: absolute;
+  z-index: 19;
+  left: calc(50% - 25px);
+  display: block;
+  transition: all ease 0.2s;
+  opacity: 1;
 }
 
 .arrow-slide {
-	position: relative;
-	display: block;
-	width: 40px;
-	height: 40px;
-	cursor: pointer;
-	animation: bounce 3s infinite;
-	opacity: 0.3;
-	border-radius: 50%;
-	background-color: #ffffff;
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  animation: bounce 3s infinite;
+  border-radius: 50%;
+  background-color: $lightOverlayColor;
 }
 
 .arrow-slide:after {
-	position: absolute;
-	top: 12px;
-	left: 1.2rem;
-	width: 2px;
-	height: 16px;
-	content: '';
-	transform: rotate(45deg);
-	transform-origin: 50% 100%;
-	border-radius: 20px;
-	background-color: #919191;
+  position: absolute;
+  top: 12px;
+  left: 1.2rem;
+  width: 2px;
+  height: 16px;
+  content: '';
+  transform: rotate(45deg);
+  transform-origin: 50% 100%;
+  border-radius: 20px;
+  background-color: $primaryColor;
 }
 
 .arrow-slide:before {
-	position: absolute;
-	top: 13px;
-	left: 1.24rem;
-	width: 2px;
-	height: 16px;
-	content: '';
-	transform: rotate(-45deg);
-	transform-origin: 0 100%;
-	border-radius: 20px;
-	background-color: #919191;
+  position: absolute;
+  top: 13px;
+  left: 1.24rem;
+  width: 2px;
+  height: 16px;
+  content: '';
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  border-radius: 20px;
+  background-color: $primaryColor;
 }
 
 .arrow-slide:hover {
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .language-flag {
-	position: absolute;
-	z-index: 9;
-	right: 48px;
-	bottom: 64px;
-	display: flex;
-	flex-direction: column;
-	padding: 12px;
-	background-color: rgba(255, 255, 255, 0.2);
-	@apply rounded;
+  position: absolute;
+  z-index: 9;
+  right: 48px;
+  bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background-color: $lightOverlayColor;
+  @apply rounded;
 }
 
 .language__flag-img {
-	width: 48px;
-	padding-bottom: 6px;
+  width: 48px;
+  padding-bottom: 6px;
 }
 
 .language__flag-img--secondary {
-	width: 24px;
-	transition: 0.2s;
+  width: 24px;
+  transition: 0.2s;
 }
 
 .language__flag-img--secondary:hover {
-	transition: 0.2s;
-	transform: scale(1.35);
+  transition: 0.2s;
+  transform: scale(1.35);
 }
 
 .language-title {
-	position: absolute;
-	z-index: 20;
-	pointer-events: none;
-	opacity: 0;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
 }
 
 
 .language-title--active {
-	opacity: 1;
+  opacity: 1;
 }
 
 .language-title__tile {
-	font-size: 12px;
-	background-color: #ffffff;
-	@apply px-4 py-2 relative block rounded;
+  font-size: 12px;
+  background-color: $primaryColor;
+  @apply px-4 py-2 relative block rounded;
 }
 
 .language-title__tile:after {
-	position: absolute;
-	top: 8px;
-	right: -3px;
-	width: 15px;
-	height: 15px;
-	content: '';
-	transform: rotate(45deg);
-	background-color: #ffffff;
-	@apply rounded-sm;
+  position: absolute;
+  top: 8px;
+  right: -3px;
+  width: 15px;
+  height: 15px;
+  content: '';
+  transform: rotate(45deg);
+  background-color: $primaryColor;
+  @apply rounded-sm;
 }
 
 @media screen and (max-width: 1500px) {
-	.main-navbar {
-		padding: 0 48px;
-	}
-
+  .main-navbar {
+    padding: 0 48px;
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {
-	.navbar {
-		width: 600px;
-	}
+  .navbar {
+    width: 600px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-
-	.navbar {
-		position: absolute;
-		z-index: 998;
-		top: 0;
-		right: 0;
-		align-items: flex-end;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		width: 100vw;
-		height: 100vh;
-		padding: 128px 48px 0 128px;
-		transition: all ease 0.3s;
-		transform: translateX(1248px);
-		background-color: #ffffff;
-	}
-	.navbar--active {
-		transform: translateX(48px);
-	}
-
-
-	.navbar--active .menu-link {
-		font-size: 24px;
-		margin: 16px 0;
-		text-transform: uppercase;
-	}
-
-	.menu-link {
-		font-size: 24px;
-		margin: 16px 0;
-	}
-
-	.hamburger-icon {
-		display: block;
-	}
+  .navbar {
+    position: absolute;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 1024px;
+    height: 100vh;
+    padding: 128px 48px 0 128px;
+    transition: all ease 0.3s;
+    transform: translateX(1248px);
+    background-color: $primaryColor;
+  }
+  .navbar--active {
+    transform: translateX(48px);
+  }
+  
+  
+  .navbar--active .menu-link {
+    font-size: 24px;
+    margin: 16px 0;
+    text-transform: uppercase;
+  }
+  
+  .menu-link {
+    font-size: 24px;
+    margin: 16px 0;
+  }
+  
+  .hamburger-icon {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.language-flag {
-		right: 32px;
-	}
-	.main-navbar {
-		padding: 0 32px;
-	}
-	.main-navbar--active .logo-icon {
-		width: 140px;
-	}
-	.logo-icon {
-		width: 140px;
-	}
-	.navbar {
-		padding: 128px 32px 0 128px;
-	}
-	.navbar .navbar--active {
-		transform: translateX(32px);
-	}
-
+  .language-flag {
+    right: 32px;
+  }
+  .main-navbar {
+    padding: 0 32px;
+  }
+  .main-navbar--active .logo-icon {
+    width: 140px;
+  }
+  .logo-icon {
+    width: 140px;
+  }
+  .navbar {
+    padding: 128px 32px 0 128px;
+  }
+  .navbar .navbar--active {
+    transform: translateX(32px);
+  }
+  
 }

@@ -46,62 +46,72 @@ if (languageBar) {
 const header = document.querySelector('.header-container');
 
 if (header) {
-	const navbarScrollHandler = () => {
-		const position = window.scrollY;
-		const navbar = document.querySelector('.main-navbar');
-		const logo = document.querySelector('.logo-icon');
-		if (position >= 30) {
-			navbar.classList.add('main-navbar--active');
-			logo.setAttribute('src', '/images/logo_podlasiak.png');
-		}
-		if (position < 30) {
-			navbar.classList.remove('main-navbar--active');
-			logo.setAttribute('src', '/images/logo_podlasiakw.png');
-		}
-	};
-	window.addEventListener('scroll', navbarScrollHandler);
-
-	const icon = document.getElementById('icon');
+	const navbar = document.querySelector('.main-navbar');
+	const icon = document.querySelector('.hamburger-icon');
 	const icon1 = document.getElementById('a');
 	const icon2 = document.getElementById('b');
 	const icon3 = document.getElementById('c');
 	const nav = document.querySelector('.navbar');
+	const menuItems = document.querySelectorAll('.menu-link');
 
-	icon.addEventListener('click', function () {
+	const navbarScrollHandler = () => {
+		const position = window.scrollY;
+		if (position >= 30) {
+			navbar.classList.add('main-navbar--active');
+		}
+		if (position < 30) {
+			navbar.classList.remove('main-navbar--active');
+		}
+	};
+
+	const hamburgerAnimationHandler = () => {
+		nav.classList.toggle('navbar--active');
+		icon1.classList.toggle('a');
+		icon2.classList.toggle('c');
+		icon3.classList.toggle('b');
+		window.addEventListener('scroll', navbarScrollHandler);
+	};
+
+	const mobileMenuHandler = (e) => {
+		window.removeEventListener('scroll', navbarScrollHandler);
 		icon1.classList.toggle('a');
 		icon2.classList.toggle('c');
 		icon3.classList.toggle('b');
 		nav.classList.toggle('navbar--active');
-		const navbar = document.querySelector('.main-navbar');
-		const logo = document.querySelector('.logo-icon');
+		if (
+			e.currentTarget === icon &&
+			nav.classList.contains('navbar--active')
+		) {
+			console.log(
+				e.currentTarget,
+				nav.classList.contains('navbar--active')
+			);
+			hamburgerAnimationHandler();
+		}
 		if (navbar.classList.contains('main-navbar--active')) {
 			navbar.classList.remove('main-navbar--active');
-			logo.setAttribute('src', '/images/logo_podlasiakw.png');
 		} else {
 			navbar.classList.add('main-navbar--active');
-			logo.setAttribute('src', '/images/logo_podlasiak.png');
 		}
-	});
+	};
 
-	const menuItems = document.querySelectorAll('.menu-link');
+	const scrollHandler = (e) => {
+		const targetItem = document.querySelector(`${e.target.dataset.target}`);
+		targetItem.scrollIntoView({ behavior: 'smooth' });
+		navbar.classList.remove('main-navbar--active');
+		window.addEventListener('scroll', navbarScrollHandler);
+	};
+
+	icon.addEventListener('click', mobileMenuHandler);
 
 	menuItems.forEach((item) => {
-		const nav = document.querySelector('.navbar');
-		item.addEventListener('click', () => {
-			nav.classList.remove('navbar--active');
-			icon1.classList.toggle('a');
-			icon2.classList.toggle('c');
-			icon3.classList.toggle('b');
-		});
+		item.addEventListener('click', hamburgerAnimationHandler);
 	});
-	menuItems.forEach((item) => {
-		const scrollHandler = () => {
-			const targetItem = document.querySelector(`${item.dataset.target}`);
-			targetItem.scrollIntoView({ behavior: 'smooth' });
-		};
 
+	menuItems.forEach((item) => {
 		item.addEventListener('click', scrollHandler);
 	});
+	window.addEventListener('scroll', navbarScrollHandler);
 }
 
 //////////////////////////////////////////////////////////////////////////////////

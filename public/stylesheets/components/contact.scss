@@ -8,7 +8,8 @@
 }
 
 .footer-overlay {
-  @apply bg-black opacity-50 top-0 left-0 absolute h-full w-full;
+  background-color: $secondaryColor;
+  @apply opacity-50 top-0 left-0 absolute h-full w-full;
 }
 
 .contact-container {
@@ -16,7 +17,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 96px 0 48px;
-  @apply text-white flex relative flex-wrap;
+  color: $secondaryFontColor;
+  @apply flex relative flex-wrap;
 }
 
 .address, .contact-form {
@@ -25,7 +27,8 @@
 
 
 .address__header {
-  @apply text-3xl font-black pb-8;
+  color: $secondaryFontColor;
+  @apply text-3xl pb-8;
 }
 
 .row__heading {
@@ -102,7 +105,8 @@
 .copyright {
   max-width: 1440px;
   margin: 0 auto;
-  @apply text-white block py-6 text-xs font-light;
+  color: $secondaryFontColor;
+  @apply block py-6 text-xs font-light;
 }
 
 @media screen and (max-width: 1500px) {
