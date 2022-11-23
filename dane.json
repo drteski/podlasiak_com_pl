@@ -1,0 +1,118 @@
+{
+  "hero": [
+    {
+      "name": "Strona główna"
+    },
+    {
+      "name": "Mocne Strony"
+    },
+    {
+      "name": "Opinie"
+    },
+    {
+      "name": "O nas"
+    },
+    {
+      "name": "Nasze sklepy"
+    },
+    {
+      "name": "Kontakt"
+    }
+  ],
+  "features": {
+    "title": "Kupuj u najlepszego sprzedawcy",
+    "content": [
+      {
+        "title": "Europejski zasięg",
+        "desc": "Sprzedajemy i wysyłamy nasze produkty do wiekszości krajów Europy."
+      },
+      {
+        "title": "Szybka wysyłka",
+        "desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień."
+      },
+      {
+        "title": "Zwroty zamówień",
+        "desc": "Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Posłuchaj naszych klientów",
+    "review": [
+      {
+        "desc": "Jestem bardzo zadowolona. Wszytsko odbyło się szybko i sprawnie",
+        "user": "Monika"
+      },
+      {
+        "desc": "Transakcja przebiegła pomyślnie. Towar dostarczony bardzo szybko. Polecam.",
+        "user": "Magda"
+      },
+      {
+        "desc": "Wszystko bez najmniejszych zastrzeżeń. Szybka pomoc przy zakupach i ekspresowa przesyłka.",
+        "user": "Dorota"
+      }
+    ],
+    "desc": {
+      "recommended": "Klientów poleca naszą firmę",
+      "firstPart": "Bierzemy udział w programie Słucham swoich klientów niezależnego serwisu opinii Opineo.pl, dzięki czemu kupujący mają pewność, że czytamy i bierzemy pod uwagę każdą opinię, również krytyczną.",
+      "secondPart": "Nasze sklepy podlegają stałemu monitoringowi jakości usług."
+    }
+  },
+  "about": {
+    "title": "O nas",
+    "firstPart": "Podlasiak Sp. z o.o. to międzynarodowa firma założona w 1994 roku. Nasze ponad 25 letnie doświadczenie w handlu pozwala dostarczać naszym klientom produkty oryginalne oraz wysokogatunkowe, dbając przy tym o najwyższą jakość świadczonych usług. Specjalizujemy się handlem w wielu sektorach biznesu. Jesteśmy właścicielem takich marek jak Rea, Tutumi, Toolight i Bluegarden. Jako jedni z pierwszych stworzyliśmy sklepy internetowe o zasięgu ogólnoeuropejskim.",
+    "secondPart": "Dzięki innowacyjnym metodom działania, i doskonałej organizacji pracy, przez wiele lat dostarczamy naszym klientom doskonałe produkty, dbając przy tym o najwyższą jakość usług. Jesteśmy przedsiębiorstwem dynamicznym i stale rozwijającym się, dlatego nie stawiamy sobie żadnych ograniczeń, tylko śmiało i pewnie, razem z naszymi klientami podążamy naprzód."
+  },
+  "stores": {
+    "title": "Nasze sklepy"
+  },
+  "contact": {
+    "details": {
+      "title": "Pozostań w kontakcie",
+      "locations": [
+        {
+          "title": "Sklep stacjonarny",
+          "subTitle": "CH Fasty",
+          "email": "salonlazienekrea@wp.pl",
+          "phone": "+48856621976"
+        },
+        {
+          "title": "Sklep Internetowy",
+          "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+          "email": "biuro.rea@podlasiak.com.pl",
+          "phone": "+48857337777"
+        },
+        {
+          "title": "Biuro",
+          "subTitle": "Hurtownia",
+          "email": "salonlazienekrea@wp.pl",
+          "site": "https://www.reahurt.pl/"
+        }
+      ]
+    },
+    "form": {
+      "title": "Skontaktuj się z nami",
+      "layout": {
+        "content": [
+          {
+            "label": "Imię i Nazwisko",
+            "placeholder": "Jan Kowalski"
+          },
+          {
+            "label": "Email",
+            "placeholder": "jankowalski@email.com"
+          },
+          {
+            "label": "Temat",
+            "placeholder": "Mój temat"
+          },
+          {
+            "label": "Treść wiadomości",
+            "placeholder": "Treść..."
+          }
+        ],
+        "button": "Wyślij"
+      }
+    }
+  }
+}

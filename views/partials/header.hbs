@@ -78,24 +78,31 @@
 				<div class="clear"></div>
 			</div>
 			<ul class='navbar'>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#home">Strona główna</button>
-				</li>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#features">Mocne strony</button>
-				</li>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#reviews">Opinie</button>
-				</li>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#about">O nas</button>
-				</li>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#stores">Nasze sklepy</button>
-				</li>
-				<li class='menu-item'>
-					<button class='menu-link' data-target="#contact">Kontakt</button>
-				</li>
+				{{#each translations.hero}}
+					<li class='menu-item'>
+						<button class='menu-link'
+								data-target="#home">{{this.name}}</button>
+					</li>
+				{{/each}}
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link'-->
+				<!--							data-target="#home"></button>-->
+				<!--				</li>-->
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link' data-target="#features">Mocne strony</button>-->
+				<!--				</li>-->
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link' data-target="#reviews">Opinie</button>-->
+				<!--				</li>-->
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link' data-target="#about">O nas</button>-->
+				<!--				</li>-->
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link' data-target="#stores">Nasze sklepy</button>-->
+				<!--				</li>-->
+				<!--				<li class='menu-item'>-->
+				<!--					<button class='menu-link' data-target="#contact">Kontakt</button>-->
+				<!--				</li>-->
 			</ul>
 		</div>
 	</nav>
@@ -272,7 +279,7 @@
 
 	</div>
 	<div class="language-title">
-		<span class="language-title__tile">PL</span>
+		<span class="language-title__tile"></span>
 	</div>
 
 </header>

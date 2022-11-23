@@ -72,22 +72,13 @@ if (header) {
 		window.addEventListener('scroll', navbarScrollHandler);
 	};
 
-	const mobileMenuHandler = (e) => {
+	const mobileMenuHandler = () => {
 		window.removeEventListener('scroll', navbarScrollHandler);
 		icon1.classList.toggle('a');
 		icon2.classList.toggle('c');
 		icon3.classList.toggle('b');
 		nav.classList.toggle('navbar--active');
-		if (
-			e.currentTarget === icon &&
-			nav.classList.contains('navbar--active')
-		) {
-			console.log(
-				e.currentTarget,
-				nav.classList.contains('navbar--active')
-			);
-			hamburgerAnimationHandler();
-		}
+
 		if (navbar.classList.contains('main-navbar--active')) {
 			navbar.classList.remove('main-navbar--active');
 		} else {
