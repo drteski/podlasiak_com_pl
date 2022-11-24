@@ -5,6 +5,7 @@ const Content = new mongoose.Schema({
 		type: [
 			{
 				name: String,
+				dataIndex: String,
 			},
 		],
 	},
@@ -17,6 +18,7 @@ const Content = new mongoose.Schema({
 				{
 					title: String,
 					desc: String,
+					img: String,
 				},
 			],
 		},
@@ -73,9 +75,14 @@ const Content = new mongoose.Schema({
 						subTitle: String,
 						email: String,
 						phone: String,
-						site: String,
+						website: String,
 					},
 				],
+			},
+			labels: {
+				phone: String,
+				email: String,
+				website: String,
 			},
 		},
 		form: {

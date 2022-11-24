@@ -3,72 +3,124 @@
 	</div>
 	<section class="contact-container">
 		<div class="address">
-			<h3 class="address__header">Pozostań w kontakcie</h3>
+			<h3 class="address__header">{{#if
+					translations.contact.details.title}}{{translations.contact.details.title}}{{else}}
+				translations.contact.details.title{{/if}}</h3>
 			<div class="address__row">
 				<div class="row__heading">
 					<span class="address__icon material-symbols-outlined">storefront</span>
-					<h4 class="address__subheader">Sklep stacjonarny:</h4>
+					<h4 class="address__subheader">{{#if
+							translations.contact.details.locations.[0].title}}{{translations.contact.details.locations.[0].title}}{{else}}
+						translations.contact.details.locations.[0].title {{/if}}:</h4>
 				</div>
 				<div class="row__content">
-					<p class="address__text"><strong>CH Fasty</strong></p>
-					<p class="address__text"><strong>Email:</strong> <a
-							href="mailto:salonlazienekrea@wp.pl">salonlazienekrea@wp.pl</a></p>
-					<p class="address__text"><strong>Telefon:</strong> <a
-							href="tel:+48856621976">85 662 19 76</a></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.locations.[0].subTitle}}{{translations.contact.details.locations.[0].subTitle}}{{else}}
+						translations.contact.details.locations.[0].subTitle{{/if}}</strong></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.labels.email}}{{translations.contact.details.labels.email}}{{else}}
+						translations.contact.details.labels.email{{/if}}:</strong> <a
+							href="mailto:{{translations.contact.details.locations.[0].email}}">{{#if
+							translations.contact.details.locations.[0].email}}{{translations.contact.details.locations.[0].email}}{{else}}
+						translations.contact.details.locations.[0].email{{/if}}</a></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.labels.phone}}{{translations.contact.details.labels.phone}}{{else}}
+						translations.contact.details.labels.phone{{/if}}:</strong> <a
+							href="tel:{{translations.contact.details.locations.[0].phone}}">{{#if
+							translations.contact.details.locations.[0].phone}}{{translations.contact.details.locations.[0].phone}}{{else}}
+						translations.contact.details.locations.[0].phone{{/if}}</a></p>
 				</div>
 			</div>
 			<div class="address__row">
 				<div class="row__heading">
 					<span class="address__icon material-symbols-outlined">public</span>
-					<h4 class="address__subheader">Sklep Internetowy:</h4>
+					<h4 class="address__subheader">{{#if
+							translations.contact.details.locations.[1].title}}{{translations.contact.details.locations.[1].title}}{{else}}
+						translations.contact.details.locations.[1].title {{/if}}:</h4>
 				</div>
 				<div class="row__content">
-					<p class="address__text"><strong>Rea, Tutumi, Toolight, Bluegarden</strong></p>
-					<p class="address__text"><strong>Telefon:</strong> <a
-							href="tel:+48857337777">85 733 77 77</a></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.locations.[1].subTitle}}{{translations.contact.details.locations.[1].subTitle}}{{else}}
+						translations.contact.details.locations.[1].subTitle{{/if}}</strong></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.labels.phone}}{{translations.contact.details.labels.phone}}{{else}}
+						translations.contact.details.labels.phone{{/if}}:</strong> <a
+							href="tel:{{translations.contact.details.locations.[1].phone}}">{{#if
+							translations.contact.details.locations.[1].phone}}{{translations.contact.details.locations.[1].phone}}{{else}}
+						translations.contact.details.locations.[1].phone{{/if}}</a></p>
 				</div>
 			</div>
 			<div class="address__row">
 				<div class="row__heading">
 
 					<span class="address__icon material-symbols-outlined">apartment</span>
-					<h4 class="address__subheader">Biuro:</h4>
+					<h4 class="address__subheader">{{#if
+							translations.contact.details.locations.[2].title}}{{translations.contact.details.locations.[2].title}}{{else}}
+						translations.contact.details.locations.[2].title {{/if}}:</h4>
 				</div>
 				<div class="row__content">
-					<p class="address__text"><strong>Hurtownia</strong></p>
-					<p class="address__text"><strong>Email:</strong> <a
-							href="mailto:salonlazienekrea@wp.pl">salonlazienekrea@wp.pl</a></p>
-					<p class="address__text"><strong>Strona:</strong> <a
-							href="https://www.reahurt.pl/"
-							target="_blank">https://www.reahurt.pl/</a></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.locations.[2].subTitle}}{{translations.contact.details.locations.[2].subTitle}}{{else}}
+						translations.contact.details.locations.[2].subTitle{{/if}}</strong></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.labels.email}}{{translations.contact.details.labels.email}}{{else}}
+						translations.contact.details.labels.email{{/if}}:</strong> <a
+							href="mailto:{{translations.contact.details.locations.[2].email}}">{{#if
+							translations.contact.details.locations.[2].email}}{{translations.contact.details.locations.[2].email}}{{else}}
+						translations.contact.details.locations.[2].email{{/if}}</a></p>
+					<p class="address__text"><strong>{{#if
+							translations.contact.details.labels.website}}{{translations.contact.details.labels.website}}{{else}}
+						translations.contact.details.labels.website{{/if}}:</strong> <a
+							href="{{translations.contact.details.locations.[2].website}}"
+							target="_blank">{{#if
+							translations.contact.details.locations.[2].website}}{{translations.contact.details.locations.[2].website}}{{else}}
+						translations.contact.details.locations.[2].website{{/if}}</a></p>
 				</div>
 			</div>
 		</div>
 		<div class="contact-form">
-			<h3 class="address__header">Skontaktuj się z nami</h3>
+			<h3 class="address__header">{{#if
+					translations.contact.form.title}}{{translations.contact.form.title}}{{else}}
+				translations.contact.form.title{{/if}}</h3>
 			<form action="/send" class="form__body">
 				<div class="body__input-container">
-					<label for="name" class="form-input__label">Imię i Nazwisko</label>
-					<input type="text" id="name" placeholder="Jan Kowalski"
+					<label for="name" class="form-input__label">{{#if
+							translations.contact.form.layout.content.[0].label}}{{translations.contact.form.layout.content.[0].label}}{{else}}
+						translations.contact.form.layout.content.[0].label{{/if}}</label>
+					<input type="text" id="name"
+							placeholder="{{translations.contact.form.layout.content.[0].placeholder}}"
 							class="form-input__field" required>
 				</div>
 				<div class="body__input-container">
-					<label for="email" class="form-input__label">Email</label>
-					<input type="text" id="email" placeholder="jankowalski@email.com"
+					<label for="email" class="form-input__label">{{#if
+							translations.contact.form.layout.content.[1].label}}{{translations.contact.form.layout.content.[1].label}}{{else}}
+						translations.contact.form.layout.content.[1].label{{/if}}</label>
+					<input type="text" id="email"
+							placeholder="{{translations.contact.form.layout.content.[1].placeholder}}"
 							class="form-input__field" required>
 				</div>
 				<div class="body__input-container">
-					<label for="subject" class="form-input__label">Temat</label>
-					<input type="text" id="subject" placeholder="Mój temat" class=form-input__field
+					<label for="subject" class="form-input__label">{{#if
+							translations.contact.form.layout.content.[2].label}}{{translations.contact.form.layout.content.[2].label}}{{else}}
+						translations.contact.form.layout.content.[2].label{{/if}}</label>
+					<input type="text" id="subject"
+							placeholder="{{translations.contact.form.layout.content.[2].placeholder}}"
+							class=form-input__field
 							required>
 				</div>
 				<div class="body__input-container">
-					<label for="content" class="form-input__label">Treść wiadomości</label>
+					<label for="content" class="form-input__label">{{#if
+							translations.contact.form.layout.content.[3].label}}{{translations.contact.form.layout.content.[3].label}}{{else}}
+						translations.contact.form.layout.content.[3].label{{/if}}</label>
 					<textarea name="content" id="content"
 							class="form-input__field form-input__field--area"
-							rows="5" placeholder="Treść..." required></textarea>
+							rows="5"
+							placeholder="{{translations.contact.form.layout.content.[3].placeholder}}"
+							required></textarea>
 				</div>
-				<button class="contact-cta button--secondary">Napisz do nas</button>
+				<button class="contact-cta button--secondary">{{#if
+						translations.contact.form.layout.button}}{{translations.contact.form.layout.button}}{{else}}
+					translations.contact.form.layout.button{{/if}}</button>
 			</form>
 		</div>
 	</section>

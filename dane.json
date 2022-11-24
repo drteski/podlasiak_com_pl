@@ -1,22 +1,28 @@
 {
   "hero": [
     {
-      "name": "Strona główna"
+      "name": "Strona główna",
+      "dataIndex": "home"
     },
     {
-      "name": "Mocne Strony"
+      "name": "Mocne Strony",
+      "dataIndex": "features"
     },
     {
-      "name": "Opinie"
+      "name": "Opinie",
+      "dataIndex": "reviews"
     },
     {
-      "name": "O nas"
+      "name": "O nas",
+      "dataIndex": "about"
     },
     {
-      "name": "Nasze sklepy"
+      "name": "Nasze sklepy",
+      "dataIndex": "stores"
     },
     {
-      "name": "Kontakt"
+      "name": "Kontakt",
+      "dataIndex": "contact"
     }
   ],
   "features": {
@@ -24,15 +30,18 @@
     "content": [
       {
         "title": "Europejski zasięg",
-        "desc": "Sprzedajemy i wysyłamy nasze produkty do wiekszości krajów Europy."
+        "desc": "Sprzedajemy i wysyłamy nasze produkty do wiekszości krajów Europy.",
+        "img": "/images/zasieg.svg"
       },
       {
         "title": "Szybka wysyłka",
-        "desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień."
+        "desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
+        "img": "/images/szybka.svg"
       },
       {
         "title": "Zwroty zamówień",
-        "desc": "Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru."
+        "desc": "Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru.",
+        "img": "/images/returns.svg"
       }
     ]
   },
@@ -86,9 +95,14 @@
           "title": "Biuro",
           "subTitle": "Hurtownia",
           "email": "salonlazienekrea@wp.pl",
-          "site": "https://www.reahurt.pl/"
+          "website": "https://www.reahurt.pl/"
         }
-      ]
+      ],
+      "labels": {
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "website": "Strona internetowa"
+      }
     },
     "form": {
       "title": "Skontaktuj się z nami",

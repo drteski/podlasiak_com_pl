@@ -81,28 +81,11 @@
 				{{#each translations.hero}}
 					<li class='menu-item'>
 						<button class='menu-link'
-								data-target="#home">{{this.name}}</button>
+								data-target="#{{this.dataIndex}}">{{#if
+								this.name}}{{this.name}}{{else}}
+							translations.hero.name{{/if}}</button>
 					</li>
 				{{/each}}
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link'-->
-				<!--							data-target="#home"></button>-->
-				<!--				</li>-->
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link' data-target="#features">Mocne strony</button>-->
-				<!--				</li>-->
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link' data-target="#reviews">Opinie</button>-->
-				<!--				</li>-->
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link' data-target="#about">O nas</button>-->
-				<!--				</li>-->
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link' data-target="#stores">Nasze sklepy</button>-->
-				<!--				</li>-->
-				<!--				<li class='menu-item'>-->
-				<!--					<button class='menu-link' data-target="#contact">Kontakt</button>-->
-				<!--				</li>-->
 			</ul>
 		</div>
 	</nav>

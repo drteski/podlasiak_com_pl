@@ -4,8 +4,8 @@ var router = express.Router();
 const translate = require('../controllers/translate');
 const Content = require('../models/Content');
 
-router.get('/', function (req, res, next) {
-	res.render('index', { title: 'Podlasiak' });
+router.get('/', (req, res) => {
+	res.redirect('/pl');
 });
 
 router.get('/pl', async (req, res) => {

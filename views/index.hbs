@@ -1,87 +1,45 @@
 <main class='main-container'>
 	<section class='features-container' id='features'>
-		<h2 class='about about--other'>{{translations.features.title}}</h2>
+		<h2 class='about about--other'>{{#if
+				translations.features.title}}{{translations.features.title}}{{else}}
+			translations.features.title{{/if}}</h2>
 		<div class='features-cont'>
-			<div class='feature-box'>
-				<img src="/images/zasieg.svg" alt="" class="feature__img">
-				<h4 class='feature__name'>{{translations.features.content.title}}</h4>
-				<p class='feature__desc'>
-					{{translations.features.content.desc}}
-				</p>
-			</div>
-			<div class='feature-box'>
-
-				<img src="/images/szybka.svg" alt="" class="feature__img">
-				<h4 class='feature__name'>Szybka wysyłka</h4>
-				<p class='feature__desc'>
-					Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny
-					dzień.
-				</p>
-			</div>
-			<div class='feature-box'>
-
-				<img src="/images/returns.svg" alt="" class="feature__img">
-				<h4 class='feature__name'>Zwroty zamówień</h4>
-				<p class='feature__desc'>
-					Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru.
-				</p>
-			</div>
+			{{#each translations.features.content}}
+				<div class='feature-box'>
+					<img src="{{this.img}}" alt="" class="feature__img">
+					<h4 class='feature__name'>{{#if this.title}}{{this.title}}{{else}}
+						translations.features.content.title{{/if}}</h4>
+					<p class='feature__desc'>{{#if this.desc}}{{this.desc}}{{else}}
+						translations.features.content.title{{/if}}</p>
+				</div>
+			{{/each}}
 		</div>
 	</section>
 	<section class='reviews-container' id='reviews'>
-		<h3 class='about about--other'>Posłuchaj naszych klientów</h3>
+		<h3 class='about about--other'>{{#if
+				translations.reviews.title}}{{translations.reviews.title}}{{else}}
+			translations.reviews.title{{/if}}</h3>
 		<div class='reviews'>
-			<div class='reviews-box'>
-				<div class='review'>
-					<div class='comment'>
-						<p class='comment__text'>
-							<strong class='comment__text comment__text--quot'>„</strong>Jestem
-							bardzo zadowolona.
-							Wszytsko odbyło się szybko i sprawnie<strong
-								class='comment__text comment__text--quot'>"</strong>
-						</p>
+			{{#each translations.reviews.review}}
+				<div class='reviews-box'>
+					<div class='review'>
+						<div class='comment'>
+							<p class='comment__text'>
+								<strong class='comment__text comment__text--quot'>„</strong>{{#if
+									this.desc}}{{this.desc}}{{else}}this.desc{{/if}}
+								<strong
+										class='comment__text comment__text--quot'>"</strong>
+							</p>
+						</div>
+					</div>
+					<div class='client'>
+						<p class='client__name'>{{#if this.user}}{{this.user}}{{else}}
+							this.user{{/if}}</p>
+						<img alt='Logo' class='client__logo'
+								src='/images/opinieo.png'>
 					</div>
 				</div>
-				<div class='client'>
-					<p class='client__name'>Monika</p>
-					<img alt='Logo' class='client__logo'
-							src='http://podlasiak.com.pl/imgs/opinieo.png'>
-				</div>
-			</div>
-			<div class='reviews-box'>
-				<div class='review'>
-					<div class='comment'>
-						<p class='comment__text'>
-							<strong class='comment__text comment__text--quot'>„</strong>Transakcja
-							przebiegła
-							pomyślnie. Towar dostarczony bardzo szybko. Polecam.<strong
-								class='comment__text comment__text--quot'>"</strong>
-						</p>
-					</div>
-				</div>
-				<div class='client'>
-					<p class='client__name'>Magda</p>
-					<img alt='Logo' class='client__logo'
-							src='http://podlasiak.com.pl/imgs/opinieo.png'>
-				</div>
-			</div>
-			<div class='reviews-box'>
-				<div class='review'>
-					<div class='comment'>
-						<p class='comment__text'>
-							<strong class='comment__text comment__text--quot'>„</strong>Wszystko bez
-							najmniejszych
-							zastrzeżeń. Szybka pomoc przy zakupach i ekspresowa przesyłka.<strong
-								class='comment__text comment__text--quot'>"</strong>
-						</p>
-					</div>
-				</div>
-				<div class='client'>
-					<p class='client__name'>Dorota</p>
-					<img alt='Logo' class='client__logo'
-							src='http://podlasiak.com.pl/imgs/opinieo.png'>
-				</div>
-			</div>
+			{{/each}}
 		</div>
 		<div class='grade-box'>
 			<div class='grade'>
@@ -96,25 +54,22 @@
 										src='http://podlasiak.com.pl/imgs/thumb_positive.png'>
 								<p class='percent__text'>97%</p>
 							</div>
-							<p class='desc-grade'>Klientów poleca naszą firmę</p>
+							<p class='desc-grade'>{{#if
+									translations.reviews.desc.recommended}}{{translations.reviews.desc.recommended}}{{else}}
+								translations.reviews.desc.recommended{{/if}}</p>
 						</div>
 						<img alt='Quality' class='quality'
 								src='http://podlasiak.com.pl/imgs/opineo-quality.png'>
 					</div>
 				</div>
 				<div class='review-text'>
-					<p class='review-text__top'>
-						Bierzemy udział w programie Słucham swoich klientów niezależnego serwisu
-						opinii
-						Opineo.pl, dzięki czemu kupujący mają pewność, że <strong>czytamy i bierzemy
-						pod uwagę
-						każdą
-						opinię,</strong> również krytyczną.
+					<p class='review-text__top'>{{#if
+							translations.reviews.desc.firstPart}}{{translations.reviews.desc.firstPart}}{{else}}
+						translations.reviews.desc.firstPart{{/if}}
 					</p>
-					<p class='review-text__bottom'>Nasze sklepy podlegają stałemu <strong>monitoringowi
-						jakości
-						usług.</strong>
-					</p>
+					<p class='review-text__bottom'>{{#if
+							translations.reviews.desc.secondPart}}{{translations.reviews.desc.secondPart}}{{else}}
+						translations.reviews.desc.secondPart{{/if}}</p>
 				</div>
 			</div>
 		</div>
@@ -123,37 +78,23 @@
 		{{>europe_svg}}
 		<div class='text-wrap'>
 			<div class='text-cont'>
-				<h3 class='about about--other'>O nas</h3>
-				<p class='content content--primary'>
-					Podlasiak Sp. z o.o. to międzynarodowa firma założona w 1994 roku. Nasze ponad
-					25 letnie
-					doświadczenie w handlu pozwala dostarczać naszym klientom produkty oryginalne
-					oraz
-					wysokogatunkowe, dbając przy tym o najwyższą jakość świadczonych usług.
-					Specjalizujemy się
-					handlem w wielu sektorach biznesu. Jesteśmy właścicielem takich marek jak Rea,
-					Tutumi,
-					Toolight i Bluegarden. Jako jedni z pierwszych stworzyliśmy sklepy internetowe o
-					zasięgu
-					ogólnoeuropejskim.
-				</p>
-				<p class='content content--secondary'>
-					Dzięki innowacyjnym metodom działania, i doskonałej organizacji pracy, przez
-					wiele lat
-					dostarczamy naszym klientom doskonałe produkty, dbając przy tym o najwyższą
-					jakość usług.
-					Jesteśmy przedsiębiorstwem dynamicznym i stale rozwijającym się, dlatego nie
-					stawiamy
-					sobie
-					żadnych ograniczeń, tylko śmiało i pewnie, razem z naszymi klientami podążamy
-					naprzód.
-				</p>
+				<h3 class='about about--other'>{{#if
+						translations.about.title}}{{translations.about.title}}{{else}}
+					translations.about.title{{/if}}</h3>
+				<p class='content content--primary'>{{#if
+						translations.about.firstPart}}{{translations.about.firstPart}}{{else}}
+					translations.about.firstPart{{/if}}</p>
+				<p class='content content--secondary'>{{#if
+						translations.about.secondPart}}{{translations.about.secondPart}}{{else}}
+					translations.about.secondPart{{/if}}</p>
 			</div>
 		</div>
 	</section>
 	<section class='stores-container' id='stores'>
 
-		<h3 class='about about--other'>Nasze sklepy</h3>
+		<h3 class='about about--other'>{{#if
+				translations.stores.title}}{{translations.stores.title}}{{else}}
+			translations.stores.title{{/if}}</h3>
 		<div class='store-wrap'>
 			<div class='store-box'>
 				<div class='logo-container'>
