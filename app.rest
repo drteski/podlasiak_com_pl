@@ -1,4 +1,15 @@
+GET http://localhost:3000/en
+Content-Type: application/json
+
+
+###
+
 GET http://localhost:3000/test2
 Content-Type: application/json
 
 
+###
+
+
+GET http://localhost:3000/test
+Content-Type: application/json
