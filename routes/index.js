@@ -8,14 +8,14 @@ router.get('/', (req, res) => {
 	res.redirect('/pl');
 });
 
-router.get('/pl', async (req, res) => {
-	const translations = await Content.findOne({});
-	res.render('index', {
-		language: 'pl',
-		title: 'Podlasiak PL',
-		translations,
-	});
-});
+// router.get('/pl', async (req, res) => {
+// 	const translations = await Content.findOne({});
+// 	res.render('index', {
+// 		language: 'pl',
+// 		title: 'Podlasiak PL',
+// 		translations,
+// 	});
+// });
 //
 // router.get('/en-GB', async (req, res) => {
 // 	const data = await Content.findOne({});
@@ -33,21 +33,24 @@ router.get('/pl', async (req, res) => {
 //
 // router.get('/test2', async (req, res) => {
 // 	const dat = await Content.findOne({});
-// 	const re = await translate(dat, 'pl', 'en-GB');
+// 	const re = await translate(dat, 'pl', 'en-GB' );
 // 	res.json(re);
 // });
 
 router.get('/:lang', async (req, res) => {
-	const language = req.params.lang;
-	if (language === 'pl') {
-		return res.redirect('/pl');
-	}
 	const data = await Content.findOne({});
-	const translations = await translate(data, 'pl', language);
+	const language = req.params.lang;
+	// console.log(typeof language);
+	// let translations;
+	// if (language !== 'pl') {
+	// 	translations = await translate(data, 'pl', language);
+	// } else {
+	// 	translations = data;
+	// }
 	res.render('index', {
 		language,
 		title: 'Podlasiak PL',
-		translations,
+		data,
 	});
 });
 
