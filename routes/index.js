@@ -40,7 +40,7 @@ router.get('/pl', async (req, res) => {
 router.get('/:lang', async (req, res) => {
 	const language = req.params.lang;
 	if (language === 'pl') {
-		res.redirect('/pl');
+		return res.redirect('/pl');
 	}
 	const data = await Content.findOne({});
 	const translations = await translate(data, 'pl', language);
