@@ -1,132 +1,3242 @@
-{
-  "hero": [
-    {
-      "name": "Strona główna",
-      "dataIndex": "home"
-    },
-    {
-      "name": "Mocne Strony",
-      "dataIndex": "features"
-    },
-    {
-      "name": "Opinie",
-      "dataIndex": "reviews"
-    },
-    {
-      "name": "O nas",
-      "dataIndex": "about"
-    },
-    {
-      "name": "Nasze sklepy",
-      "dataIndex": "stores"
-    },
-    {
-      "name": "Kontakt",
-      "dataIndex": "contact"
-    }
-  ],
-  "features": {
-    "title": "Kupuj u najlepszego sprzedawcy",
-    "content": [
-      {
-        "title": "Europejski zasięg",
-        "desc": "Sprzedajemy i wysyłamy nasze produkty do wiekszości krajów Europy.",
-        "img": "/images/zasieg.svg"
-      },
-      {
-        "title": "Szybka wysyłka",
-        "desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
-        "img": "/images/szybka.svg"
-      },
-      {
-        "title": "Zwroty zamówień",
-        "desc": "Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru.",
-        "img": "/images/returns.svg"
-      }
-    ]
+[
+  {
+	"language": "pl",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Strona główna",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Mocne Strony",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Opinie",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nas",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Nasze sklepy",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kupuj u najlepszego sprzedawcy",
+		"content": [
+		  {
+			"title": "Europejski zasięg",
+			"desc": "Sprzedajemy i wysyłamy nasze produkty do wiekszości krajów Europy.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Szybka wysyłka",
+			"desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Zwroty zamówień",
+			"desc": "Nieużywany produkt możesz zwrócić w ciągu 14 dni od daty odbioru.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Posłuchaj naszych klientów",
+		"review": [
+		  {
+			"desc": "Jestem bardzo zadowolona. Wszytsko odbyło się szybko i sprawnie",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakcja przebiegła pomyślnie. Towar dostarczony bardzo szybko. Polecam.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Wszystko bez najmniejszych zastrzeżeń. Szybka pomoc przy zakupach i ekspresowa przesyłka.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Klientów poleca naszą firmę",
+		  "firstPart": "Bierzemy udział w programie Słucham swoich klientów niezależnego serwisu opinii Opineo.pl, dzięki czemu kupujący mają pewność, że czytamy i bierzemy pod uwagę każdą opinię, również krytyczną.",
+		  "secondPart": "Nasze sklepy podlegają stałemu monitoringowi jakości usług."
+		}
+	  },
+	  "about": {
+		"title": "O nas",
+		"firstPart": "Podlasiak Sp. z o.o. to międzynarodowa firma założona w 1994 roku. Nasze ponad 25 letnie doświadczenie w handlu pozwala dostarczać naszym klientom produkty oryginalne oraz wysokogatunkowe, dbając przy tym o najwyższą jakość świadczonych usług. Specjalizujemy się handlem w wielu sektorach biznesu. Jesteśmy właścicielem takich marek jak Rea, Tutumi, Toolight i Bluegarden. Jako jedni z pierwszych stworzyliśmy sklepy internetowe o zasięgu ogólnoeuropejskim.",
+		"secondPart": "Dzięki innowacyjnym metodom działania, i doskonałej organizacji pracy, przez wiele lat dostarczamy naszym klientom doskonałe produkty, dbając przy tym o najwyższą jakość usług. Jesteśmy przedsiębiorstwem dynamicznym i stale rozwijającym się, dlatego nie stawiamy sobie żadnych ograniczeń, tylko śmiało i pewnie, razem z naszymi klientami podążamy naprzód."
+	  },
+	  "stores": {
+		"title": "Nasze sklepy"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Pozostań w kontakcie",
+		  "locations": [
+			{
+			  "title": "Sklep stacjonarny",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Sklep Internetowy",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuro",
+			  "subTitle": "Hurtownia",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Strona internetowa"
+		  }
+		},
+		"form": {
+		  "title": "Skontaktuj się z nami",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Imię i Nazwisko",
+				"placeholder": "Jan Kowalski"
+			  },
+			  {
+				"label": "Email",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Temat",
+				"placeholder": "Mój temat"
+			  },
+			  {
+				"label": "Treść wiadomości",
+				"placeholder": "Treść..."
+			  }
+			],
+			"button": "Wyślij"
+		  }
+		}
+	  }
+	}
   },
-  "reviews": {
-    "title": "Posłuchaj naszych klientów",
-    "review": [
-      {
-        "desc": "Jestem bardzo zadowolona. Wszytsko odbyło się szybko i sprawnie",
-        "user": "Monika"
-      },
-      {
-        "desc": "Transakcja przebiegła pomyślnie. Towar dostarczony bardzo szybko. Polecam.",
-        "user": "Magda"
-      },
-      {
-        "desc": "Wszystko bez najmniejszych zastrzeżeń. Szybka pomoc przy zakupach i ekspresowa przesyłka.",
-        "user": "Dorota"
-      }
-    ],
-    "desc": {
-      "recommended": "Klientów poleca naszą firmę",
-      "firstPart": "Bierzemy udział w programie Słucham swoich klientów niezależnego serwisu opinii Opineo.pl, dzięki czemu kupujący mają pewność, że czytamy i bierzemy pod uwagę każdą opinię, również krytyczną.",
-      "secondPart": "Nasze sklepy podlegają stałemu monitoringowi jakości usług."
-    }
+  {
+	"language": "en",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Features",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Reviews",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "About us",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Our Stores",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contact",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Buy from the best retailer",
+		"content": [
+		  {
+			"title": "European coverage",
+			"desc": "We sell and ship our products to most countries in Europe.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Fast shipping",
+			"desc": "We ship within 24 hours therefore we can guarantee next day delivery.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Order returns",
+			"desc": "You can return an unused product within 14 days of receipt.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Listen to our customers",
+		"review": [
+		  {
+			"desc": "I am very satisfied. Everything was done quickly and efficiently.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "The transaction went well. Goods delivered very quickly. Highly recommend.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Everything without the slightest reservation. Quick help with purchases and express delivery.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Customers recommend our company",
+		  "firstPart": "We participate in the I Listen to My Customers programme of the independent review site Opineo.pl, so buyers can be assured that we read and take into account every opinion, including critical ones.",
+		  "secondPart": "Our shops are subject to constant monitoring of service quality."
+		}
+	  },
+	  "about": {
+		"title": "About us",
+		"firstPart": "Podlasiak Sp. z o.o. is an international company founded in 1994. Our more than 25 years of experience in trade allows us to provide our customers with original and high quality products, taking care of the highest quality of our services. We specialise in trade in many business sectors. We own brands such as Rea, Tutumi, Toolight and Bluegarden. We were one of the first to create pan-European online shops.",
+		"secondPart": "Thanks to our innovative methods of operation, and excellent work organisation, we have been providing our customers with excellent products for many years, while ensuring the highest quality of service. We are a dynamic and constantly growing company, which is why we do not set any limits for ourselves, but move forward boldly and confidently, together with our customers."
+	  },
+	  "stores": {
+		"title": "Our shops"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Stay in touch",
+		  "locations": [
+			{
+			  "title": "Stationary shop",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online Shop",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Office",
+			  "subTitle": "Wholesale",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Phone",
+			"email": "E-Mail",
+			"website": "Website"
+		  }
+		},
+		"form": {
+		  "title": "Contact us",
+		  "layout": {
+			"content": [
+			  {
+				"label": "First and last name",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Subject",
+				"placeholder": "My subject"
+			  },
+			  {
+				"label": "Message",
+				"placeholder": "Content..."
+			  }
+			],
+			"button": "Send"
+		  }
+		}
+	  }
+	}
   },
-  "about": {
-    "title": "O nas",
-    "firstPart": "Podlasiak Sp. z o.o. to międzynarodowa firma założona w 1994 roku. Nasze ponad 25 letnie doświadczenie w handlu pozwala dostarczać naszym klientom produkty oryginalne oraz wysokogatunkowe, dbając przy tym o najwyższą jakość świadczonych usług. Specjalizujemy się handlem w wielu sektorach biznesu. Jesteśmy właścicielem takich marek jak Rea, Tutumi, Toolight i Bluegarden. Jako jedni z pierwszych stworzyliśmy sklepy internetowe o zasięgu ogólnoeuropejskim.",
-    "secondPart": "Dzięki innowacyjnym metodom działania, i doskonałej organizacji pracy, przez wiele lat dostarczamy naszym klientom doskonałe produkty, dbając przy tym o najwyższą jakość usług. Jesteśmy przedsiębiorstwem dynamicznym i stale rozwijającym się, dlatego nie stawiamy sobie żadnych ograniczeń, tylko śmiało i pewnie, razem z naszymi klientami podążamy naprzód."
+  {
+	"language": "de",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Merkmale",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Bewertungen",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Über uns",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Unsere Geschäfte",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kaufen Sie beim besten Händler",
+		"content": [
+		  {
+			"title": "Europäische Abdeckung",
+			"desc": "Wir verkaufen und versenden unsere Produkte in die meisten Länder Europas.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Szybka wysyłka",
+			"desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Zwroty zamówień",
+			"desc": "Sie können ein unbenutztes Produkt innerhalb von 14 Tagen nach Erhalt zurückgeben.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Wir hören auf unsere Kunden",
+		"review": [
+		  {
+			"desc": "Ich bin sehr zufrieden. Alles wurde schnell und effizient erledigt.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Die Transaktion lief gut. Ware wurde sehr schnell geliefert. Sehr zu empfehlen.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Alles ohne den geringsten Vorbehalt. Schnelle Hilfe beim Kauf und Expresslieferung.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kunden empfehlen unser Unternehmen",
+		  "firstPart": "Wir nehmen am Programm I Listen to My Customers der unabhängigen Bewertungsseite Opineo.pl teil, so dass Käufer sicher sein können, dass wir jede Meinung, auch die kritischen, lesen und berücksichtigen.",
+		  "secondPart": "Unsere Shops unterliegen einer ständigen Überwachung der Servicequalität."
+		}
+	  },
+	  "about": {
+		"title": "Über uns",
+		"firstPart": "Podlasiak Sp. z o.o. ist ein internationales Unternehmen, das im Jahr 1994 gegründet wurde. Unsere mehr als 25-jährige Erfahrung im Handel ermöglicht es uns, unseren Kunden originelle und qualitativ hochwertige Produkte zu liefern, wobei wir auf die höchste Qualität unserer Dienstleistungen achten. Wir haben uns auf den Handel in vielen Geschäftsbereichen spezialisiert. Wir besitzen Marken wie Rea, Tutumi, Toolight und Bluegarden. Wir waren einer der ersten, die europaweite Online-Shops eingerichtet haben.",
+		"secondPart": "Dank unserer innovativen Arbeitsweise und unserer ausgezeichneten Arbeitsorganisation bieten wir unseren Kunden seit vielen Jahren hervorragende Produkte und gewährleisten gleichzeitig höchste Servicequalität. Wir sind ein dynamisches und ständig wachsendes Unternehmen, deshalb setzen wir uns keine Grenzen, sondern gehen mutig und zuversichtlich gemeinsam mit unseren Kunden voran."
+	  },
+	  "stores": {
+		"title": "Unsere Geschäfte"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "In Kontakt bleiben",
+		  "locations": [
+			{
+			  "title": "Schreibwarengeschäft",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online Shop",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuro",
+			  "subTitle": "Hurtownia",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Website"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktieren Sie uns",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Vor- und Nachname",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Email",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Betreff",
+				"placeholder": "Mój temat"
+			  },
+			  {
+				"label": "Nachricht",
+				"placeholder": "Inhalt..."
+			  }
+			],
+			"button": "Senden"
+		  }
+		}
+	  }
+	}
   },
-  "stores": {
-    "title": "Nasze sklepy"
+  {
+	"language": "ru",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Домашняя страница",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Особенности",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Отзывы",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "О нас",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Наши магазины",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Связаться",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Покупайте у лучшего продавца",
+		"content": [
+		  {
+			"title": "Европейское покрытие",
+			"desc": "Мы продаем и отправляем нашу продукцию в большинство стран Европы.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "быстрая доставка",
+			"desc": "Мы осуществляем доставку в течение 24 часов, поэтому можем гарантировать доставку на следующий день.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Возврат заказов",
+			"desc": "Вы можете вернуть неиспользованный товар в течение 14 дней с момента получения.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Прислушивайтесь к мнению наших клиентов",
+		"review": [
+		  {
+			"desc": "Я очень доволен. Все было сделано быстро и качественно",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Сделка прошла хорошо. Товар доставлен очень быстро. Очень рекомендую.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Все без малейших оговорок. Быстрая помощь с покупками и экспресс-доставка.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Клиенты рекомендуют нашу компанию",
+		  "firstPart": "Мы участвуем в программе Я слушаю своих клиентов независимого сайта отзывов Opineo.pl, поэтому покупатели могут быть уверены, что мы читаем и учитываем каждое мнение, в том числе критическое.",
+		  "secondPart": "Наши магазины подвергаются постоянному мониторингу качества обслуживания"
+		}
+	  },
+	  "about": {
+		"title": "О нас",
+		"firstPart": "Podlasiak Sp. z o.o. является международной компанией, основанной в 1994 году. Наш более чем 25-летний опыт работы в торговле позволяет нам предоставлять нашим клиентам оригинальную и высококачественную продукцию, заботясь о высочайшем качестве наших услуг. Мы специализируемся на торговле во многих отраслях бизнеса. Нам принадлежат такие бренды, как Rea, Tutumi, Toolight и Bluegarden. Мы одними из первых создали общеевропейские интернет-магазины.",
+		"secondPart": "Благодаря нашим инновационным методам работы и отличной организации труда мы уже много лет обеспечиваем наших клиентов отличной продукцией, гарантируя при этом высочайшее качество обслуживания. Мы - динамичная и постоянно растущая компания, поэтому мы не ставим для себя никаких ограничений, а смело и уверенно движемся вперед вместе с нашими клиентами."
+	  },
+	  "stores": {
+		"title": "Наши магазины"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Оставайтесь на связи",
+		  "locations": [
+			{
+			  "title": "Магазин канцелярских товаров",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Интернет-магазин",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Office",
+			  "subTitle": "Оптовая торговля",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Телефон",
+			"email": "Электронная почта",
+			"website": "Сайт"
+		  }
+		},
+		"form": {
+		  "title": "Свяжитесь с нами",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Имя и фамилия",
+				"placeholder": "Jan Kowalski"
+			  },
+			  {
+				"label": "Электронная почта",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Тема",
+				"placeholder": "Моя тема"
+			  },
+			  {
+				"label": "Содержание сообщения",
+				"placeholder": "Содержание..."
+			  }
+			],
+			"button": "Отправить"
+		  }
+		}
+	  }
+	}
   },
-  "contact": {
-    "details": {
-      "title": "Pozostań w kontakcie",
-      "locations": [
-        {
-          "title": "Sklep stacjonarny",
-          "subTitle": "CH Fasty",
-          "email": "salonlazienekrea@wp.pl",
-          "phone": "+48856621976"
-        },
-        {
-          "title": "Sklep Internetowy",
-          "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
-          "email": "biuro.rea@podlasiak.com.pl",
-          "phone": "+48857337777"
-        },
-        {
-          "title": "Biuro",
-          "subTitle": "Hurtownia",
-          "email": "salonlazienekrea@wp.pl",
-          "website": "https://www.reahurt.pl/"
-        }
-      ],
-      "labels": {
-        "phone": "Telefon",
-        "email": "E-Mail",
-        "website": "Strona internetowa"
-      }
-    },
-    "form": {
-      "title": "Skontaktuj się z nami",
-      "layout": {
-        "content": [
-          {
-            "label": "Imię i Nazwisko",
-            "placeholder": "Jan Kowalski"
-          },
-          {
-            "label": "Email",
-            "placeholder": "jankowalski@email.com"
-          },
-          {
-            "label": "Temat",
-            "placeholder": "Mój temat"
-          },
-          {
-            "label": "Treść wiadomości",
-            "placeholder": "Treść..."
-          }
-        ],
-        "button": "Wyślij"
-      }
-    }
+  {
+	"language": "it",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Caratteristiche",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recensioni",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Chi siamo",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "I nostri negozi",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contatto",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Acquista dal miglior rivenditore",
+		"content": [
+		  {
+			"title": "Copertura europea",
+			"desc": "Vendiamo e spediamo i nostri prodotti nella maggior parte dei paesi europei.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Spedizione veloce",
+			"desc": "Spediamo entro 24 ore quindi possiamo garantire la consegna il giorno successivo.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Ordine ritorna",
+			"desc": "È possibile restituire un prodotto non utilizzato entro 14 giorni dal ricevimento.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Ascoltiamo i nostri clienti",
+		"review": [
+		  {
+			"desc": "Sono molto soddisfatto. Tutto è stato fatto in modo rapido ed efficiente",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "La transazione è andata bene. Merce consegnata molto velocemente. Altamente raccomandato.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Tutto senza la minima riserva. Aiuto rapido per gli acquisti e consegna rapida.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "I clienti raccomandano la nostra azienda",
+		  "firstPart": "Partecipiamo al programma I Listen to My Customers del sito di recensioni indipendenti Opineo.pl, quindi gli acquirenti possono essere certi che leggiamo e prendiamo in considerazione ogni opinione, comprese quelle critiche.",
+		  "secondPart": "I nostri negozi sono soggetti a un costante monitoraggio della qualità del servizio."
+		}
+	  },
+	  "about": {
+		"title": "O nas",
+		"firstPart": "Podlasiak Sp. z o.o. to międzynarodowa firma założona w 1994 roku. Nasze ponad 25 letnie doświadczenie w handlu pozwala dostarczać naszym klientom produkty oryginalne oraz wysokogatunkowe, dbając przy tym o najwyższą jakość świadczonych usług. Specjalizujemy się handlem w wielu sektorach biznesu. Jesteśmy właścicielem takich marek jak Rea, Tutumi, Toolight i Bluegarden. Jako jedni z pierwszych stworzyliśmy sklepy internetowe o zasięgu ogólnoeuropejskim.",
+		"secondPart": "Dzięki innowacyjnym metodom działania, i doskonałej organizacji pracy, przez wiele lat dostarczamy naszym klientom doskonałe produkty, dbając przy tym o najwyższą jakość usług. Jesteśmy przedsiębiorstwem dynamicznym i stale rozwijającym się, dlatego nie stawiamy sobie żadnych ograniczeń, tylko śmiało i pewnie, razem z naszymi klientami podążamy naprzód."
+	  },
+	  "stores": {
+		"title": "Nasze sklepy"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Pozostań w kontakcie",
+		  "locations": [
+			{
+			  "title": "Sklep stacjonarny",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Sklep Internetowy",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuro",
+			  "subTitle": "Hurtownia",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Strona internetowa"
+		  }
+		},
+		"form": {
+		  "title": "Skontaktuj się z nami",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Imię i Nazwisko",
+				"placeholder": "Jan Kowalski"
+			  },
+			  {
+				"label": "Email",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Temat",
+				"placeholder": "Mój temat"
+			  },
+			  {
+				"label": "Treść wiadomości",
+				"placeholder": "Treść..."
+			  }
+			],
+			"button": "Wyślij"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "fr",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Page d'accueil",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Caractéristiques",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Critiques",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "A propos de nous",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Nos magasins",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contact",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Achetez chez le meilleur détaillant",
+		"content": [
+		  {
+			"title": "Couverture européenne",
+			"desc": "Nous vendons et expédions nos produits dans la plupart des pays d'Europe.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Expédition rapide",
+			"desc": "Nous expédions dans les 24 heures et pouvons donc garantir une livraison le lendemain.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Retours de commande",
+			"desc": "Vous pouvez retourner un produit non utilisé dans les 14 jours suivant sa réception.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Écouter nos clients",
+		"review": [
+		  {
+			"desc": "Je suis très satisfait. Tout a été fait rapidement et efficacement.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "La transaction s'est bien déroulée. Les marchandises ont été livrées très rapidement. Je recommande vivement.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Tout sans la moindre réserve. Aide rapide pour les achats et livraison express.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Les clients recommandent notre entreprise",
+		  "firstPart": "Nous participons au programme J'écoute mes clients du site d'évaluation indépendant Opineo.pl, de sorte que les acheteurs peuvent être assurés que nous lisons et prenons en compte chaque opinion, y compris les critiques",
+		  "secondPart": "Nos magasins sont soumis à un contrôle constant de la qualité du service."
+		}
+	  },
+	  "about": {
+		"title": "A propos de nous",
+		"firstPart": "Podlasiak Sp. z o.o. est une société internationale fondée en 1994. Notre expérience de plus de 25 ans dans le commerce nous permet de fournir à nos clients des produits originaux et de haute qualité, en veillant à la plus haute qualité de nos services. Nous sommes spécialisés dans le commerce dans de nombreux secteurs d'activité. Nous possédons des marques telles que Rea, Tutumi, Toolight et Bluegarden. Nous avons été l'un des premiers à créer des boutiques en ligne paneuropéennes.",
+		"secondPart": "Grâce à nos méthodes de travail innovantes et à une excellente organisation du travail, nous fournissons à nos clients d'excellents produits depuis de nombreuses années, tout en leur assurant un service de la plus haute qualité. Nous sommes une entreprise dynamique et en croissance constante, c'est pourquoi nous ne nous fixons aucune limite, mais avançons avec audace et confiance, avec nos clients."
+	  },
+	  "stores": {
+		"title": "Nos magasins"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Restez en contact",
+		  "locations": [
+			{
+			  "title": "Papeterie",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Boutique en ligne",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Bureau",
+			  "subTitle": "Vente en gros",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Téléphone",
+			"email": "Courriel",
+			"website": "Site web"
+		  }
+		},
+		"form": {
+		  "title": "Nous contacter",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Nom et prénom",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Courriel",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Sujet",
+				"placeholder": "Mon sujet"
+			  },
+			  {
+				"label": "Message",
+				"placeholder": "Contenu..."
+			  }
+			],
+			"button": "Envoyer"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "cz",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Domovská stránka",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Vlastnosti",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenze",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nás",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše prodejny",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Nakupujte u nejlepšího prodejce",
+		"content": [
+		  {
+			"title": "Evropské pokrytí",
+			"desc": "Naše výrobky prodáváme a zasíláme do většiny zemí Evropy.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Rychlé dodání",
+			"desc": "Zboží odesíláme do 24 hodin, proto můžeme zaručit doručení do druhého dne.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Vrácení objednávky",
+			"desc": "Nepoužitý výrobek můžete vrátit do 14 dnů od jeho obdržení.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Naslouchejte našim zákazníkům",
+		"review": [
+		  {
+			"desc": "Jsem velmi spokojen. Vše proběhlo rychle a efektivně.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakce proběhla v pořádku. Zboží bylo dodáno velmi rychle. Vřele doporučuji.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Vše bez sebemenších výhrad. Rychlá pomoc při nákupu a expresní dodání.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Zákazníci doporučují naši společnost",
+		  "firstPart": "Účastníme se programu Naslouchám svým zákazníkům nezávislého recenzního webu Opineo.pl, takže si kupující mohou být jisti, že čteme a bereme v úvahu každý názor, včetně kritických.",
+		  "secondPart": "Naše prodejny podléhají neustálé kontrole kvality služeb."
+		}
+	  },
+	  "about": {
+		"title": "O nás",
+		"firstPart": "Podlasiak Sp. z o.o. je mezinárodní společnost založená v roce 1994. Naše více než 25leté zkušenosti v oblasti obchodu nám umožňují poskytovat našim zákazníkům originální a vysoce kvalitní výrobky a dbát na nejvyšší kvalitu našich služeb. Specializujeme se na obchod v mnoha obchodních odvětvích. Vlastníme značky jako Rea, Tutumi, Toolight a Bluegarden. Jako jedni z prvních jsme vytvořili celoevropské internetové obchody.",
+		"secondPart": "Díky inovativním metodám práce a vynikající organizaci práce poskytujeme našim zákazníkům již mnoho let vynikající výrobky a zároveň zajišťujeme nejvyšší kvalitu služeb. Jsme dynamická a neustále se rozvíjející společnost, a proto si neklademe žádné hranice, ale jdeme směle a sebevědomě vpřed společně s našimi zákazníky."
+	  },
+	  "stores": {
+		"title": "Naše obchody"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Zůstaňte v kontaktu",
+		  "locations": [
+			{
+			  "title": "Stacionární prodejna",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online obchod",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Kancelář",
+			  "subTitle": "Velkoobchod",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Webové stránky"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktujte nás",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Jméno a příjmení",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Předmět",
+				"placeholder": "Můj předmět"
+			  },
+			  {
+				"label": "Zpráva",
+				"placeholder": "Obsah..."
+			  }
+			],
+			"button": "Odeslat"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "sk",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Úvodná stránka",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Vlastnosti",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenzie",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nás",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše predajne",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Nakupujte u najlepšieho predajcu",
+		"content": [
+		  {
+			"title": "Európske pokrytie",
+			"desc": "Naše výrobky predávame a zasielame do väčšiny krajín Európy.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Rýchle dodanie",
+			"desc": "Dodávame do 24 hodín, preto môžeme zaručiť doručenie nasledujúci deň.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Vrátenie objednávky",
+			"desc": "Nepoužitý výrobok môžete vrátiť do 14 dní od jeho prevzatia.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Počúvajte našich zákazníkov",
+		"review": [
+		  {
+			"desc": "Som veľmi spokojný. Všetko bolo vykonané rýchlo a efektívne.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakcia prebehla v poriadku. Tovar dodaný veľmi rýchlo. Vrelo odporúčam.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Všetko bez najmenších výhrad. Rýchla pomoc pri nákupe a expresné dodanie.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Zákazníci odporúčajú našu spoločnosť",
+		  "firstPart": "Sme zapojení do programu I Listen to My Customers (Počúvam svojich zákazníkov) nezávislého portálu Opineo.pl, takže kupujúci si môžu byť istí, že čítame a berieme do úvahy každý názor, vrátane kritických.",
+		  "secondPart": "Naše predajne podliehajú neustálemu monitorovaniu kvality služieb."
+		}
+	  },
+	  "about": {
+		"title": "O nás",
+		"firstPart": "Podlasiak Sp. z o.o. je medzinárodná spoločnosť založená v roku 1994. Naše viac ako 25-ročné skúsenosti v oblasti obchodu nám umožňujú poskytovať našim zákazníkom originálne a kvalitné výrobky, pričom dbáme na najvyššiu kvalitu našich služieb. Špecializujeme sa na obchod v mnohých obchodných odvetviach. Vlastníme značky ako Rea, Tutumi, Toolight a Bluegarden. Ako jedni z prvých sme vytvorili celoeurópske internetové obchody.",
+		"secondPart": "Vďaka inovatívnym metódam práce a vynikajúcej organizácii práce poskytujeme našim zákazníkom už mnoho rokov vynikajúce výrobky a zároveň zabezpečujeme najvyššiu kvalitu služieb. Sme dynamická a neustále sa rozvíjajúca spoločnosť, preto si nekladieme žiadne hranice, ale spoločne s našimi zákazníkmi ideme odvážne a sebavedomo vpred."
+	  },
+	  "stores": {
+		"title": "Naše obchody"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Zostaňte v kontakte",
+		  "locations": [
+			{
+			  "title": "Stacionárny obchod",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online obchod",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Kancelária",
+			  "subTitle": "Veľkoobchod",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefón",
+			"email": "E-Mail",
+			"website": "Webová lokalita"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktujte nás",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Meno a priezvisko",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Predmet",
+				"placeholder": "Môj predmet"
+			  },
+			  {
+				"label": "Správa",
+				"placeholder": "Obsah..."
+			  }
+			],
+			"button": "Odoslať"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "ro",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Pagina de start",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Caracteristici",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenzii",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Despre noi",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Magazinele noastre",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contactați",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Cumpărați de la cel mai bun comerciant cu amănuntul",
+		"content": [
+		  {
+			"title": "Acoperire europeană",
+			"desc": "Vindem și livrăm produsele noastre în majoritatea țărilor din Europa.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Livrare rapidă",
+			"desc": "Livrăm în termen de 24 de ore, prin urmare, putem garanta livrarea în ziua următoare.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Returnări de comenzi",
+			"desc": "Puteți returna un produs nefolosit în termen de 14 zile de la primire.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Să ne ascultăm clienții",
+		"review": [
+		  {
+			"desc": "Sunt foarte mulțumit. Totul a fost făcut rapid și eficient.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Tranzacția a decurs bine. Bunurile au fost livrate foarte repede. Foarte recomandat.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Totul fără nici cea mai mică rezervă. Ajutor rapid cu achiziții și livrare expresă.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Clienții recomandă compania noastră",
+		  "firstPart": "Participăm la programul I Listen to My Customers al site-ului independent de recenzii Opineo.pl, astfel încât cumpărătorii pot fi siguri că citim și luăm în considerare fiecare opinie, inclusiv cele critice.",
+		  "secondPart": "Magazinele noastre sunt supuse unei monitorizări constante a calității serviciilor."
+		}
+	  },
+	  "about": {
+		"title": "Despre noi",
+		"firstPart": "Podlasiak Sp. z o.o. este o companie internațională fondată în 1994. Experiența noastră de peste 25 de ani în comerț ne permite să oferim clienților noștri produse originale și de înaltă calitate, având grijă de cea mai înaltă calitate a serviciilor noastre. Suntem specializați în comerț în multe sectoare de activitate. Deținem mărci precum Rea, Tutumi, Toolight și Bluegarden. Am fost printre primii care au creat magazine online pan-europene.",
+		"secondPart": "Datorită metodelor noastre inovatoare de operare și a organizării excelente a muncii, oferim clienților noștri produse excelente de mulți ani, asigurând în același timp cea mai înaltă calitate a serviciilor. Suntem o companie dinamică și în continuă creștere, motiv pentru care nu ne stabilim nicio limită, ci mergem înainte cu îndrăzneală și încredere, împreună cu clienții noștri."
+	  },
+	  "stores": {
+		"title": "Magazinele noastre"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Rămâneți în contact",
+		  "locations": [
+			{
+			  "title": "Magazin de papetărie",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Magazin online",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Birou",
+			  "subTitle": "Cu ridicata",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Site web"
+		  }
+		},
+		"form": {
+		  "title": "Contactați-ne",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Nume și prenume",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Subiect",
+				"placeholder": "Subiectul meu"
+			  },
+			  {
+				"label": "Mesaj",
+				"placeholder": "Conținutul..."
+			  }
+			],
+			"button": "Trimiteți"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "hu",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Honlap",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Jellemzők",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Vélemények",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Rólunk",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Üzleteink",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kapcsolat",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Vásároljon a legjobb kiskereskedőtől",
+		"content": [
+		  {
+			"title": "Európai lefedettség",
+			"desc": "Termékeinket Európa legtöbb országába értékesítjük és szállítjuk.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Gyors szállítás",
+			"desc": "24 órán belül szállítunk, ezért garantálni tudjuk a másnapi kiszállítást.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Visszatérő rendelések",
+			"desc": "A nem használt terméket a kézhezvételtől számított 14 napon belül visszaküldheti.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Hallgassuk meg ügyfeleinket",
+		"review": [
+		  {
+			"desc": "Nagyon elégedett vagyok. Minden gyorsan és hatékonyan történt.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "A tranzakció jól ment. Az árut nagyon gyorsan szállították. Nagyon ajánlom.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Mindent a legkisebb fenntartás nélkül. Gyors segítség a vásárlásoknál és expressz szállítás.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Ügyfeleink ajánlják cégünket",
+		  "firstPart": "Részt veszünk az Opineo.pl független véleményező oldal I Listen to My Customers programjában, így a vásárlók biztosak lehetnek abban, hogy minden véleményt elolvasunk és figyelembe veszünk, beleértve a kritikus véleményeket is.",
+		  "secondPart": "Üzleteink a szolgáltatás minőségének folyamatos ellenőrzése alatt állnak."
+		}
+	  },
+	  "about": {
+		"title": "About us",
+		"firstPart": "A Podlasiak Sp. z o.o. egy 1994-ben alapított nemzetközi vállalat. A kereskedelemben szerzett több mint 25 éves tapasztalatunk lehetővé teszi számunkra, hogy ügyfeleinknek eredeti és kiváló minőségű termékeket nyújtsunk, ügyelve szolgáltatásaink legmagasabb színvonalára. Számos üzleti ágazatban szakosodtunk a kereskedelemre. Olyan márkák tulajdonosa vagyunk, mint a Rea, Tutumi, Toolight és Bluegarden. Az elsők között voltunk, akik páneurópai online áruházakat hoztak létre.",
+		"secondPart": "Innovatív működési módszereinknek és kiváló munkaszervezésünknek köszönhetően évek óta kiváló termékeket biztosítunk ügyfeleinknek, miközben a legmagasabb színvonalú szolgáltatást nyújtjuk. Dinamikus és folyamatosan fejlődő vállalat vagyunk, ezért nem szabunk magunknak határokat, hanem bátran és magabiztosan haladunk előre, ügyfeleinkkel együtt."
+	  },
+	  "stores": {
+		"title": "Üzleteink"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Maradjon kapcsolatban",
+		  "locations": [
+			{
+			  "title": "Papírbolt",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online bolt",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Iroda",
+			  "subTitle": "Nagykereskedelem",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Honlap"
+		  }
+		},
+		"form": {
+		  "title": "Kapcsolatfelvétel",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Kereszt- és vezetéknév",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Tárgy",
+				"placeholder": "Az én témám"
+			  },
+			  {
+				"label": "Üzenet",
+				"placeholder": "Tartalom..."
+			  }
+			],
+			"button": "Küldje el a"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "bg",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Начална страница",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Характеристики",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Отзиви",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "За нас",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Нашите магазини",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Свържете се с",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Купете от най-добрия търговец на дребно",
+		"content": [
+		  {
+			"title": "Европейско покритие",
+			"desc": "Продаваме и изпращаме нашите продукти в повечето страни в Европа.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Бърза доставка",
+			"desc": "Изпращаме в рамките на 24 часа, затова можем да гарантираме доставка на следващия ден.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Връщане на поръчки",
+			"desc": "Можете да върнете неизползван продукт в рамките на 14 дни от получаването му.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Слушайте нашите клиенти",
+		"review": [
+		  {
+			"desc": "Много съм доволен. Всичко беше направено бързо и ефективно.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Сделката премина успешно. Стоките бяха доставени много бързо. Силно препоръчвам.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Всичко без ни най-малка забележка. Бърза помощ при покупките и експресна доставка.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Клиентите препоръчват нашата компания",
+		  "firstPart": "Участваме в програмата Слушам клиентите си на независимия сайт за ревюта Opineo.pl, така че купувачите могат да бъдат сигурни, че четем и вземаме под внимание всяко мнение, включително и критичното.",
+		  "secondPart": "Нашите магазини са обект на постоянен мониторинг на качеството на услугите."
+		}
+	  },
+	  "about": {
+		"title": "За нас",
+		"firstPart": "Podlasiak Sp. z o.o. е международна компания, основана през 1994 г. Нашият повече от 25-годишен опит в търговията ни позволява да предоставяме на клиентите си оригинални и висококачествени продукти, като се грижим за най-високото качество на нашите услуги. Специализирани сме в търговията в много бизнес сектори. Притежаваме марки като Rea, Tutumi, Toolight и Bluegarden. Ние бяхме едни от първите, които създадоха паневропейски онлайн магазини.",
+		"secondPart": "Благодарение на иновативните ни методи на работа и отличната организация на работа от много години предоставяме на клиентите си отлични продукти, като същевременно гарантираме най-високо качество на обслужване. Ние сме динамична и постоянно развиваща се компания, поради което не си поставяме граници, а вървим напред смело и уверено, заедно с нашите клиенти."
+	  },
+	  "stores": {
+		"title": "Нашите магазини"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Останете във връзка",
+		  "locations": [
+			{
+			  "title": "Канцеларски магазин",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Онлайн магазин",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Офис",
+			  "subTitle": "Търговия на едро",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Телефон",
+			"email": "Електронна поща",
+			"website": "Уебсайт"
+		  }
+		},
+		"form": {
+		  "title": "Свържете се с нас",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Име и фамилия",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Електронна поща",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Тема",
+				"placeholder": "Моята тема"
+			  },
+			  {
+				"label": "Съобщение",
+				"placeholder": "Съдържание..."
+			  }
+			],
+			"button": "Изпрати"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "lt",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Pradžia",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Savybės",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Apžvalgos",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Apie mus",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Mūsų parduotuvės",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Susisiekite su",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Pirkite iš geriausio mažmenininko",
+		"content": [
+		  {
+			"title": "Europos aprėptis",
+			"desc": "Savo gaminius parduodame ir siunčiame į daugelį Europos šalių.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Fast shipping",
+			"desc": "Siunčiame per 24 valandas, todėl galime garantuoti pristatymą kitą dieną.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Užsakymų grąžinimai",
+			"desc": "Nepanaudotą gaminį galite grąžinti per 14 dienų nuo jo gavimo.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Įsiklausykite į mūsų klientus",
+		"review": [
+		  {
+			"desc": "Esu labai patenkintas. Viskas buvo atlikta greitai ir efektyviai.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Sandoris pavyko gerai. Prekės pristatytos labai greitai. Labai rekomenduoju.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Viskas be menkiausių išlygų. Greita pagalba perkant ir skubus pristatymas.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Klientai rekomenduoja mūsų įmonę",
+		  "firstPart": "Dalyvaujame nepriklausomos apžvalgų svetainės Opineo.pl programoje Klausau savo klientų, todėl pirkėjai gali būti tikri, kad skaitome kiekvieną nuomonę, įskaitant kritinę, ir į ją atsižvelgiame.",
+		  "secondPart": "Mūsų parduotuvėse nuolat stebima paslaugų kokybė."
+		}
+	  },
+	  "about": {
+		"title": "Apie mus",
+		"firstPart": "Podlasiak Sp. z o.o. yra tarptautinė įmonė, įkurta 1994 m. Daugiau nei 25 metų patirtis prekyboje leidžia mums tiekti klientams originalius ir aukštos kokybės gaminius, rūpinantis aukščiausia paslaugų kokybe. Specializuojamės prekybos srityje daugelyje verslo sektorių. Mums priklauso tokie prekių ženklai kaip Rea, Tutumi, Toolight ir Bluegarden. Buvome vieni pirmųjų, sukūrusių visos Europos internetines parduotuves.",
+		"secondPart": "Dėl novatoriškų darbo metodų ir puikaus darbo organizavimo jau daugelį metų teikiame savo klientams puikius gaminius ir užtikriname aukščiausią aptarnavimo kokybę. Esame dinamiška ir nuolat auganti įmonė, todėl sau nekeliame jokių ribų, o kartu su klientais drąsiai ir užtikrintai žengiame į priekį."
+	  },
+	  "stores": {
+		"title": "Mūsų parduotuvės"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Palaikykite ryšį",
+		  "locations": [
+			{
+			  "title": "Kanceliarinių prekių parduotuvė",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Internetinė parduotuvė",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuras",
+			  "subTitle": "Didmeninė prekyba",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefonas",
+			"email": "El. paštas",
+			"website": "Svetainė"
+		  }
+		},
+		"form": {
+		  "title": "Susisiekite su mumis",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Vardas ir pavardė",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "El. paštas",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Tema",
+				"placeholder": "Mano tema"
+			  },
+			  {
+				"label": "Žinutė",
+				"placeholder": "Turinys..."
+			  }
+			],
+			"button": "Siųsti"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "ua",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Головна сторінка",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Особливості",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Відгуки",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Про нас",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Наші магазини",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Контакти",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Купуйте у кращого продавця",
+		"content": [
+		  {
+			"title": "Європейське покриття",
+			"desc": "Ми продаємо і відправляємо нашу продукцію в більшість країн Європи.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Швидка доставка",
+			"desc": "Ми відправляємо протягом 24 годин, тому можемо гарантувати доставку на наступний день.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Повернення замовлення",
+			"desc": "Ви можете повернути невикористаний товар протягом 14 днів з моменту отримання.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Прислухайтеся до наших клієнтів",
+		"review": [
+		  {
+			"desc": "Я дуже задоволений. Все було зроблено швидко і якісно.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Угода пройшла добре. Товар доставлений дуже швидко. Дуже рекомендую.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Все без найменших застережень. Швидка допомога з покупками та експрес-доставка.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Клієнти рекомендують нашу компанію",
+		  "firstPart": "Ми беремо участь у програмі Я слухаю своїх клієнтів незалежного сайту відгуків Opineo.pl, тому покупці можуть бути впевнені, що ми читаємо і беремо до уваги кожну думку, в тому числі й критичну.",
+		  "secondPart": "У наших магазинах здійснюється постійний моніторинг якості обслуговування."
+		}
+	  },
+	  "about": {
+		"title": "Про нас",
+		"firstPart": "Podlasiak Sp. z o.o. - міжнародна компанія, заснована в 1994 році. Наш більш ніж 25-річний досвід у сфері торгівлі дозволяє нам забезпечувати наших клієнтів оригінальними та високоякісними продуктами, дбаючи про найвищу якість наших послуг. Ми спеціалізуємося на торгівлі в багатьох секторах бізнесу. Ми володіємо такими брендами, як Rea, Tutumi, Toolight і Bluegarden. Ми були одними з перших, хто створив загальноєвропейські інтернет-магазини.",
+		"secondPart": "Завдяки інноваційним методам роботи та відмінній організації праці, ми вже багато років забезпечуємо наших клієнтів відмінною продукцією, гарантуючи при цьому найвищу якість обслуговування. Ми є динамічною компанією, що постійно розвивається, саме тому ми не ставимо для себе ніяких рамок, а сміливо і впевнено рухаємося вперед, разом з нашими клієнтами."
+	  },
+	  "stores": {
+		"title": "Наші магазини"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Залишайтеся на зв'язку",
+		  "locations": [
+			{
+			  "title": "Стаціонарний магазин",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online Shop",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Office",
+			  "subTitle": "Оптова торгівля",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Телефон",
+			"email": "Електронна пошта",
+			"website": "Веб-сайт"
+		  }
+		},
+		"form": {
+		  "title": "Зв'яжіться з нами",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ім'я та прізвище",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Електронна пошта",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Тема",
+				"placeholder": "Моя тема"
+			  },
+			  {
+				"label": "Повідомлення",
+				"placeholder": "Зміст..."
+			  }
+			],
+			"button": "Надіслати"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "es",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Página web",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Características",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Comentarios",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Sobre nosotros",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Nuestras tiendas",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contacte con",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Compre en el mejor distribuidor",
+		"content": [
+		  {
+			"title": "Cobertura europea",
+			"desc": "Vendemos y enviamos nuestros productos a la mayoría de los países de Europa.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Envío rápido",
+			"desc": "Enviamos en 24 horas, por lo que podemos garantizar la entrega al día siguiente.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Devolución de pedidos",
+			"desc": "Puede devolver un producto no utilizado en un plazo de 14 días a partir de su recepción.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Escuchar a nuestros clientes",
+		"review": [
+		  {
+			"desc": "Estoy muy satisfecho. Todo se hizo con rapidez y eficacia.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "La transacción fue bien. La mercancía se entregó muy rápidamente. Muy recomendable.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Todo sin la menor reserva. Ayuda rápida en las compras y entrega exprés.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Los clientes recomiendan nuestra empresa",
+		  "firstPart": "Participamos en el programa Escucho a mis clientes de la web de opiniones independientes Opineo.pl, por lo que los compradores pueden estar seguros de que leemos y tenemos en cuenta todas las opiniones, incluidas las críticas.",
+		  "secondPart": "Nuestras tiendas están sometidas a un control constante de la calidad del servicio."
+		}
+	  },
+	  "about": {
+		"title": "Sobre nosotros",
+		"firstPart": "Podlasiak Sp. z o.o. es una empresa internacional fundada en 1994. Nuestra experiencia de más de 25 años en el comercio nos permite ofrecer a nuestros clientes productos originales y de alta calidad, cuidando la máxima calidad de nuestros servicios. Estamos especializados en el comercio en muchos sectores empresariales. Somos propietarios de marcas como Rea, Tutumi, Toolight y Bluegarden. Fuimos uno de los primeros en crear tiendas online paneuropeas.",
+		"secondPart": "Gracias a nuestros innovadores métodos de funcionamiento, y a una excelente organización del trabajo, llevamos muchos años proporcionando a nuestros clientes excelentes productos, garantizando al mismo tiempo la máxima calidad de servicio. Somos una empresa dinámica y en constante crecimiento, por lo que no nos ponemos límites, sino que avanzamos con audacia y confianza, junto con nuestros clientes."
+	  },
+	  "stores": {
+		"title": "Nuestras tiendas"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Manténgase en contacto",
+		  "locations": [
+			{
+			  "title": "Papelería",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Tienda en línea",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Oficina",
+			  "subTitle": "Venta al por mayor",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Teléfono",
+			"email": "E-Mail",
+			"website": "Página web"
+		  }
+		},
+		"form": {
+		  "title": "Contacto con nosotros",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Nombre y apellidos",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Asunto",
+				"placeholder": "Mi tema"
+			  },
+			  {
+				"label": "Mensaje",
+				"placeholder": "Contenido..."
+			  }
+			],
+			"button": "Send"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "nl",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Kenmerken",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Beoordelingen",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Over ons",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Onze winkels",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contact",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Koop bij de beste verkoper",
+		"content": [
+		  {
+			"title": "Europese dekking",
+			"desc": "Wij verkopen en verzenden onze producten naar de meeste landen in Europa.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Snelle verzending",
+			"desc": "Wij verzenden binnen 24 uur en garanderen daarom levering de volgende dag.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Retourzendingen",
+			"desc": "U kunt een ongebruikt product binnen 14 dagen na ontvangst retourneren.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Luisteren naar onze klanten",
+		"review": [
+		  {
+			"desc": "Ik ben zeer tevreden. Alles werd snel en efficiënt gedaan.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "De transactie verliep goed. Goederen zeer snel geleverd. Zeer aan te bevelen.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Alles zonder het minste voorbehoud. Snelle hulp bij aankopen en snelle levering.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Klanten bevelen ons bedrijf aan",
+		  "firstPart": "Wij nemen deel aan het I Listen to My Customers-programma van de onafhankelijke beoordelingssite Opineo.pl, zodat kopers er zeker van kunnen zijn dat wij elke mening, ook de kritische, lezen en in aanmerking nemen.",
+		  "secondPart": "De kwaliteit van onze winkels wordt voortdurend gecontroleerd."
+		}
+	  },
+	  "about": {
+		"title": "Over ons",
+		"firstPart": "Podlasiak Sp. z o.o. is een internationaal bedrijf opgericht in 1994. Onze meer dan 25 jaar ervaring in de handel stelt ons in staat onze klanten te voorzien van originele en hoogwaardige producten, waarbij wij zorg dragen voor de hoogste kwaliteit van onze diensten. Wij zijn gespecialiseerd in de handel in vele bedrijfssectoren. Wij bezitten merken zoals Rea, Tutumi, Toolight en Bluegarden. Wij waren een van de eersten die pan-Europese online winkels creëerden.",
+		"secondPart": "Dankzij onze innovatieve werkmethoden en een uitstekende werkorganisatie leveren wij onze klanten al vele jaren uitstekende producten en garanderen wij de hoogste kwaliteit van dienstverlening. Wij zijn een dynamisch en voortdurend groeiend bedrijf. Daarom stellen wij voor onszelf geen grenzen, maar gaan wij samen met onze klanten moedig en vol vertrouwen vooruit."
+	  },
+	  "stores": {
+		"title": "Onze winkels"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Blijf in contact",
+		  "locations": [
+			{
+			  "title": "Stationaire winkel",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online winkel",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Bureau",
+			  "subTitle": "Groothandel",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefoon",
+			"email": "E-Mail",
+			"website": "Website"
+		  }
+		},
+		"form": {
+		  "title": "Contacteer ons",
+		  "layout": {
+			"content": [
+			  {
+				"label": "First and last name",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-mail",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Onderwerp",
+				"placeholder": "Mijn onderwerp"
+			  },
+			  {
+				"label": "Bericht",
+				"placeholder": "Inhoud..."
+			  }
+			],
+			"button": "Stuur"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "lv",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Mājas lapa",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Īpašības",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Atsauksmes",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Par mums",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Mūsu veikali",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Sazinieties ar",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Pirkt no labākā mazumtirgotāja",
+		"content": [
+		  {
+			"title": "Eiropas pārklājums",
+			"desc": "Mēs pārdodam un piegādājam savus produktus uz lielāko daļu Eiropas valstu.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Ātra piegāde",
+			"desc": "Mēs piegādājam 24 stundu laikā, tāpēc varam garantēt piegādi nākamajā dienā.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Pasūtījumu atgriešana",
+			"desc": "Neizmantotu produktu varat atgriezt 14 dienu laikā pēc tā saņemšanas.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Uzklausiet mūsu klientus",
+		"review": [
+		  {
+			"desc": "Es esmu ļoti apmierināts. Viss tika paveikts ātri un efektīvi.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Darījums noritēja veiksmīgi. Prece piegādāta ļoti ātri. Ļoti iesaku.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Viss bez mazākās atrunas. Ātra palīdzība ar pirkumiem un ātra piegāde.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Klienti iesaka mūsu uzņēmumu",
+		  "firstPart": "Mēs piedalāmies neatkarīgās atsauksmju vietnes Opineo.pl programmā Es uzklausu savus klientus, tāpēc pircēji var būt droši, ka mēs izlasām un ņemam vērā ikvienu viedokli, tostarp kritisko.",
+		  "secondPart": "Mūsu veikalos tiek pastāvīgi uzraudzīta pakalpojumu kvalitāte."
+		}
+	  },
+	  "about": {
+		"title": "Par mums",
+		"firstPart": "Podlasiak Sp. z o.o. ir starptautisks uzņēmums, kas dibināts 1994. gadā. Mūsu vairāk nekā 25 gadu pieredze tirdzniecībā ļauj mums piedāvāt saviem klientiem oriģinālus un augstas kvalitātes produktus, rūpējoties par visaugstāko pakalpojumu kvalitāti. Mēs specializējamies tirdzniecībā daudzās uzņēmējdarbības nozarēs. Mums pieder tādi zīmoli kā Rea, Tutumi, Toolight un Bluegarden. Mēs bijām vieni no pirmajiem, kas izveidoja Eiropas mēroga interneta veikalus.",
+		"secondPart": "Pateicoties mūsu inovatīvajām darbības metodēm un lieliskajai darba organizācijai, mēs jau daudzus gadus saviem klientiem piedāvājam lieliskus produktus, vienlaikus nodrošinot visaugstāko apkalpošanas kvalitāti. Mēs esam dinamisks un nepārtraukti augošs uzņēmums, tāpēc mēs sev nenosakām nekādus ierobežojumus, bet drosmīgi un pārliecinoši virzāmies uz priekšu kopā ar saviem klientiem."
+	  },
+	  "stores": {
+		"title": "Mūsu veikali"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Sazinieties ar mums",
+		  "locations": [
+			{
+			  "title": "Kancelejas preču veikals",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Tiešsaistes veikals",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Birojs",
+			  "subTitle": "Vairumtirdzniecība",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Tālrunis",
+			"email": "E-pasts",
+			"website": "Tīmekļa vietne"
+		  }
+		},
+		"form": {
+		  "title": "Sazinieties ar mums",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Vārds un uzvārds",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-pasts",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Temats",
+				"placeholder": "Mans temats"
+			  },
+			  {
+				"label": "Ziņa",
+				"placeholder": "Saturs..."
+			  }
+			],
+			"button": "Sūtīt"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "ee",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Koduleht",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Omadused",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Arvustused",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Meie kohta",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Meie kauplused",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Osta parimalt jaemüüjalt",
+		"content": [
+		  {
+			"title": "Euroopa katvus",
+			"desc": "Me müüme ja tarnime oma tooteid enamikku Euroopa riikidest.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Kiire laevandus",
+			"desc": "Me saadame 24 tunni jooksul, seega saame garanteerida tarne järgmisel päeval.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Tellimuse tagastamine",
+			"desc": "Kasutamata toote saate tagastada 14 päeva jooksul pärast selle kättesaamist.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Kuulake meie kliente",
+		"review": [
+		  {
+			"desc": "Olen väga rahul. Kõik tehti kiiresti ja tõhusalt.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Tehing läks hästi. Kaup toimetati kohale väga kiiresti. Väga soovitan.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Kõik ilma vähimagi reservatsioonita. Kiire abi ostude ja kiirkulleriga.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kliendid soovitavad meie ettevõtet",
+		  "firstPart": "Me osaleme sõltumatu hindamissaidi Opineo.pl programmis Ma kuulan oma kliente, nii et ostjad võivad olla kindlad, et me loeme ja võtame arvesse kõiki arvamusi, ka kriitilisi.",
+		  "secondPart": "Meie kauplustes jälgitakse pidevalt teenuse kvaliteeti."
+		}
+	  },
+	  "about": {
+		"title": "Meie kohta",
+		"firstPart": "Podlasiak Sp. z o.o. on 1994. aastal asutatud rahvusvaheline ettevõte. Meie enam kui 25-aastane kaubanduskogemus võimaldab meil pakkuda oma klientidele originaalseid ja kvaliteetseid tooteid, hoolitsedes meie teenuste kõrgeima kvaliteedi eest. Oleme spetsialiseerunud kaubandusele paljudes ärivaldkondades. Meile kuuluvad sellised kaubamärgid nagu Rea, Tutumi, Toolight ja Bluegarden. Olime üks esimesi, kes lõi üleeuroopalisi veebipoode.",
+		"secondPart": "Tänu uuenduslikele töömeetoditele ja suurepärasele töökorraldusele oleme juba aastaid pakkunud oma klientidele suurepäraseid tooteid, tagades samal ajal kõrgeima teeninduskvaliteedi. Oleme dünaamiline ja pidevalt kasvav ettevõte, mistõttu ei sea me endale mingeid piire, vaid liigume julgelt ja enesekindlalt edasi, koos oma klientidega."
+	  },
+	  "stores": {
+		"title": "Meie kauplused"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Hoia ühendust",
+		  "locations": [
+			{
+			  "title": "Statsionaarne kauplus",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Veebipood",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Büroo",
+			  "subTitle": "Hulgimüük",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-post",
+			"website": "Veebileht"
+		  }
+		},
+		"form": {
+		  "title": "Võtke meiega ühendust",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ees- ja perekonnanimi",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-post",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Teema",
+				"placeholder": "Minu teema"
+			  },
+			  {
+				"label": "Sõnum",
+				"placeholder": "Sisu..."
+			  }
+			],
+			"button": "Saada"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "hr",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Početna stranica",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Značajke",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenzije",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nama",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše trgovine",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kupujte kod najboljeg trgovca",
+		"content": [
+		  {
+			"title": "Europska pokrivenost",
+			"desc": "Prodajemo i šaljemo naše proizvode u većinu zemalja u Europi.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Brza dostava",
+			"desc": "Šaljemo unutar 24 sata, stoga možemo jamčiti isporuku sljedeći dan.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Narudžba se vraća",
+			"desc": "Nekorišteni proizvod možete vratiti u roku od 14 dana od primitka.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Slušajte naše klijente",
+		"review": [
+		  {
+			"desc": "Jako sam zadovoljan. Sve je urađeno brzo i učinkovito.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakcija je dobro prošla. Roba isporučena vrlo brzo. Visoko preporučeno.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Sve bez imalo rezerve. Brza pomoć pri kupnji i ekspresna dostava.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kupci preporučuju našu tvrtku",
+		  "firstPart": "Sudjelujemo u programu Slušam svoje klijente neovisne stranice za recenzije Opineo.pl, tako da kupci mogu biti sigurni da čitamo i uzimamo u obzir svako mišljenje, uključujući i kritičko.",
+		  "secondPart": "Naše trgovine podložne su stalnom nadzoru kvalitete usluge."
+		}
+	  },
+	  "about": {
+		"title": "O nama",
+		"firstPart": "Podlasiak Sp. z o.o. je međunarodna tvrtka osnovana 1994. godine. Naše više od 25 godina iskustva u trgovini omogućuje nam da kupcima ponudimo originalne i visokokvalitetne proizvode, vodeći računa o najvišoj kvaliteti naših usluga. Specijalizirani smo za trgovinu u mnogim poslovnim sektorima. Posjedujemo robne marke kao što su Rea, Tutumi, Toolight i Bluegarden. Bili smo jedni od prvih koji su kreirali paneuropske online trgovine.",
+		"secondPart": "Zahvaljujući našim inovativnim metodama rada i izvrsnoj organizaciji rada, svojim kupcima već dugi niz godina pružamo vrhunske proizvode, a pritom osiguravamo najvišu kvalitetu usluge. Dinamična smo tvrtka koja stalno raste, zato si ne postavljamo ograničenja, već hrabro i samouvjereno koračamo naprijed, zajedno sa svojim kupcima."
+	  },
+	  "stores": {
+		"title": "Naše trgovine"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Ostati u kontaktu",
+		  "locations": [
+			{
+			  "title": "Trgovina papirnatom robom",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online trgovina",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Ured",
+			  "subTitle": "Veleprodaja",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-pošta",
+			"website": "Web stranica"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktirajte nas",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ime i prezime",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-pošta",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Predmet",
+				"placeholder": "Moj predmet"
+			  },
+			  {
+				"label": "Poruka",
+				"placeholder": "Sadržaj..."
+			  }
+			],
+			"button": "Poslati"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "me",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Početna stranica",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Značajke",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenzije",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nama",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše trgovine",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kupujte kod najboljeg trgovca",
+		"content": [
+		  {
+			"title": "Europska pokrivenost",
+			"desc": "Prodajemo i šaljemo naše proizvode u većinu zemalja u Europi.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Brza dostava",
+			"desc": "Šaljemo unutar 24 sata, stoga možemo jamčiti isporuku sljedeći dan.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Narudžba se vraća",
+			"desc": "Nekorišteni proizvod možete vratiti u roku od 14 dana od primitka.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Slušajte naše klijente",
+		"review": [
+		  {
+			"desc": "Jako sam zadovoljan. Sve je urađeno brzo i učinkovito.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakcija je dobro prošla. Roba isporučena vrlo brzo. Visoko preporučeno.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Sve bez imalo rezerve. Brza pomoć pri kupnji i ekspresna dostava.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kupci preporučuju našu tvrtku",
+		  "firstPart": "Sudjelujemo u programu Slušam svoje klijente neovisne stranice za recenzije Opineo.pl, tako da kupci mogu biti sigurni da čitamo i uzimamo u obzir svako mišljenje, uključujući i kritičko.",
+		  "secondPart": "Naše trgovine podložne su stalnom nadzoru kvalitete usluge."
+		}
+	  },
+	  "about": {
+		"title": "O nama",
+		"firstPart": "Podlasiak Sp. z o.o. je međunarodna tvrtka osnovana 1994. godine. Naše više od 25 godina iskustva u trgovini omogućuje nam da kupcima ponudimo originalne i visokokvalitetne proizvode, vodeći računa o najvišoj kvaliteti naših usluga. Specijalizirani smo za trgovinu u mnogim poslovnim sektorima. Posjedujemo robne marke kao što su Rea, Tutumi, Toolight i Bluegarden. Bili smo jedni od prvih koji su kreirali paneuropske online trgovine.",
+		"secondPart": "Zahvaljujući našim inovativnim metodama rada i izvrsnoj organizaciji rada, svojim kupcima već dugi niz godina pružamo vrhunske proizvode, a pritom osiguravamo najvišu kvalitetu usluge. Dinamična smo tvrtka koja stalno raste, zato si ne postavljamo ograničenja, već hrabro i samouvjereno koračamo naprijed, zajedno sa svojim kupcima."
+	  },
+	  "stores": {
+		"title": "Naše trgovine"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Ostati u kontaktu",
+		  "locations": [
+			{
+			  "title": "Trgovina papirnatom robom",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online trgovina",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Ured",
+			  "subTitle": "Veleprodaja",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-pošta",
+			"website": "Web stranica"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktirajte nas",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ime i prezime",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-pošta",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Predmet",
+				"placeholder": "Moj predmet"
+			  },
+			  {
+				"label": "Poruka",
+				"placeholder": "Sadržaj..."
+			  }
+			],
+			"button": "Poslati"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "rs",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Početna stranica",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Značajke",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Recenzije",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nama",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše trgovine",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kupujte kod najboljeg trgovca",
+		"content": [
+		  {
+			"title": "Europska pokrivenost",
+			"desc": "Prodajemo i šaljemo naše proizvode u većinu zemalja u Europi.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Brza dostava",
+			"desc": "Šaljemo unutar 24 sata, stoga možemo jamčiti isporuku sljedeći dan.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Narudžba se vraća",
+			"desc": "Nekorišteni proizvod možete vratiti u roku od 14 dana od primitka.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Slušajte naše klijente",
+		"review": [
+		  {
+			"desc": "Jako sam zadovoljan. Sve je urađeno brzo i učinkovito.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Transakcija je dobro prošla. Roba isporučena vrlo brzo. Visoko preporučeno.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Sve bez imalo rezerve. Brza pomoć pri kupnji i ekspresna dostava.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kupci preporučuju našu tvrtku",
+		  "firstPart": "Sudjelujemo u programu Slušam svoje klijente neovisne stranice za recenzije Opineo.pl, tako da kupci mogu biti sigurni da čitamo i uzimamo u obzir svako mišljenje, uključujući i kritičko.",
+		  "secondPart": "Naše trgovine podložne su stalnom nadzoru kvalitete usluge."
+		}
+	  },
+	  "about": {
+		"title": "O nama",
+		"firstPart": "Podlasiak Sp. z o.o. je međunarodna tvrtka osnovana 1994. godine. Naše više od 25 godina iskustva u trgovini omogućuje nam da kupcima ponudimo originalne i visokokvalitetne proizvode, vodeći računa o najvišoj kvaliteti naših usluga. Specijalizirani smo za trgovinu u mnogim poslovnim sektorima. Posjedujemo robne marke kao što su Rea, Tutumi, Toolight i Bluegarden. Bili smo jedni od prvih koji su kreirali paneuropske online trgovine.",
+		"secondPart": "Zahvaljujući našim inovativnim metodama rada i izvrsnoj organizaciji rada, svojim kupcima već dugi niz godina pružamo vrhunske proizvode, a pritom osiguravamo najvišu kvalitetu usluge. Dinamična smo tvrtka koja stalno raste, zato si ne postavljamo ograničenja, već hrabro i samouvjereno koračamo naprijed, zajedno sa svojim kupcima."
+	  },
+	  "stores": {
+		"title": "Naše trgovine"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Ostati u kontaktu",
+		  "locations": [
+			{
+			  "title": "Trgovina papirnatom robom",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online trgovina",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Ured",
+			  "subTitle": "Veleprodaja",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-pošta",
+			"website": "Web stranica"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktirajte nas",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ime i prezime",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-pošta",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Predmet",
+				"placeholder": "Moj predmet"
+			  },
+			  {
+				"label": "Poruka",
+				"placeholder": "Sadržaj..."
+			  }
+			],
+			"button": "Poslati"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "at",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Merkmale",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Bewertungen",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Über uns",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Unsere Geschäfte",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kaufen Sie beim besten Händler",
+		"content": [
+		  {
+			"title": "Europäische Abdeckung",
+			"desc": "Wir verkaufen und versenden unsere Produkte in die meisten Länder Europas.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Szybka wysyłka",
+			"desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Zwroty zamówień",
+			"desc": "Sie können ein unbenutztes Produkt innerhalb von 14 Tagen nach Erhalt zurückgeben.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Wir hören auf unsere Kunden",
+		"review": [
+		  {
+			"desc": "Ich bin sehr zufrieden. Alles wurde schnell und effizient erledigt.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Die Transaktion lief gut. Ware wurde sehr schnell geliefert. Sehr zu empfehlen.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Alles ohne den geringsten Vorbehalt. Schnelle Hilfe beim Kauf und Expresslieferung.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kunden empfehlen unser Unternehmen",
+		  "firstPart": "Wir nehmen am Programm I Listen to My Customers der unabhängigen Bewertungsseite Opineo.pl teil, so dass Käufer sicher sein können, dass wir jede Meinung, auch die kritischen, lesen und berücksichtigen.",
+		  "secondPart": "Unsere Shops unterliegen einer ständigen Überwachung der Servicequalität."
+		}
+	  },
+	  "about": {
+		"title": "Über uns",
+		"firstPart": "Podlasiak Sp. z o.o. ist ein internationales Unternehmen, das im Jahr 1994 gegründet wurde. Unsere mehr als 25-jährige Erfahrung im Handel ermöglicht es uns, unseren Kunden originelle und qualitativ hochwertige Produkte zu liefern, wobei wir auf die höchste Qualität unserer Dienstleistungen achten. Wir haben uns auf den Handel in vielen Geschäftsbereichen spezialisiert. Wir besitzen Marken wie Rea, Tutumi, Toolight und Bluegarden. Wir waren einer der ersten, die europaweite Online-Shops eingerichtet haben.",
+		"secondPart": "Dank unserer innovativen Arbeitsweise und unserer ausgezeichneten Arbeitsorganisation bieten wir unseren Kunden seit vielen Jahren hervorragende Produkte und gewährleisten gleichzeitig höchste Servicequalität. Wir sind ein dynamisches und ständig wachsendes Unternehmen, deshalb setzen wir uns keine Grenzen, sondern gehen mutig und zuversichtlich gemeinsam mit unseren Kunden voran."
+	  },
+	  "stores": {
+		"title": "Unsere Geschäfte"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "In Kontakt bleiben",
+		  "locations": [
+			{
+			  "title": "Schreibwarengeschäft",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online Shop",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuro",
+			  "subTitle": "Hurtownia",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Website"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktieren Sie uns",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Vor- und Nachname",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Email",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Betreff",
+				"placeholder": "Mój temat"
+			  },
+			  {
+				"label": "Nachricht",
+				"placeholder": "Inhalt..."
+			  }
+			],
+			"button": "Senden"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "be",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Page d'accueil",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Caractéristiques",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Critiques",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "A propos de nous",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Nos magasins",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Contact",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Achetez chez le meilleur détaillant",
+		"content": [
+		  {
+			"title": "Couverture européenne",
+			"desc": "Nous vendons et expédions nos produits dans la plupart des pays d'Europe.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Expédition rapide",
+			"desc": "Nous expédions dans les 24 heures et pouvons donc garantir une livraison le lendemain.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Retours de commande",
+			"desc": "Vous pouvez retourner un produit non utilisé dans les 14 jours suivant sa réception.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Écouter nos clients",
+		"review": [
+		  {
+			"desc": "Je suis très satisfait. Tout a été fait rapidement et efficacement.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "La transaction s'est bien déroulée. Les marchandises ont été livrées très rapidement. Je recommande vivement.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Tout sans la moindre réserve. Aide rapide pour les achats et livraison express.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Les clients recommandent notre entreprise",
+		  "firstPart": "Nous participons au programme J'écoute mes clients du site d'évaluation indépendant Opineo.pl, de sorte que les acheteurs peuvent être assurés que nous lisons et prenons en compte chaque opinion, y compris les critiques",
+		  "secondPart": "Nos magasins sont soumis à un contrôle constant de la qualité du service."
+		}
+	  },
+	  "about": {
+		"title": "A propos de nous",
+		"firstPart": "Podlasiak Sp. z o.o. est une société internationale fondée en 1994. Notre expérience de plus de 25 ans dans le commerce nous permet de fournir à nos clients des produits originaux et de haute qualité, en veillant à la plus haute qualité de nos services. Nous sommes spécialisés dans le commerce dans de nombreux secteurs d'activité. Nous possédons des marques telles que Rea, Tutumi, Toolight et Bluegarden. Nous avons été l'un des premiers à créer des boutiques en ligne paneuropéennes.",
+		"secondPart": "Grâce à nos méthodes de travail innovantes et à une excellente organisation du travail, nous fournissons à nos clients d'excellents produits depuis de nombreuses années, tout en leur assurant un service de la plus haute qualité. Nous sommes une entreprise dynamique et en croissance constante, c'est pourquoi nous ne nous fixons aucune limite, mais avançons avec audace et confiance, avec nos clients."
+	  },
+	  "stores": {
+		"title": "Nos magasins"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Restez en contact",
+		  "locations": [
+			{
+			  "title": "Papeterie",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Boutique en ligne",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Bureau",
+			  "subTitle": "Vente en gros",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Téléphone",
+			"email": "Courriel",
+			"website": "Site web"
+		  }
+		},
+		"form": {
+		  "title": "Nous contacter",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Nom et prénom",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Courriel",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Sujet",
+				"placeholder": "Mon sujet"
+			  },
+			  {
+				"label": "Message",
+				"placeholder": "Contenu..."
+			  }
+			],
+			"button": "Envoyer"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "si",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Domača stran",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Značilnosti",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Mnenja",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "O nas",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Naše prodajalne",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Pišite na",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kupite pri najboljšem prodajalcu na drobno",
+		"content": [
+		  {
+			"title": "Evropska pokritost",
+			"desc": "Naše izdelke prodajamo in pošiljamo v večino evropskih držav.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Hitra dostava",
+			"desc": "Pošiljamo v 24 urah, zato lahko zagotovimo dostavo naslednji dan.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Vračila naročil",
+			"desc": "Neuporabljen izdelek lahko vrnete v 14 dneh po prejemu.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Prisluhnite našim strankam",
+		"review": [
+		  {
+			"desc": "Zelo sem zadovoljen. Vse je bilo opravljeno hitro in učinkovito.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Posel je potekal dobro. Blago je bilo dostavljeno zelo hitro. Toplo priporočam.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Vse brez najmanjšega zadržka. Hitra pomoč pri nakupih in hitra dostava.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Stranke priporočajo naše podjetje",
+		  "firstPart": "Sodelujemo v programu I Listen to My Customers neodvisnega spletnega mesta Opineo.pl, zato so kupci lahko prepričani, da preberemo in upoštevamo vsako mnenje, tudi kritično.",
+		  "secondPart": "V naših trgovinah stalno spremljamo kakovost storitev."
+		}
+	  },
+	  "about": {
+		"title": "O nas",
+		"firstPart": "Podlasiak Sp. z o.o. je mednarodno podjetje, ustanovljeno leta 1994. Več kot 25 let izkušenj v trgovini nam omogoča, da svojim strankam zagotavljamo izvirne in visokokakovostne izdelke ter skrbimo za najvišjo kakovost naših storitev. Specializirani smo za trgovino v številnih poslovnih sektorjih. Imamo blagovne znamke, kot so Rea, Tutumi, Toolight in Bluegarden. Bili smo med prvimi, ki smo ustvarili vseevropske spletne trgovine.",
+		"secondPart": "Z inovativnimi metodami delovanja in odlično organizacijo dela svojim strankam že vrsto let zagotavljamo odlične izdelke in najvišjo kakovost storitev. Smo dinamično in nenehno rastoče podjetje, zato si ne postavljamo omejitev, temveč skupaj s strankami pogumno in samozavestno napredujemo."
+	  },
+	  "stores": {
+		"title": "Naše trgovine"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "Ostanite v stiku",
+		  "locations": [
+			{
+			  "title": "Papirnica",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Spletna trgovina",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Urad",
+			  "subTitle": "Trgovina na debelo",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-pošta",
+			"website": "Spletna stran"
+		  }
+		},
+		"form": {
+		  "title": "Pišite nam",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Ime in priimek",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "E-pošta",
+				"placeholder": "johnkowalski@email.com"
+			  },
+			  {
+				"label": "Predmet",
+				"placeholder": "Moja tema"
+			  },
+			  {
+				"label": "Sporočilo",
+				"placeholder": "Vsebina..."
+			  }
+			],
+			"button": "Pošlji"
+		  }
+		}
+	  }
+	}
+  },
+  {
+	"language": "ch",
+	"layout": {
+	  "hero": [
+		{
+		  "name": "Homepage",
+		  "dataIndex": "home"
+		},
+		{
+		  "name": "Merkmale",
+		  "dataIndex": "features"
+		},
+		{
+		  "name": "Bewertungen",
+		  "dataIndex": "reviews"
+		},
+		{
+		  "name": "Über uns",
+		  "dataIndex": "about"
+		},
+		{
+		  "name": "Unsere Geschäfte",
+		  "dataIndex": "stores"
+		},
+		{
+		  "name": "Kontakt",
+		  "dataIndex": "contact"
+		}
+	  ],
+	  "features": {
+		"title": "Kaufen Sie beim besten Händler",
+		"content": [
+		  {
+			"title": "Europäische Abdeckung",
+			"desc": "Wir verkaufen und versenden unsere Produkte in die meisten Länder Europas.",
+			"img": "/images/zasieg.svg"
+		  },
+		  {
+			"title": "Szybka wysyłka",
+			"desc": "Wysyłamy towar w ciągu 24h dlatego możemy zagwarantować dostawę na następny dzień.",
+			"img": "/images/szybka.svg"
+		  },
+		  {
+			"title": "Zwroty zamówień",
+			"desc": "Sie können ein unbenutztes Produkt innerhalb von 14 Tagen nach Erhalt zurückgeben.",
+			"img": "/images/returns.svg"
+		  }
+		]
+	  },
+	  "reviews": {
+		"title": "Wir hören auf unsere Kunden",
+		"review": [
+		  {
+			"desc": "Ich bin sehr zufrieden. Alles wurde schnell und effizient erledigt.",
+			"user": "Monika"
+		  },
+		  {
+			"desc": "Die Transaktion lief gut. Ware wurde sehr schnell geliefert. Sehr zu empfehlen.",
+			"user": "Magda"
+		  },
+		  {
+			"desc": "Alles ohne den geringsten Vorbehalt. Schnelle Hilfe beim Kauf und Expresslieferung.",
+			"user": "Dorota"
+		  }
+		],
+		"desc": {
+		  "recommended": "Kunden empfehlen unser Unternehmen",
+		  "firstPart": "Wir nehmen am Programm I Listen to My Customers der unabhängigen Bewertungsseite Opineo.pl teil, so dass Käufer sicher sein können, dass wir jede Meinung, auch die kritischen, lesen und berücksichtigen.",
+		  "secondPart": "Unsere Shops unterliegen einer ständigen Überwachung der Servicequalität."
+		}
+	  },
+	  "about": {
+		"title": "Über uns",
+		"firstPart": "Podlasiak Sp. z o.o. ist ein internationales Unternehmen, das im Jahr 1994 gegründet wurde. Unsere mehr als 25-jährige Erfahrung im Handel ermöglicht es uns, unseren Kunden originelle und qualitativ hochwertige Produkte zu liefern, wobei wir auf die höchste Qualität unserer Dienstleistungen achten. Wir haben uns auf den Handel in vielen Geschäftsbereichen spezialisiert. Wir besitzen Marken wie Rea, Tutumi, Toolight und Bluegarden. Wir waren einer der ersten, die europaweite Online-Shops eingerichtet haben.",
+		"secondPart": "Dank unserer innovativen Arbeitsweise und unserer ausgezeichneten Arbeitsorganisation bieten wir unseren Kunden seit vielen Jahren hervorragende Produkte und gewährleisten gleichzeitig höchste Servicequalität. Wir sind ein dynamisches und ständig wachsendes Unternehmen, deshalb setzen wir uns keine Grenzen, sondern gehen mutig und zuversichtlich gemeinsam mit unseren Kunden voran."
+	  },
+	  "stores": {
+		"title": "Unsere Geschäfte"
+	  },
+	  "contact": {
+		"details": {
+		  "title": "In Kontakt bleiben",
+		  "locations": [
+			{
+			  "title": "Schreibwarengeschäft",
+			  "subTitle": "CH Fasty",
+			  "email": "salonlazienekrea@wp.pl",
+			  "phone": "+48856621976"
+			},
+			{
+			  "title": "Online Shop",
+			  "subTitle": "Rea, Tutumi, Toolight, Bluegarden",
+			  "email": "biuro.rea@podlasiak.com.pl",
+			  "phone": "+48857337777"
+			},
+			{
+			  "title": "Biuro",
+			  "subTitle": "Hurtownia",
+			  "email": "salonlazienekrea@wp.pl",
+			  "website": "https://www.reahurt.pl/"
+			}
+		  ],
+		  "labels": {
+			"phone": "Telefon",
+			"email": "E-Mail",
+			"website": "Website"
+		  }
+		},
+		"form": {
+		  "title": "Kontaktieren Sie uns",
+		  "layout": {
+			"content": [
+			  {
+				"label": "Vor- und Nachname",
+				"placeholder": "John Kowalski"
+			  },
+			  {
+				"label": "Email",
+				"placeholder": "jankowalski@email.com"
+			  },
+			  {
+				"label": "Betreff",
+				"placeholder": "Mój temat"
+			  },
+			  {
+				"label": "Nachricht",
+				"placeholder": "Inhalt..."
+			  }
+			],
+			"button": "Senden"
+		  }
+		}
+	  }
+	}
   }
-}
+]

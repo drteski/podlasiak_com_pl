@@ -78,12 +78,12 @@
 				<div class="clear"></div>
 			</div>
 			<ul class='navbar'>
-				{{#each translations.hero}}
+				{{#each translations.layout.hero}}
 					<li class='menu-item'>
 						<button class='menu-link'
 								data-target="#{{this.dataIndex}}">{{#if
 								this.name}}{{this.name}}{{else}}
-							translations.hero.name{{/if}}</button>
+							translations.layout.hero.name{{/if}}</button>
 					</li>
 				{{/each}}
 			</ul>
@@ -97,7 +97,7 @@
 				src='/images/flags/pl.png'
 				title='PL'
 		/></a>
-		<a class='lang' href='/en-GB'>
+		<a class='lang' href='/en'>
 			<img
 					alt='United Kingdom'
 					class='language__flag-img language__flag-img--secondary'
