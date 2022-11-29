@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const Content = require('../models/Content');
 
-const languageSwitcher = {
+const languageSwitcherController = {
 	async initialLang(req, res) {
 		const clientLanguage = req.headers['accept-language'].split(',')[0];
 		const serverLanguage = await Content.findOne({
@@ -23,4 +23,4 @@ const languageSwitcher = {
 	},
 };
 
-module.exports = languageSwitcher;
+module.exports = languageSwitcherController;

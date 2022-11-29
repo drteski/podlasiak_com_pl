@@ -131,11 +131,17 @@ if (form) {
 		const text = form.querySelector('#text').value;
 
 		fetch(`/send`, {
-			Method: 'POST',
-			Headers: {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
-			Body: JSON.stringify({ userName, email, subject, text }),
+			body: JSON.stringify({
+				userName,
+				email,
+				subject,
+				text,
+			}),
 		}).then((res) => console.log(res));
 	};
 	submitBtn.addEventListener('click', handleMailer);
