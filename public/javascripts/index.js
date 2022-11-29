@@ -116,3 +116,27 @@ if (arrow) {
 	};
 	arrow.addEventListener('click', arrowHandler);
 }
+
+//////////////////////////////////////////////////////////////////////////////////
+
+const form = document.querySelector('.form__body');
+
+if (form) {
+	const submitBtn = form.querySelector('.contact-cta');
+	const handleMailer = (e) => {
+		e.preventDefault();
+		const userName = form.querySelector('#userName').value;
+		const email = form.querySelector('#email').value;
+		const subject = form.querySelector('#subject').value;
+		const text = form.querySelector('#text').value;
+
+		fetch(`/send`, {
+			Method: 'POST',
+			Headers: {
+				'Content-Type': 'application/json',
+			},
+			Body: JSON.stringify({ userName, email, subject, text }),
+		}).then((res) => console.log(res));
+	};
+	submitBtn.addEventListener('click', handleMailer);
+}

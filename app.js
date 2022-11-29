@@ -64,25 +64,6 @@ app.engine(
 			allowProtoPropertiesByDefault: true,
 			allowProtoMethodsByDefault: true,
 		},
-		helpers: {
-			pagination(all, limit) {
-				return Math.ceil(all / limit);
-			},
-			count(all, limit, page) {
-				const itemsCount = parseInt(all);
-				const itemsLimit = parseInt(limit);
-				const pageCount = parseInt(page);
-				const pages = Math.ceil(itemsCount / itemsLimit);
-				const remaining = itemsCount % itemsLimit;
-				const lowerItems = itemsLimit * pageCount - itemsLimit + 1;
-				const higherItems = itemsLimit * pageCount;
-				return `${
-					pageCount === pages ? itemsCount - remaining : lowerItems
-				} - ${
-					pageCount === pages ? itemsCount : higherItems
-				} z ${all} produktów`;
-			},
-		},
 	})
 );
 
@@ -100,7 +81,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get('env') === 'development' ? err : {};

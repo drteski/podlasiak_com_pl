@@ -85,12 +85,12 @@
 			<h3 class="address__header">{{#if
 					translations.layout.contact.form.title}}{{translations.layout.contact.form.title}}{{else}}
 				translations.layout.contact.form.title{{/if}}</h3>
-			<form action="/send" class="form__body">
+			<form class="form__body">
 				<div class="body__input-container">
-					<label for="name" class="form-input__label">{{#if
+					<label for="userName" class="form-input__label">{{#if
 							translations.layout.contact.form.layout.content.[0].label}}{{translations.layout.contact.form.layout.content.[0].label}}{{else}}
 						translations.layout.contact.form.layout.content.[0].label{{/if}}</label>
-					<input type="text" id="name"
+					<input type="text" id="userName"
 							placeholder="{{translations.layout.contact.form.layout.content.[0].placeholder}}"
 							class="form-input__field" required>
 				</div>
@@ -112,10 +112,10 @@
 							required>
 				</div>
 				<div class="body__input-container">
-					<label for="content" class="form-input__label">{{#if
+					<label for="text" class="form-input__label">{{#if
 							translations.layout.contact.form.layout.content.[3].label}}{{translations.layout.contact.form.layout.content.[3].label}}{{else}}
 						translations.layout.contact.form.layout.content.[3].label{{/if}}</label>
-					<textarea name="content" id="content"
+					<textarea name="content" id="text"
 							class="form-input__field form-input__field--area"
 							rows="5"
 							placeholder="{{translations.layout.contact.form.layout.content.[3].placeholder}}"

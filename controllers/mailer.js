@@ -1,30 +1,54 @@
 const nodemailer = require('nodemailer');
 
-async function main() {
-	let transporter = nodemailer.createTransport({
-		host: 'podlasiak1.home.pl',
-		port: 465,
-		secure: true, // true for 465, false for other ports
-		auth: {
-			user: 'admin@podlasiak.com.pl', // generated ethereal user
-			pass: process.env.MAIL_PASSWORD, // generated ethereal password
-		},
-	});
+const { host, port, user, password } = process.env;
 
-	let info = await transporter.sendMail({
-		from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
-		to: 'drteski@gmail.com', // list of receivers
-		subject: 'Hello ✔', // Subject line
-		text: 'Hello world?', // plain text body
-		html: '<b>Hello world?</b>', // html body
-	});
+const transporter = nodemailer.createTransport({
+	host,
+	port,
+	secure: true, // true for 465, false for other ports
+	auth: {
+		user, // generated ethereal user
+		password, // generated ethereal password
+	},
+});
 
-	console.log('Message sent: %s', info.messageId);
-	// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+const mailClient = {
+	async send(req, res, next) {
+		const { subject, text } = req.body;
+		const info = await transporter.sendMail({
+			from: 'admin@podlasiak.com.pl', // sender address
+			// from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
+			to: 'drteski@gmail.com', // list of receivers
+			subject,
+			text,
+		});
+		return next();
+	},
+	async confirmation(req, res) {
+		const { userName, email, subject, text } = req.body;
+		const info = await transporter.sendMail({
+			from: '"Podlasiak" <admin@podlasiak.com.pl>', // sender address
+			// from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
+			to: `${email}`, // list of receivers
+			subject: 'Podlasiak - Dziękujemy za wiadomość',
+			text: `
+			Witaj ${userName},
+			
+			Dziękujemy za wiadomość, odpowiemy na nią najszybciej jak to jest możliwe.
+			
+			-----
+			Twoja wiadomość:
+			
+			Temat: ${subject}
+			Treść: ${text}
+			
+			z poważaniem,
+			Podlasiak
+			`,
+		});
+		console.log(info.messageId);
+		res.send(`Confirmation sent: ${info.messageId}`);
+	},
+};
 
-	// Preview only available when sending through an Ethereal account
-	console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-	// Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-}
-
-main().catch(console.error);
+module.exports = mailClient;
