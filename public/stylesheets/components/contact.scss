@@ -1,131 +1,154 @@
 
 .footer-container {
-  position: relative;
-  z-index: 1;
-  background: url('/images/slider1.jpg') no-repeat 50% 60%;
-  background-size: cover;
-  scroll-margin-top: 96px;
+	position: relative;
+	z-index: 1;
+	background: url('/images/slider1.jpg') no-repeat 50% 60%;
+	background-size: cover;
+	scroll-margin-top: 96px;
 }
 
 .footer-overlay {
-  background-color: $secondaryColor;
-  @apply opacity-50 top-0 left-0 absolute h-full w-full;
+	background-color: $secondaryColor;
+	@apply opacity-50 top-0 left-0 absolute h-full w-full;
 }
 
 .contact-container {
-  z-index: 2;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 96px 0 48px;
-  color: $secondaryFontColor;
-  @apply flex relative flex-wrap;
+	z-index: 2;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 96px 0 48px;
+	color: $secondaryFontColor;
+	@apply flex relative flex-wrap;
 }
 
 .address, .contact-form {
-  width: 50%;
+	width: 50%;
 }
 
 
 .address__header {
-  color: $secondaryFontColor;
-  @apply text-3xl pb-8;
+	color: $secondaryFontColor;
+	@apply text-3xl pb-8;
 }
 
 .row__heading {
-  @apply flex items-center pb-4;
+	@apply flex items-center pb-4;
 }
 
 .row__content {
-  @apply ml-11;
+	@apply ml-11;
 }
 
 .address__row:not(:last-child) {
-  @apply mb-6;
+	@apply mb-6;
 }
 
 .address__icon {
-  @apply text-4xl pr-2;
+	@apply text-4xl pr-2;
 }
 
 .address__subheader {
-  @apply text-xl;
+	@apply text-xl;
 }
 
 .address__text {
-  @apply pb-2;
+	@apply pb-2;
 }
 
 .address__text a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .contact-form {
-  @apply flex flex-col;
+	transition: opacity 1s ease;
+	@apply flex flex-col relative z-10;
+}
+
+.contact-form--active::after {
+	font-size: 20px;
+	top: 50%;
+	left: 50%;
+	padding: 26px 64px;
+	content: attr(data-message);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	background: $lightOverlayColor;
+	@apply absolute rounded-md;
+}
+
+.form__body {
+	transition: opacity 1s ease;
+}
+
+.form__body--active {
+	pointer-events: none;
+	opacity: 0.2;
 }
 
 .body__input-container {
-  @apply flex flex-col;
+	@apply flex flex-col;
 }
 
 .body__input-container:nth-child(4) {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .form-input__label {
-  @apply text-sm font-light py-2;
+	@apply text-sm font-light py-2;
 }
 
 .form-input__field {
-  transition: all ease 0.3s;
-  border: 3px solid rgba(255, 255, 255, 0.0);
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  @apply p-4 rounded;
-  &--area {
-    resize: none;
-  }
+	transition: all ease 0.3s;
+	border: 3px solid rgba(255, 255, 255, 0.0);
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.1);
+	@apply p-4 rounded;
+	&--area {
+		resize: none;
+	}
 }
 
 .form-input__field:hover {
-  border: 3px solid rgba(255, 255, 255, 0.0);
-  background-color: rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(255, 255, 255, 0.0);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .form-input__field:focus {
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.1);
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 
 .copyright-container {
-  z-index: 2;
-  @apply bg-gray-800 relative;
+	z-index: 2;
+	@apply bg-gray-800 relative;
 }
 
 .copyright {
-  max-width: 1440px;
-  margin: 0 auto;
-  color: $secondaryFontColor;
-  @apply block py-6 text-xs font-light;
+	max-width: 1440px;
+	margin: 0 auto;
+	color: $secondaryFontColor;
+	@apply block py-6 text-xs font-light;
 }
 
 @media screen and (max-width: 1500px) {
-  .contact-container, .copyright {
-    margin: 0 48px;
-  }
+	.contact-container, .copyright {
+		margin: 0 48px;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .contact-container, .copyright {
-    max-width: 1440px;
-    margin: 0 32px;
-  }
-  
-  .address, .contact-form {
-    width: 100%;
-  }
-  
-  .address {
-    margin-bottom: 32px;
-  }
+	.contact-container, .copyright {
+		max-width: 1440px;
+		margin: 0 32px;
+	}
+
+	.address, .contact-form {
+		width: 100%;
+	}
+
+	.address {
+		margin-bottom: 32px;
+	}
 }

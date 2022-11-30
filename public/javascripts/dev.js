@@ -123,12 +123,23 @@ const form = document.querySelector('.form__body');
 
 if (form) {
 	const submitBtn = form.querySelector('.contact-cta');
+
+	const contactFormPopup = (message) => {
+		const contactContainer = document.querySelector('.contact-form');
+		contactContainer.classList.add('contact-form--active');
+		form.classList.add('form__body--active');
+		contactContainer.dataset.message = message;
+		setTimeout(() => {
+			form.classList.remove('form__body--active');
+			contactContainer.classList.remove('contact-form--active');
+		}, 3000);
+	};
 	const handleMailer = (e) => {
 		e.preventDefault();
-		const userName = form.querySelector('#userName').value;
-		const email = form.querySelector('#email').value;
-		const subject = form.querySelector('#subject').value;
-		const text = form.querySelector('#text').value;
+		const userName = form.querySelector('#userName');
+		const email = form.querySelector('#email');
+		const subject = form.querySelector('#subject');
+		const text = form.querySelector('#text');
 
 		fetch(`/send`, {
 			method: 'POST',
@@ -137,14 +148,21 @@ if (form) {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				userName,
-				email,
-				subject,
-				text,
+				userName: userName.value,
+				email: email.value,
+				subject: subject.value,
+				text: text.value,
 			}),
 		})
 			.then((res) => res.json())
-			.then((json) => console.log(json));
+			.then((json) => {
+				const { message } = json.message.layout.contact.form;
+				contactFormPopup(message);
+				userName.value = '';
+				email.value = '';
+				subject.value = '';
+				text.value = '';
+			});
 	};
 	submitBtn.addEventListener('click', handleMailer);
 }

@@ -2,8 +2,9 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 const handlebarsNodeMailer = require('nodemailer-express-handlebars');
+const Content = require('../models/Content');
 
-const { MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASS } = process.env;
+const { MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASS, MAIL_SENDER } = process.env;
 
 const transporter = nodemailer.createTransport({
 	host: MAIL_HOST,
@@ -34,7 +35,7 @@ const mailClient = {
 		const { userName, email, subject, text } = req.body;
 		await transporter
 			.sendMail({
-				from: '"Podlasiak" <admin@podlasiak.com.pl>',
+				from: MAIL_SENDER,
 				to: 'drteski@gmail.com',
 				subject: `Wiadomość od: ${email} - ${subject}`,
 				template: 'client',
@@ -43,28 +44,34 @@ const mailClient = {
 					subject,
 					userName,
 					email,
-				},
-			})
+			},
+			)
 			.catch((err) => console.log(err));
 		return next();
 	},
 	async confirmation(req, res) {
-		const { userName, email, subject, text } = req.body;
+		const {
+			userName,
+			email,
+			subject,
+			text
+		} = req.body;
+		const message = await Content.findOne({ language: 'pl' });
 		await transporter
 			.sendMail({
-				from: '"Podlasiak" <admin@podlasiak.com.pl>',
+				from: MAIL_SENDER,
 				to: `${email}`,
 				subject: `Otrzymaliśmy twoje zgłoszenie - ${email}`,
 				template: 'replay',
 				context: {
 					text,
 					subject,
-					userName,
-				},
+					userName
+				}
 			})
 			.then((done) => {
 				console.log(done);
-				res.json({ message: 'Dziękujemy za kontakt.' });
+				res.json({ message });
 			})
 			.catch((err) => {
 				console.log(err);

@@ -13,7 +13,7 @@ const session = require('express-session');
 const MongoDBStore = require('express-mongodb-session')(session);
 
 const indexRouter = require('./routes/index');
-const mailerRouter = require('./routes/mailer');
+const mailerRouter = require('./routes/mail');
 
 const app = express();
 // DB setup
