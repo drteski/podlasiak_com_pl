@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/test
+GET http://localhost:3000/send
 Content-Type: application/json
 
 ###
@@ -19,9 +19,9 @@ POST http://localhost:3000/send
 Content-Type: application/json
 
 {
-	"userName": "Krzysztof Tomaszewski",
-	"email": "drteski@gmail.com",
-	"subject": "Moja wiadomość do ciebie",
-	"text": "a;lskdjgl;aksjdgldkgfjalsdkjf;laksjd;lfkjas;ldf "
+  "userName": "Krzysztof Tomaszewski",
+  "email": "drteski@gmail.com",
+  "subject": "Moja wiadomość do ciebie",
+  "text": "a;lskdjgl;aksjdgldkgfjalsdkjf;laksjd;lfkjas;ldf "
 }
 

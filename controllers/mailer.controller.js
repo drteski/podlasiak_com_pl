@@ -1,6 +1,7 @@
 require('dotenv').config();
+
 const nodemailer = require('nodemailer');
-// const handlebarsNodeMailer = require('nodemailer-express-handlebars');
+const handlebarsNodeMailer = require('nodemailer-express-handlebars');
 
 const { MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASS } = process.env;
 
@@ -14,115 +15,65 @@ const transporter = nodemailer.createTransport({
 	},
 });
 
-// transporter.use(
-// 	'compile',
-// 	handlebarsNodeMailer({
-// 		extName: '.hbs',
-// 		viewPath: __dirname + '/views/email/',
-// 		layoutsDir: __dirname + '/view/email',
-// 		defaultLayout: 'email',
-// 		partialsDir: __dirname + '/views/email/partials/',
-// 	})
-// );
-
-// const clientMessage = {
-// 	from: 'from@domain.com',
-// 	to: 'to@domain.com',
-// 	subject: 'Test',
-// 	template: 'email',
-// 	context: {
-// 		name: 'Name',
-// 	},
-// };
-//
-// const confirmationMessage = {
-// 	from: 'from@domain.com',
-// 	to: 'to@domain.com',
-// 	subject: 'Test',
-// 	template: 'email',
-// 	context: {
-// 		name: 'Name',
-// 	},
-// };
+transporter.use(
+	'compile',
+	handlebarsNodeMailer({
+		viewEngine: {
+			extName: '.hbs',
+			partialsDir: './views/email',
+			layoutsDir: './views/email',
+			defaultLayout: false,
+		},
+		extName: '.hbs',
+		viewPath: './views/email',
+	})
+);
 
 const mailClient = {
 	async replay(req, res, next) {
-		const { subject, text } = req.body;
-		await transporter.sendMail({
-			from: 'admin@podlasiak.com.pl', // sender address
-			// from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
-			to: 'drteski@gmail.com', // list of receivers
-			subject,
-			text,
-		});
+		const { userName, email, subject, text } = req.body;
+		await transporter
+			.sendMail({
+				from: '"Podlasiak" <admin@podlasiak.com.pl>',
+				to: 'drteski@gmail.com',
+				subject: `Wiadomość od: ${email} - ${subject}`,
+				template: 'client',
+				context: {
+					text,
+					subject,
+					userName,
+					email,
+				},
+			})
+			.catch((err) => console.log(err));
 		return next();
 	},
 	async confirmation(req, res) {
 		const { userName, email, subject, text } = req.body;
-		const info = await transporter.sendMail({
-			from: '"Podlasiak" <admin@podlasiak.com.pl>', // sender address
-			// from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
-			to: `${email}`, // list of receivers
-			subject: 'Podlasiak - Dziękujemy za wiadomość',
-			text: `
-			Witaj ${userName},
-
-			Dziękujemy za wiadomość, odpowiemy na nią najszybciej jak to jest możliwe.
-
-			-----
-			Twoja wiadomość:
-
-			Temat: ${subject}
-			Treść: ${text}
-
-			z poważaniem,
-			Podlasiak
-			`,
-		});
-		console.log(info.messageId);
-		res.send(`Confirmation sent: ${info.messageId}`);
+		await transporter
+			.sendMail({
+				from: '"Podlasiak" <admin@podlasiak.com.pl>',
+				to: `${email}`,
+				subject: `Otrzymaliśmy twoje zgłoszenie - ${email}`,
+				template: 'replay',
+				context: {
+					text,
+					subject,
+					userName,
+				},
+			})
+			.then((done) => {
+				console.log(done);
+				res.json({ message: 'Dziękujemy za kontakt.' });
+			})
+			.catch((err) => {
+				console.log(err);
+				res.json({
+					message:
+						'Wystąpił błąd, odśwież stronę i spróbuj jeszcze raz.',
+				});
+			});
 	},
 };
-
-// const mailClient = {
-// 	async replay(req, res) {
-// 		const { subject, text } = req.body;
-// 		// await transporter.sendMail({
-// 		// 	from: 'admin@podlasiak.com.pl',
-// 		// 	to: 'drteski@gmail.com',
-// 		// 	subject: 'Test',
-// 		// 	template: 'email',
-// 		// 	context: {
-// 		// 		name: 'Name',
-// 		// 	},
-// 		// });
-// 		res.send('ok');
-// 		// return next();
-// 	},
-// 	async confirmation(req, res) {
-// 		const { userName, email, subject, text } = req.body;
-// 		const info = await transporter.sendMail({
-// 			from: '"Podlasiak" <admin@podlasiak.com.pl>', // sender address
-// 			// from: '"Fred Foo 👻" <admin@podlasiak.com.pl>', // sender address
-// 			to: `${email}`, // list of receivers
-// 			subject: 'Podlasiak - Dziękujemy za wiadomość',
-// 			text: `
-// 			Witaj ${userName},
-//
-// 			Dziękujemy za wiadomość, odpowiemy na nią najszybciej jak to jest możliwe.
-//
-// 			-----
-// 			Twoja wiadomość:
-//
-// 			Temat: ${subject}
-// 			Treść: ${text}
-//
-// 			z poważaniem,
-// 			Podlasiak
-// 			`,
-// 		});
-// 		res.send(`Confirmation sent: ${info.messageId}`);
-// 	},
-// };
 
 module.exports = mailClient;

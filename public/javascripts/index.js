@@ -142,7 +142,9 @@ if (form) {
 				subject,
 				text,
 			}),
-		}).then((res) => console.log(res));
+		})
+			.then((res) => res.json())
+			.then((json) => console.log(json));
 	};
 	submitBtn.addEventListener('click', handleMailer);
 }

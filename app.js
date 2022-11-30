@@ -16,7 +16,6 @@ const indexRouter = require('./routes/index');
 const mailerRouter = require('./routes/mailer');
 
 const app = express();
-
 // DB setup
 
 mongoose.connect(process.env.DATABASE_URL, {
