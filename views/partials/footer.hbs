@@ -6,80 +6,41 @@
 			<h3 class="address__header">{{#if
 					translations.layout.contact.details.title}}{{translations.layout.contact.details.title}}{{else}}
 				translations.layout.contact.details.title{{/if}}</h3>
-			<div class="address__row">
-				<div class="row__heading">
-					<span class="address__icon material-symbols-outlined">storefront</span>
-					<h4 class="address__subheader">{{#if
-							translations.layout.contact.details.locations.[0].title}}{{translations.layout.contact.details.locations.[0].title}}{{else}}
-						translations.layout.contact.details.locations.[0].title {{/if}}:</h4>
+			{{#each translations.layout.contact.details.locations}}
+				<div class="address__row">
+					<div class="row__heading">
+						<span class="address__icon material-symbols-outlined">{{../translations.layout.contact.details.locations.icon}}</span>
+						<h4 class="address__subheader">{{#if this.title}}{{this.title}}{{else}}
+							translations.layout.contact.details.locations.[0].title {{/if}}:</h4>
+					</div>
+					<div class="row__content">
+						<p class="address__text">
+							<strong>{{#if this.subTitle}}{{this.subTitle}}{{else}}
+								translations.layout.contact.details.locations.[0].subTitle{{/if}}</strong>
+						</p>
+						<p class="address__text">
+							<strong>{{#if
+									../translations.layout.contact.details.labels.email}}{{../translations.layout.contact.details.labels.email}}{{else}}
+								translations.layout.contact.details.labels.email{{/if}}:</strong> <a
+								href="mailto:{{this.email}}">{{#if
+								this.email}}{{this.email}}{{else}}
+							translations.layout.contact.details.locations.[0].email{{/if}}</a></p>
+						{{#if this.website}}<p class="address__text"><strong>{{#if
+								../translations.layout.contact.details.labels.website}}{{../translations.layout.contact.details.labels.website}}{{else}}
+							translations.layout.contact.details.labels.website{{/if}}:</strong> <a
+								href="{{this.website}}">{{#if
+								this.website}}{{this.website}}{{else}}
+							translations.layout.contact.details.locations.[0].phone{{/if}}</a>
+						</p>{{else}}<p class="address__text"><strong>{{#if
+								../translations.layout.contact.details.labels.phone}}{{../translations.layout.contact.details.labels.phone}}{{else}}
+							translations.layout.contact.details.labels.phone{{/if}}:</strong> <a
+								href="tel:{{this.phone}}">{{#if
+								this.phone}}{{this.phone}}{{else}}
+							translations.layout.contact.details.locations.[0].phone{{/if}}</a>
+						</p>{{/if}}
+					</div>
 				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.locations.[0].subTitle}}{{translations.layout.contact.details.locations.[0].subTitle}}{{else}}
-						translations.layout.contact.details.locations.[0].subTitle{{/if}}</strong>
-					</p>
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.labels.email}}{{translations.layout.contact.details.labels.email}}{{else}}
-						translations.layout.contact.details.labels.email{{/if}}:</strong> <a
-							href="mailto:{{translations.layout.contact.details.locations.[0].email}}">{{#if
-							translations.layout.contact.details.locations.[0].email}}{{translations.layout.contact.details.locations.[0].email}}{{else}}
-						translations.layout.contact.details.locations.[0].email{{/if}}</a></p>
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.labels.phone}}{{translations.layout.contact.details.labels.phone}}{{else}}
-						translations.layout.contact.details.labels.phone{{/if}}:</strong> <a
-							href="tel:{{translations.layout.contact.details.locations.[0].phone}}">{{#if
-							translations.layout.contact.details.locations.[0].phone}}{{translations.layout.contact.details.locations.[0].phone}}{{else}}
-						translations.layout.contact.details.locations.[0].phone{{/if}}</a></p>
-				</div>
-			</div>
-			<div class="address__row">
-				<div class="row__heading">
-					<span class="address__icon material-symbols-outlined">public</span>
-					<h4 class="address__subheader">{{#if
-							translations.layout.contact.details.locations.[1].title}}{{translations.layout.contact.details.locations.[1].title}}{{else}}
-						translations.layout.contact.details.locations.[1].title {{/if}}:</h4>
-				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.locations.[1].subTitle}}{{translations.layout.contact.details.locations.[1].subTitle}}{{else}}
-						translations.layout.contact.details.locations.[1].subTitle{{/if}}</strong>
-					</p>
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.labels.phone}}{{translations.layout.contact.details.labels.phone}}{{else}}
-						translations.layout.contact.details.labels.phone{{/if}}:</strong> <a
-							href="tel:{{translations.layout.contact.details.locations.[1].phone}}">{{#if
-							translations.layout.contact.details.locations.[1].phone}}{{translations.layout.contact.details.locations.[1].phone}}{{else}}
-						translations.layout.contact.details.locations.[1].phone{{/if}}</a></p>
-				</div>
-			</div>
-			<div class="address__row">
-				<div class="row__heading">
-
-					<span class="address__icon material-symbols-outlined">apartment</span>
-					<h4 class="address__subheader">{{#if
-							translations.layout.contact.details.locations.[2].title}}{{translations.layout.contact.details.locations.[2].title}}{{else}}
-						translations.layout.contact.details.locations.[2].title {{/if}}:</h4>
-				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.locations.[2].subTitle}}{{translations.layout.contact.details.locations.[2].subTitle}}{{else}}
-						translations.layout.contact.details.locations.[2].subTitle{{/if}}</strong>
-					</p>
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.labels.email}}{{translations.layout.contact.details.labels.email}}{{else}}
-						translations.layout.contact.details.labels.email{{/if}}:</strong> <a
-							href="mailto:{{translations.layout.contact.details.locations.[2].email}}">{{#if
-							translations.layout.contact.details.locations.[2].email}}{{translations.layout.contact.details.locations.[2].email}}{{else}}
-						translations.layout.contact.details.locations.[2].email{{/if}}</a></p>
-					<p class="address__text"><strong>{{#if
-							translations.layout.contact.details.labels.website}}{{translations.layout.contact.details.labels.website}}{{else}}
-						translations.layout.contact.details.labels.website{{/if}}:</strong> <a
-							href="{{translations.layout.contact.details.locations.[2].website}}"
-							target="_blank">{{#if
-							translations.layout.contact.details.locations.[2].website}}{{translations.layout.contact.details.locations.[2].website}}{{else}}
-						translations.layout.contact.details.locations.[2].website{{/if}}</a></p>
-				</div>
-			</div>
+			{{/each}}
 		</div>
 		<div class="contact-form">
 			<h3 class="address__header">{{#if

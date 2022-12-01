@@ -44,18 +44,13 @@ const mailClient = {
 					subject,
 					userName,
 					email,
-			},
-			)
+				},
+			})
 			.catch((err) => console.log(err));
 		return next();
 	},
 	async confirmation(req, res) {
-		const {
-			userName,
-			email,
-			subject,
-			text
-		} = req.body;
+		const { userName, email, subject, text } = req.body;
 		const message = await Content.findOne({ language: 'pl' });
 		await transporter
 			.sendMail({
@@ -66,8 +61,8 @@ const mailClient = {
 				context: {
 					text,
 					subject,
-					userName
-				}
+					userName,
+				},
 			})
 			.then((done) => {
 				console.log(done);
