@@ -80,6 +80,7 @@ const Content = new mongoose.Schema({
 							email: String,
 							phone: String,
 							website: String,
+							icon: String,
 						},
 					],
 				},
@@ -103,11 +104,19 @@ const Content = new mongoose.Schema({
 						],
 					},
 					button: {
-						type: String,
+						type: Strig,
 					},
 				},
 			},
 		},
+	},
+	replay: {
+		greeting: String,
+		senderSubject: String,
+		clientSubject: String,
+		clientMessage: String,
+		farewell: String,
+		mainText: Strig,
 	},
 });
 module.exports = mongoose.model('Content', Content);

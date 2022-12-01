@@ -9,14 +9,16 @@
 			{{#each translations.layout.contact.details.locations}}
 				<div class="address__row">
 					<div class="row__heading">
-						<span class="address__icon material-symbols-outlined">{{../translations.layout.contact.details.locations.icon}}</span>
+						<span class="address__icon material-symbols-outlined">{{#if
+								this.icon}}{{this.icon}}{{else}}
+							translations.layout.contact.details.locations.icon{{/if}}</span>
 						<h4 class="address__subheader">{{#if this.title}}{{this.title}}{{else}}
-							translations.layout.contact.details.locations.[0].title {{/if}}:</h4>
+							translations.layout.contact.details.locations.title{{/if}}:</h4>
 					</div>
 					<div class="row__content">
 						<p class="address__text">
 							<strong>{{#if this.subTitle}}{{this.subTitle}}{{else}}
-								translations.layout.contact.details.locations.[0].subTitle{{/if}}</strong>
+								translations.layout.contact.details.locations.subTitle{{/if}}</strong>
 						</p>
 						<p class="address__text">
 							<strong>{{#if

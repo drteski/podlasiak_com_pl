@@ -52,16 +52,29 @@ const mailClient = {
 	async confirmation(req, res) {
 		const { userName, email, subject, text } = req.body;
 		const message = await Content.findOne({ language: 'pl' });
+		const {
+			greeting,
+			clientSubject,
+			clientMessage,
+			farewell,
+			mainText,
+			senderSubject,
+		} = message.replay;
 		await transporter
 			.sendMail({
 				from: MAIL_SENDER,
 				to: `${email}`,
-				subject: `Otrzymaliśmy twoje zgłoszenie - ${email}`,
+				subject: `${senderSubject} - ${email}`,
 				template: 'replay',
 				context: {
 					text,
 					subject,
 					userName,
+					greeting,
+					clientSubject,
+					clientMessage,
+					farewell,
+					mainText,
 				},
 			})
 			.then((done) => {
