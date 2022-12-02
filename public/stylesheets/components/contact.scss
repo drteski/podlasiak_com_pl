@@ -87,11 +87,26 @@
 }
 
 .body__input-container {
+	position: relative;
 	@apply flex flex-col;
 }
 
 .body__input-container:nth-child(4) {
 	margin-bottom: 1rem;
+}
+
+.body__input-container--active {
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.body__input-container--active::before {
+	position: absolute;
+	right: 16px;
+	bottom: 12px;
+	width: 24px;
+	content: url('/images/warning.svg');
+	pointer-events: none;
 }
 
 .form-input__label {
@@ -117,6 +132,18 @@
 .form-input__field:focus {
 	border: 3px solid rgba(255, 255, 255, 0.3);
 	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.body__input-container--active .form-input__field {
+	border: 3px solid #da1e28;
+}
+
+.body__input-container--active .form-input__field:hover {
+	border: 3px solid #fa4d56;
+}
+
+.body__input-container--active .form-input__field:focus {
+	border: 3px solid #da1e28;
 }
 
 

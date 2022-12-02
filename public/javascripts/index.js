@@ -135,35 +135,59 @@ if (form) {
 			contactContainer.classList.remove('contact-form--active');
 		}, 3000);
 	};
-	const handleMailer = (e) => {
+
+	const emptyInputChecker = (items) => {
+		const emptyInputs = items.filter((item) => item.value === '');
+		emptyInputs.forEach((emptyInput) =>
+			emptyInput.parentNode.classList.add('body__input-container--active')
+		);
+	};
+	console.log();
+	const inputss = form.querySelectorAll('.form-input__field');
+	inputss.forEach((inputs) => {
+		inputs.addEventListener('keydown', (e) => {
+			if (
+				e.currentTarget.parentNode.classList.contains(
+					'body__input-container--active'
+				)
+			) {
+				e.currentTarget.parentNode.classList.remove(
+					'body__input-container--active'
+				);
+			}
+		});
+	});
+	const mailHandler = (e) => {
 		e.preventDefault();
 		const userName = form.querySelector('#userName');
 		const email = form.querySelector('#email');
 		const subject = form.querySelector('#subject');
 		const text = form.querySelector('#text');
-		submitBtn.classList.add('contact-cta--active');
-		fetch(`/send`, {
-			method: 'POST',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				userName: userName.value,
-				email: email.value,
-				subject: subject.value,
-				text: text.value,
-			}),
-		})
-			.then((res) => res.json())
-			.then((json) => {
-				const { message } = json.message.layout.contact.form;
-				contactFormPopup(message);
-				userName.value = '';
-				email.value = '';
-				subject.value = '';
-				text.value = '';
-			});
+		emptyInputChecker([userName, email, subject, text]);
+		// submitBtn.classList.add('contact-cta--active');
+		// fetch(`/send`, {
+		// 	method: 'POST',
+		// 	headers: {
+		// 		Accept: 'application/json',
+		// 		'Content-Type': 'application/json',
+		// 	},
+		// 	body: JSON.stringify({
+		// 		userName: userName.value,
+		// 		email: email.value,
+		// 		subject: subject.value,
+		// 		text: text.value,
+		// 	}),
+		// })
+		// 	.then((res) => res.json())
+		// 	.then((json) => {
+		// 		const { message } = json.message.layout.contact.form;
+		// 		contactFormPopup(message);
+		// 		userName.value = '';
+		// 		email.value = '';
+		// 		subject.value = '';
+		// 		text.value = '';
+		// 	});
 	};
-	submitBtn.addEventListener('click', handleMailer);
+
+	submitBtn.addEventListener('click', mailHandler);
 }
