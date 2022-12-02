@@ -51,7 +51,7 @@ const mailClient = {
 	},
 	async confirmation(req, res) {
 		const { userName, email, subject, text } = req.body;
-		const message = await Content.findOne({ language: 'pl' });
+		const message = await Content.findOne({ language: 'hu' });
 		const {
 			greeting,
 			clientSubject,

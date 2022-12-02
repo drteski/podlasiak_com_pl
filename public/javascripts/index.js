@@ -129,6 +129,7 @@ if (form) {
 		contactContainer.classList.add('contact-form--active');
 		form.classList.add('form__body--active');
 		contactContainer.dataset.message = message;
+		submitBtn.classList.remove('contact-cta--active');
 		setTimeout(() => {
 			form.classList.remove('form__body--active');
 			contactContainer.classList.remove('contact-form--active');
@@ -140,7 +141,7 @@ if (form) {
 		const email = form.querySelector('#email');
 		const subject = form.querySelector('#subject');
 		const text = form.querySelector('#text');
-
+		submitBtn.classList.add('contact-cta--active');
 		fetch(`/send`, {
 			method: 'POST',
 			headers: {

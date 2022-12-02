@@ -104,7 +104,7 @@ const Content = new mongoose.Schema({
 						],
 					},
 					button: {
-						type: Strig,
+						type: String,
 					},
 				},
 			},
@@ -116,7 +116,7 @@ const Content = new mongoose.Schema({
 		clientSubject: String,
 		clientMessage: String,
 		farewell: String,
-		mainText: Strig,
+		mainText: String,
 	},
 });
 module.exports = mongoose.model('Content', Content);

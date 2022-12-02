@@ -1,3 +1,44 @@
 main {
   scroll-margin-top: 96px;
 }
+
+.button--secondary {
+  transition: all ease 0.3s;
+  color: white;
+  background-color: $lightOverlayColor;
+  @apply px-10 py-6 rounded block relative;
+}
+
+.contact-cta--active {
+  position: relative;
+  color: transparent;
+}
+
+.contact-cta--active:after {
+  position: absolute;
+  top: 28%;
+  left: 38%;
+  display: block;
+  width: 32px;
+  height: 32px;
+  content: '';
+  transform: translate(-50%, -50%);
+  animation: lds-dual-ring 1.2s linear infinite;
+  border: 2px solid #ffffff;
+  border-color: #ffffff transparent #ffffff transparent;
+  border-radius: 50%;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);;
+}

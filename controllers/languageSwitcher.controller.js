@@ -4,16 +4,26 @@ const Content = require('../models/Content');
 
 const languageSwitcherController = {
 	async initialLang(req, res) {
-		const clientLanguage = req.headers['accept-language'].split(',')[0];
-		const serverLanguage = await Content.findOne({
-			language: `${clientLanguage}`,
+		const clientLang = req.headers['accept-language'].split(',')[0];
+		const cookieLang = req.session.cookie.lang;
+		const serverLang = await Content.findOne({
+			language: `${clientLang}`,
 		});
-		if (serverLanguage !== null) return res.redirect(`/${clientLanguage}`);
-		return res.redirect(`/en`);
+		console.log(cookieLang);
+
+		if (!serverLang && !cookieLang) return res.redirect(`/en`);
+
+		if (cookieLang) {
+			return res.redirect(`/${cookieLang}`);
+		}
+		// if (cookieLang !== null) {
+		// }
+		//
+		// if (serverLang !== null) return res.redirect(`/${clientLang}`);
 	},
 	async targetLang(req, res) {
 		const { lang } = req.params;
-		// console.log(req.headers['accept-language'].split(',')[0]);
+		req.session.cookie.lang = lang;
 		const translations = await Content.findOne({ language: `${lang}` });
 		res.render('index', {
 			lang,
