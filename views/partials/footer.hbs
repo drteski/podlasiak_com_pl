@@ -55,15 +55,16 @@
 						translations.layout.contact.form.layout.content.[0].label{{/if}}</label>
 					<input type="text" id="userName"
 							placeholder="{{translations.layout.contact.form.layout.content.[0].placeholder}}"
-							class="form-input__field">
+							class="form-input__field"/>
 				</div>
 				<div class="body__input-container">
 					<label for="email" class="form-input__label">{{#if
 							translations.layout.contact.form.layout.content.[1].label}}{{translations.layout.contact.form.layout.content.[1].label}}{{else}}
 						translations.layout.contact.form.layout.content.[1].label{{/if}}</label>
-					<input type="text" id="email"
+					<input type="email" id="email"
 							placeholder="{{translations.layout.contact.form.layout.content.[1].placeholder}}"
-							class="form-input__field">
+							class="form-input__field"
+					/>
 				</div>
 				<div class="body__input-container">
 					<label for="subject" class="form-input__label">{{#if
@@ -71,8 +72,8 @@
 						translations.layout.contact.form.layout.content.[2].label{{/if}}</label>
 					<input type="text" id="subject"
 							placeholder="{{translations.layout.contact.form.layout.content.[2].placeholder}}"
-							class=form-input__field
-					>
+							class="form-input__field"
+					/>
 				</div>
 				<div class="body__input-container">
 					<label for="text" class="form-input__label">{{#if
@@ -82,9 +83,10 @@
 							class="form-input__field form-input__field--area"
 							rows="5"
 							placeholder="{{translations.layout.contact.form.layout.content.[3].placeholder}}"
+
 					></textarea>
 				</div>
-				<button class="contact-cta button--secondary">{{#if
+				<button class="contact-cta button--secondary" type="submit">{{#if
 						translations.layout.contact.form.layout.button}}{{translations.layout.contact.form.layout.button}}{{else}}
 					translations.layout.contact.form.layout.button{{/if}}</button>
 			</form>

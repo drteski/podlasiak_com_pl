@@ -94,8 +94,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; /* 1 */
-  font-size: 1em; /* 2 */
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 /*
 Add the correct font size in all browsers.
@@ -275,7 +275,7 @@ Set the default cursor for buttons.
 */
 button,
 [role='button'] {
-  cursor: pointer;
+	cursor: pointer;
 }
 /*
 Make sure disabled buttons don't get the pointer cursor.
@@ -743,66 +743,66 @@ template {
 
 */
 @font-face {
-  font-family: 'Manrope-Variable';
-  src: url('../fonts/Manrope-Variable.woff2') format('woff2'), url('../fonts/Manrope-Variable.woff') format('woff'), url('../fonts/Manrope-Variable.ttf') format('truetype');
-  font-weight: 200 800;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-Variable';
+	src: url('../fonts/Manrope-Variable.woff2') format('woff2'), url('../fonts/Manrope-Variable.woff') format('woff'), url('../fonts/Manrope-Variable.ttf') format('truetype');
+	font-weight: 200 800;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-ExtraLight';
-  src: url('../fonts/Manrope-ExtraLight.woff2') format('woff2'), url('../fonts/Manrope-ExtraLight.woff') format('woff'), url('../fonts/Manrope-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-ExtraLight';
+	src: url('../fonts/Manrope-ExtraLight.woff2') format('woff2'), url('../fonts/Manrope-ExtraLight.woff') format('woff'), url('../fonts/Manrope-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-Light';
-  src: url('../fonts/Manrope-Light.woff2') format('woff2'), url('../fonts/Manrope-Light.woff') format('woff'), url('../fonts/Manrope-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-Light';
+	src: url('../fonts/Manrope-Light.woff2') format('woff2'), url('../fonts/Manrope-Light.woff') format('woff'), url('../fonts/Manrope-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-Regular';
-  src: url('../fonts/Manrope-Regular.woff2') format('woff2'), url('../fonts/Manrope-Regular.woff') format('woff'), url('../fonts/Manrope-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-Regular';
+	src: url('../fonts/Manrope-Regular.woff2') format('woff2'), url('../fonts/Manrope-Regular.woff') format('woff'), url('../fonts/Manrope-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-Medium';
-  src: url('../fonts/Manrope-Medium.woff2') format('woff2'), url('../fonts/Manrope-Medium.woff') format('woff'), url('../fonts/Manrope-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-Medium';
+	src: url('../fonts/Manrope-Medium.woff2') format('woff2'), url('../fonts/Manrope-Medium.woff') format('woff'), url('../fonts/Manrope-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-SemiBold';
-  src: url('../fonts/Manrope-SemiBold.woff2') format('woff2'), url('../fonts/Manrope-SemiBold.woff') format('woff'), url('../fonts/Manrope-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-SemiBold';
+	src: url('../fonts/Manrope-SemiBold.woff2') format('woff2'), url('../fonts/Manrope-SemiBold.woff') format('woff'), url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-Bold';
-  src: url('../fonts/Manrope-Bold.woff2') format('woff2'), url('../fonts/Manrope-Bold.woff') format('woff'), url('../fonts/Manrope-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-Bold';
+	src: url('../fonts/Manrope-Bold.woff2') format('woff2'), url('../fonts/Manrope-Bold.woff') format('woff'), url('../fonts/Manrope-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Manrope-ExtraBold';
-  src: url('../fonts/Manrope-ExtraBold.woff2') format('woff2'), url('../fonts/Manrope-ExtraBold.woff') format('woff'), url('../fonts/Manrope-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-display: swap;
-  font-style: normal;
+	font-family: 'Manrope-ExtraBold';
+	src: url('../fonts/Manrope-ExtraBold.woff2') format('woff2'), url('../fonts/Manrope-ExtraBold.woff') format('woff'), url('../fonts/Manrope-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-display: swap;
+	font-style: normal;
 }
 * {
-  font-family: 'Manrope-Variable';
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	font-family: 'Manrope-Variable';
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .onload-logo-container {
@@ -851,13 +851,13 @@ select:-webkit-autofill:focus {
 }
 
 .header-container {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background: url('/images/hero_background.jpg') no-repeat center;
-  background-size: cover;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	background: url('/images/hero_background.jpg') no-repeat center;
+	background-size: cover;
 }
 
 .header-overlay{
@@ -1049,29 +1049,29 @@ select:-webkit-autofill:focus {
 }
 
 .arrow-slide:after {
-  position: absolute;
-  top: 12px;
-  left: 1.2rem;
-  width: 2px;
-  height: 16px;
-  content: '';
-  transform: rotate(45deg);
-  transform-origin: 50% 100%;
-  border-radius: 20px;
-  background-color: #ffffff;
+	position: absolute;
+	top: 12px;
+	left: 1.2rem;
+	width: 2px;
+	height: 16px;
+	content: '';
+	transform: rotate(45deg);
+	transform-origin: 50% 100%;
+	border-radius: 20px;
+	background-color: #ffffff;
 }
 
 .arrow-slide:before {
-  position: absolute;
-  top: 13px;
-  left: 1.24rem;
-  width: 2px;
-  height: 16px;
-  content: '';
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  border-radius: 20px;
-  background-color: #ffffff;
+	position: absolute;
+	top: 13px;
+	left: 1.24rem;
+	width: 2px;
+	height: 16px;
+	content: '';
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+	border-radius: 20px;
+	background-color: #ffffff;
 }
 
 .arrow-slide:hover {
@@ -1129,15 +1129,15 @@ select:-webkit-autofill:focus {
 }
 
 .language-title__tile:after {
-  position: absolute;
-  top: 8px;
-  right: -3px;
-  width: 15px;
-  height: 15px;
-  content: '';
-  transform: rotate(45deg);
-  background-color: #ffffff;
-  border-radius: 0.125rem;
+	position: absolute;
+	top: 8px;
+	right: -3px;
+	width: 15px;
+	height: 15px;
+	content: '';
+	transform: rotate(45deg);
+	background-color: #ffffff;
+	border-radius: 0.125rem;
 }
 
 @media screen and (max-width: 1500px) {
@@ -1668,11 +1668,11 @@ select:-webkit-autofill:focus {
   }
 }
 .footer-container {
-  position: relative;
-  z-index: 1;
-  background: url('/images/footer_background.jpg') no-repeat 50% 60%;
-  background-size: cover;
-  scroll-margin-top: 96px;
+	position: relative;
+	z-index: 1;
+	background: url('/images/footer_background.jpg') no-repeat 50% 60%;
+	background-size: cover;
+	scroll-margin-top: 96px;
 }
 
 .footer-overlay {
@@ -1846,14 +1846,14 @@ select:-webkit-autofill:focus {
 
 .copyright {
 	max-width: 1440px;
-  margin: 0 auto;
-  color: #ffffff;
-  display: block;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 300;
+	margin: 0 auto;
+	color: #ffffff;
+	display: block;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 300;
 }
 
 @media screen and (max-width: 1500px) {
@@ -1896,18 +1896,18 @@ main {
 }
 
 .contact-cta--active:after {
-  position: absolute;
-  top: 28%;
-  left: 38%;
-  display: block;
-  width: 32px;
-  height: 32px;
-  content: '';
-  transform: translate(-50%, -50%);
-  animation: lds-dual-ring 1.2s linear infinite;
-  border: 2px solid #ffffff;
-  border-color: #ffffff transparent #ffffff transparent;
-  border-radius: 50%;
+	position: absolute;
+	top: 28%;
+	left: 38%;
+	display: block;
+	width: 32px;
+	height: 32px;
+	content: '';
+	transform: translate(-50%, -50%);
+	animation: lds-dual-ring 1.2s linear infinite;
+	border: 2px solid #ffffff;
+	border-color: #ffffff transparent #ffffff transparent;
+	border-radius: 50%;
 }
 
 @keyframes lds-dual-ring {
