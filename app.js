@@ -3,6 +3,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const createError = require('http-errors');
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -15,6 +16,13 @@ const indexRouter = require('./routes/index');
 const mailerRouter = require('./routes/mail');
 
 const app = express();
+app.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			...helmet.contentSecurityPolicy.getDefaultDirectives,
+		},
+	})
+);
 // DB setup
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -77,7 +85,8 @@ app.use('/send', mailerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-	next(createError(404));
+	res.status(404).render('404', { layout: 'error' });
+	// next(createError(404));
 });
 
 // error handler

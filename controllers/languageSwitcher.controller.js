@@ -9,27 +9,19 @@ const languageSwitcherController = {
 		const serverLang = await Content.findOne({
 			language: `${clientLang}`,
 		});
-		console.log('drugie', req.session);
-
 		if (!serverLang || !cookieLang) return res.redirect(`/en`);
-		if (cookieLang === '' || cookieLang.length > 2)
-			return res.redirect('/en');
-		if (cookieLang) return res.redirect(`/${cookieLang}`);
-
-		// if (cookieLang !== null) {
-		// }
-		//
-		// if (serverLang !== null) return res.redirect(`/${clientLang}`);
+		if (cookieLang === '') return res.redirect('/en');
+		return res.redirect(`/${cookieLang}`);
 	},
 	async targetLang(req, res) {
 		const { lang } = req.params;
+		if (lang.length > 2)
+			return res.status(404).render('404', { layout: 'error' });
 		req.session.lang = lang;
-
-		console.log('pierwsze', req.session);
 		const translations = await Content.findOne({ language: `${lang}` });
 		res.render('index', {
 			lang,
-			title: 'Podlasiak PL',
+			title: `Podlasiak ${lang.toUpperCase()}`,
 			translations,
 		});
 	},
