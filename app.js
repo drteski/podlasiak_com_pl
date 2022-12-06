@@ -16,13 +16,13 @@ const indexRouter = require('./routes/index');
 const mailerRouter = require('./routes/mail');
 
 const app = express();
-app.use(
-	helmet.contentSecurityPolicy({
-		directives: {
-			...helmet.contentSecurityPolicy.getDefaultDirectives,
-		},
-	})
-);
+// app.use(
+// 	helmet.contentSecurityPolicy({
+// 		directives: {
+// 			...helmet.contentSecurityPolicy.getDefaultDirectives,
+// 		},
+// 	})
+// );
 // DB setup
 
 mongoose.connect(process.env.DATABASE_URL, {

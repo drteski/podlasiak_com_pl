@@ -1,26 +1,26 @@
 <main class='main-container'>
 	<section class='features-container' id='features'>
 		<h2 class='about about--other'>{{#if
-				translations.layout.features.title}}{{translations.layout.features.title}}{{else}}
-			translations.layout.features.title{{/if}}</h2>
+				serverLang.layout.features.title}}{{serverLang.layout.features.title}}{{else}}
+			serverLang.layout.features.title{{/if}}</h2>
 		<div class='features-cont'>
-			{{#each translations.layout.features.content}}
+			{{#each serverLang.layout.features.content}}
 				<div class='feature-box'>
 					<img src="{{this.img}}" alt="" class="feature__img">
 					<h4 class='feature__name'>{{#if this.title}}{{this.title}}{{else}}
-						translations.layout.features.content.title{{/if}}</h4>
+						serverLang.layout.features.content.title{{/if}}</h4>
 					<p class='feature__desc'>{{#if this.desc}}{{this.desc}}{{else}}
-						translations.layout.features.content.title{{/if}}</p>
+						serverLang.layout.features.content.title{{/if}}</p>
 				</div>
 			{{/each}}
 		</div>
 	</section>
 	<section class='reviews-container' id='reviews'>
 		<h3 class='about about--other'>{{#if
-				translations.layout.reviews.title}}{{translations.layout.reviews.title}}{{else}}
-			translations.layout.reviews.title{{/if}}</h3>
+				serverLang.layout.reviews.title}}{{serverLang.layout.reviews.title}}{{else}}
+			serverLang.layout.reviews.title{{/if}}</h3>
 		<div class='reviews'>
-			{{#each translations.layout.reviews.review}}
+			{{#each serverLang.layout.reviews.review}}
 				<div class='reviews-box'>
 					<div class='review'>
 						<div class='comment'>
@@ -55,8 +55,8 @@
 								<p class='percent__text'>97%</p>
 							</div>
 							<p class='desc-grade'>{{#if
-									translations.layout.reviews.desc.recommended}}{{translations.layout.reviews.desc.recommended}}{{else}}
-								translations.layout.reviews.desc.recommended{{/if}}</p>
+									serverLang.layout.reviews.desc.recommended}}{{serverLang.layout.reviews.desc.recommended}}{{else}}
+								serverLang.layout.reviews.desc.recommended{{/if}}</p>
 						</div>
 						<img alt='Quality' class='quality'
 								src='/images/opineo/opineo-quality.png'>
@@ -64,12 +64,12 @@
 				</div>
 				<div class='review-text'>
 					<p class='review-text__top'>{{#if
-							translations.layout.reviews.desc.firstPart}}{{translations.layout.reviews.desc.firstPart}}{{else}}
-						translations.layout.reviews.desc.firstPart{{/if}}
+							serverLang.layout.reviews.desc.firstPart}}{{serverLang.layout.reviews.desc.firstPart}}{{else}}
+						serverLang.layout.reviews.desc.firstPart{{/if}}
 					</p>
 					<p class='review-text__bottom'>{{#if
-							translations.layout.reviews.desc.secondPart}}{{translations.layout.reviews.desc.secondPart}}{{else}}
-						translations.layout.reviews.desc.secondPart{{/if}}</p>
+							serverLang.layout.reviews.desc.secondPart}}{{serverLang.layout.reviews.desc.secondPart}}{{else}}
+						serverLang.layout.reviews.desc.secondPart{{/if}}</p>
 				</div>
 			</div>
 		</div>
@@ -79,22 +79,22 @@
 		<div class='text-wrap'>
 			<div class='text-cont'>
 				<h3 class='about about--other'>{{#if
-						translations.layout.about.title}}{{translations.layout.about.title}}{{else}}
-					translations.layout.about.title{{/if}}</h3>
+						serverLang.layout.about.title}}{{serverLang.layout.about.title}}{{else}}
+					serverLang.layout.about.title{{/if}}</h3>
 				<p class='content content--primary'>{{#if
-						translations.layout.about.firstPart}}{{translations.layout.about.firstPart}}{{else}}
-					translations.layout.about.firstPart{{/if}}</p>
+						serverLang.layout.about.firstPart}}{{serverLang.layout.about.firstPart}}{{else}}
+					serverLang.layout.about.firstPart{{/if}}</p>
 				<p class='content content--secondary'>{{#if
-						translations.layout.about.secondPart}}{{translations.layout.about.secondPart}}{{else}}
-					translations.layout.about.secondPart{{/if}}</p>
+						serverLang.layout.about.secondPart}}{{serverLang.layout.about.secondPart}}{{else}}
+					serverLang.layout.about.secondPart{{/if}}</p>
 			</div>
 		</div>
 	</section>
 	<section class='stores-container' id='stores'>
 
 		<h3 class='about about--other'>{{#if
-				translations.layout.stores.title}}{{translations.layout.stores.title}}{{else}}
-			translations.layout.stores.title{{/if}}</h3>
+				serverLang.layout.stores.title}}{{serverLang.layout.stores.title}}{{else}}
+			serverLang.layout.stores.title{{/if}}</h3>
 		<div class='store-wrap'>
 			<div class='store-box'>
 				<div class='logo-container'>
