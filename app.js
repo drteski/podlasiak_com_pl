@@ -8,7 +8,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const handlebars = require('express-handlebars');
-const helpersPack = require('handlebars-helpers')();
 const session = require('express-session');
 const MongoDBStore = require('express-mongodb-session')(session);
 

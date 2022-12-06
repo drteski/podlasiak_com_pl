@@ -5,13 +5,12 @@ const Content = require('../models/Content');
 const languageSwitcherController = {
 	async initialLang(req, res) {
 		const clientLang = req.headers['accept-language'].split(',')[0];
-		const cookieLang = req.session.cookie.lang;
+		const cookieLang = req.session.lang;
 		const serverLang = await Content.findOne({
 			language: `${clientLang}`,
 		});
-		console.log(cookieLang);
 
-		if (!serverLang && !cookieLang) return res.redirect(`/en`);
+		if (!serverLang || !cookieLang) return res.redirect(`/en`);
 
 		if (cookieLang) {
 			return res.redirect(`/${cookieLang}`);
@@ -23,7 +22,7 @@ const languageSwitcherController = {
 	},
 	async targetLang(req, res) {
 		const { lang } = req.params;
-		req.session.cookie.lang = lang;
+		req.session.lang = lang;
 		const translations = await Content.findOne({ language: `${lang}` });
 		res.render('index', {
 			lang,
