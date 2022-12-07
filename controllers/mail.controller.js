@@ -31,7 +31,7 @@ transporter.use(
 );
 
 const mailClient = {
-	async replay(req, res, next) {
+	async reply(req, res, next) {
 		const { userName, email, subject, text } = req.body;
 		await transporter
 			.sendMail({
@@ -51,7 +51,8 @@ const mailClient = {
 	},
 	async confirmation(req, res) {
 		const { userName, email, subject, text } = req.body;
-		const message = await Content.findOne({ language: 'hu' });
+		const clientLang = req.session.lang;
+		const message = await Content.findOne({ language: `${clientLang}` });
 		const {
 			greeting,
 			clientSubject,
@@ -59,13 +60,13 @@ const mailClient = {
 			farewell,
 			mainText,
 			senderSubject,
-		} = message.replay;
+		} = message.reply;
 		await transporter
 			.sendMail({
 				from: MAIL_SENDER,
 				to: `${email}`,
 				subject: `${senderSubject} - ${email}`,
-				template: 'replay',
+				template: 'reply',
 				context: {
 					text,
 					subject,

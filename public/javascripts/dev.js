@@ -1,18 +1,18 @@
-const render = () => {
-	const wrapper = document.querySelector('.wrapper');
-	const load = document.querySelector('.onload-logo-container');
-	setTimeout(() => wrapper.removeAttribute('style'), 2300);
-	const onloadRemover = () => {
-		load.classList.add('wrapper--active');
-		wrapper.classList.remove('wrapper--active');
-		setTimeout(() => load.remove(), 100);
+const mainWrapper = document.querySelector('.wrapper');
+if (mainWrapper) {
+	const render = () => {
+		const load = document.querySelector('.onload-logo-container');
+		setTimeout(() => mainWrapper.removeAttribute('style'), 2300);
+		const onloadRemover = () => {
+			load.classList.add('wrapper--active');
+			mainWrapper.classList.remove('wrapper--active');
+			setTimeout(() => load.remove(), 100);
+		};
+
+		setTimeout(onloadRemover, 2400);
 	};
-
-	setTimeout(onloadRemover, 2400);
-};
-document.addEventListener('DOMContentLoaded', render);
-
-//////////////////////////////////////////////////////////////////////////////////
+	document.addEventListener('DOMContentLoaded', render);
+}
 
 const languageBar = document.querySelector('.language-flag');
 
@@ -54,7 +54,7 @@ if (header) {
 	const nav = document.querySelector('.navbar');
 	const menuItems = document.querySelectorAll('.menu-link');
 
-	const navbarScrollHandler = () => {
+	const navbarScrollStyling = () => {
 		const position = window.scrollY;
 		if (position >= 30) {
 			navbar.classList.add('main-navbar--active');
@@ -69,28 +69,37 @@ if (header) {
 		icon1.classList.toggle('a');
 		icon2.classList.toggle('c');
 		icon3.classList.toggle('b');
-		window.addEventListener('scroll', navbarScrollHandler);
+		window.addEventListener('scroll', navbarScrollStyling);
 	};
 
 	const mobileMenuHandler = () => {
-		window.removeEventListener('scroll', navbarScrollHandler);
+		window.removeEventListener('scroll', navbarScrollStyling);
+		const position = window.scrollY;
 		icon1.classList.toggle('a');
 		icon2.classList.toggle('c');
 		icon3.classList.toggle('b');
 		nav.classList.toggle('navbar--active');
-
-		if (navbar.classList.contains('main-navbar--active')) {
-			navbar.classList.remove('main-navbar--active');
-		} else {
-			navbar.classList.add('main-navbar--active');
+		if (
+			navbar.classList.contains('main-navbar--active') &&
+			position >= 30
+		) {
+			console.log('teraz');
+			return;
 		}
+		if (navbar.classList.contains('main-navbar--active')) {
+			console.log('później');
+			navbar.classList.remove('main-navbar--active');
+			return;
+		}
+		console.log('najpóźniej');
+		navbar.classList.add('main-navbar--active');
 	};
 
 	const scrollHandler = (e) => {
 		const targetItem = document.querySelector(`${e.target.dataset.target}`);
 		targetItem.scrollIntoView({ behavior: 'smooth' });
 		navbar.classList.remove('main-navbar--active');
-		window.addEventListener('scroll', navbarScrollHandler);
+		// window.addEventListener('scroll', navbarScrollStyling);
 	};
 
 	icon.addEventListener('click', mobileMenuHandler);
@@ -102,7 +111,7 @@ if (header) {
 	menuItems.forEach((item) => {
 		item.addEventListener('click', scrollHandler);
 	});
-	window.addEventListener('scroll', navbarScrollHandler);
+	window.addEventListener('scroll', navbarScrollStyling);
 }
 
 //////////////////////////////////////////////////////////////////////////////////

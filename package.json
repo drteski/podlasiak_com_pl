@@ -10,7 +10,9 @@
     "build": "npx tailwindcss -i ./public/stylesheets/style.scss -o ./public/stylesheets/style.css --minify"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.20.2",
     "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "deepl-node": "^1.7.1",
@@ -19,6 +21,9 @@
     "express-handlebars": "^6.0.6",
     "express-mongodb-session": "^3.2.1",
     "express-session": "^1.17.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-js-minify": "^0.0.3",
+    "gulp-sourcemaps": "^3.0.0",
     "handlebars-helpers": "^0.10.0",
     "hbs": "~4.0.4",
     "helmet": "^6.0.1",
@@ -29,6 +34,7 @@
     "node-fetch": "^3.2.10",
     "nodemailer": "^6.8.0",
     "nodemailer-express-handlebars": "^5.0.0",
+    "rfs": "^9.0.6",
     "uuid": "^8.3.2",
     "vivus": "^0.4.6",
     "xml2js": "^0.4.23",

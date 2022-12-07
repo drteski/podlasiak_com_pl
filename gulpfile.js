@@ -5,6 +5,9 @@ const browserSync = require('browser-sync');
 const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
+const babel = require('gulp-babel');
+const minify = require('gulp-js-minify');
+const sourcemaps = require('gulp-sourcemaps');
 const tailwindcss = require('tailwindcss');
 const rename = require('gulp-rename');
 
@@ -12,6 +15,14 @@ gulp.task('js', () => {
 	return gulp
 		.src('public/javascripts/dev.js')
 		.pipe(rename('index.js'))
+		.pipe(sourcemaps.init())
+		.pipe(
+			babel({
+				presets: ['@babel/preset-env'],
+			})
+		)
+		.pipe(minify())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('public/javascripts/'));
 });
 

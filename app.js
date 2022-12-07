@@ -1,10 +1,12 @@
 require('dotenv').config();
 
 const mongoose = require('mongoose');
-const createError = require('http-errors');
+// const morgan = require('morgan');
+const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
+// const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
@@ -16,13 +18,21 @@ const indexRouter = require('./routes/index');
 const mailerRouter = require('./routes/mail');
 
 const app = express();
-// app.use(
-// 	helmet.contentSecurityPolicy({
-// 		directives: {
-// 			...helmet.contentSecurityPolicy.getDefaultDirectives,
-// 		},
-// 	})
+
+// const accessLogStream = fs.createWriteStream(
+// 	path.join(__dirname, 'access.log'),
+// 	{ flags: 'a' }
 // );
+// app.use(morgan('combined', { stream: accessLogStream }));
+
+app.use(compression());
+app.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			...helmet.contentSecurityPolicy.getDefaultDirectives,
+		},
+	})
+);
 // DB setup
 
 mongoose.connect(process.env.DATABASE_URL, {

@@ -110,7 +110,7 @@ const Content = new mongoose.Schema({
 			},
 		},
 	},
-	replay: {
+	reply: {
 		greeting: String,
 		senderSubject: String,
 		clientSubject: String,

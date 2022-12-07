@@ -137,7 +137,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Witaj, ",
 	  "senderSubject": "Otrzymaliśmy twoje zgłoszenie",
 	  "clientSubject": "Temat:",
@@ -284,7 +284,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hello, ",
 	  "senderSubject": "We have received your request",
 	  "clientSubject": "Subject:",
@@ -431,7 +431,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hallo, ",
 	  "senderSubject": "Wir haben Ihre Anfrage erhalten",
 	  "clientSubject": "Betreff:",
@@ -578,7 +578,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Здравствуйте, ",
 	  "senderSubject": "Мы получили ваш запрос",
 	  "clientSubject": "Тема:",
@@ -725,7 +725,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Здравствуйте, ",
 	  "senderSubject": "Мы получили ваш запрос",
 	  "clientSubject": "Тема:",
@@ -872,7 +872,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Bonjour, ",
 	  "senderSubject": "Nous avons bien reçu votre demande",
 	  "clientSubject": "Objet:",
@@ -1019,7 +1019,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Dobrý den, ",
 	  "senderSubject": "Obdrželi jsme vaši žádost",
 	  "clientSubject": "Předmět:",
@@ -1166,7 +1166,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Dobrý deň, ",
 	  "senderSubject": "Dostali sme vašu žiadosť",
 	  "clientSubject": "Predmet:",
@@ -1313,7 +1313,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Bună ziua, ",
 	  "senderSubject": "Am primit cererea dvs",
 	  "clientSubject": "Subiect:",
@@ -1460,7 +1460,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Helló, ",
 	  "senderSubject": "Megkaptuk a kérését",
 	  "clientSubject": "Tárgy:",
@@ -1607,7 +1607,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Здравейте, ",
 	  "senderSubject": "Получихме вашата заявка",
 	  "clientSubject": "Относно:",
@@ -1754,7 +1754,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Sveiki, ",
 	  "senderSubject": "Gavome jūsų užklausą",
 	  "clientSubject": "Tema:",
@@ -1901,7 +1901,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Доброго дня, ",
 	  "senderSubject": "Ми отримали Ваш запит",
 	  "clientSubject": "Тема:",
@@ -2048,7 +2048,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hola, ",
 	  "senderSubject": "Hemos recibido su solicitud",
 	  "clientSubject": "Asunto:",
@@ -2195,7 +2195,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hallo, ",
 	  "senderSubject": "We hebben uw verzoek ontvangen",
 	  "clientSubject": "Onderwerp:",
@@ -2342,7 +2342,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Sveiki, ",
 	  "senderSubject": "Mēs esam saņēmuši jūsu pieprasījumu",
 	  "clientSubject": "Temats:",
@@ -2489,7 +2489,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Tere, ",
 	  "senderSubject": "Oleme saanud teie taotluse",
 	  "clientSubject": "Teema:",
@@ -2636,7 +2636,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Zdravo, ",
 	  "senderSubject": "Primili smo vaš zahtjev",
 	  "clientSubject": "Predmet:",
@@ -2783,7 +2783,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Zdravo, ",
 	  "senderSubject": "Primili smo vaš zahtjev",
 	  "clientSubject": "Predmet:",
@@ -2930,7 +2930,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Zdravo, ",
 	  "senderSubject": "Primili smo vaš zahtjev",
 	  "clientSubject": "Predmet:",
@@ -3077,7 +3077,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hallo, ",
 	  "senderSubject": "Wir haben Ihre Anfrage erhalten",
 	  "clientSubject": "Betreff:",
@@ -3224,7 +3224,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Bonjour, ",
 	  "senderSubject": "Nous avons bien reçu votre demande",
 	  "clientSubject": "Objet:",
@@ -3371,7 +3371,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Pozdravljeni, ",
 	  "senderSubject": "Prejeli smo vašo zahtevo",
 	  "clientSubject": "Zadeva:",
@@ -3518,7 +3518,7 @@
 		}
 	  }
 	},
-	"replay": {
+	"reply": {
 	  "greeting": "Hallo, ",
 	  "senderSubject": "Wir haben Ihre Anfrage erhalten",
 	  "clientSubject": "Betreff:",
