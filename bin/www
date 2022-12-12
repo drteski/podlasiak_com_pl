@@ -13,15 +13,15 @@ const http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-let port;
+let port = normalizePort(process.env.PORT || '3000');
 
-if (process.env.NODE_ENV === 'development') {
-    port = normalizePort(process.env.PORT || '3000');
-}
-
-if (process.env.NODE_ENV === 'production') {
-    port = 80;
-}
+// if (process.env.NODE_ENV === 'development') {
+//     port = normalizePort(process.env.PORT || '3000');
+// }
+//
+// if (process.env.NODE_ENV === 'production') {
+//     port = 80;
+// }
 
 
 app.set('port', port);

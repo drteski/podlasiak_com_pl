@@ -8,17 +8,24 @@
 }
 
 .footer-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
 	background-color: $secondaryColor;
-	@apply opacity-50 top-0 left-0 absolute h-full w-full;
 }
 
 .contact-container {
+	position: relative;
 	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 96px 0 48px;
 	color: $secondaryFontColor;
-	@apply flex relative flex-wrap;
 }
 
 .address, .contact-form {
@@ -27,32 +34,39 @@
 
 
 .address__header {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding-bottom: 32px;
 	color: $secondaryFontColor;
-	@apply text-3xl pb-8;
 }
 
 .row__heading {
-	@apply flex items-center pb-4;
+	display: flex;
+	align-items: center;
+	padding-bottom: 16px;
 }
 
 .row__content {
-	@apply ml-11;
+	margin-left: 2.75rem;
 }
 
 .address__row:not(:last-child) {
-	@apply mb-6;
+	margin-bottom: 24px;
 }
 
 .address__icon {
-	@apply text-4xl pr-2;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	padding-right: 8px;
 }
 
 .address__subheader {
-	@apply text-xl;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 
 .address__text {
-	@apply pb-2;
+	padding-bottom: 8px;
 }
 
 .address__text a:hover {
@@ -60,12 +74,16 @@
 }
 
 .contact-form {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
 	transition: opacity 1s ease;
-	@apply flex flex-col relative z-10;
 }
 
 .contact-form--active::after {
 	font-size: 20px;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	padding: 26px 64px;
@@ -73,8 +91,8 @@
 	transform: translate(-50%, -50%);
 	text-align: center;
 	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
 	background: $lightOverlayColor;
-	@apply absolute rounded-md;
 }
 
 .form__body {
@@ -88,7 +106,8 @@
 
 .body__input-container {
 	position: relative;
-	@apply flex flex-col;
+	display: flex;
+	flex-direction: column;
 }
 
 .body__input-container:nth-child(4) {
@@ -110,17 +129,27 @@
 }
 
 .form-input__label {
-	@apply text-sm font-light py-2;
+	font-size: 0.875rem;
+	font-weight: 300;
+	line-height: 1.25rem;
+	padding: 8px 0;
 }
 
 .form-input__field {
+	padding: 16px;
 	transition: all ease 0.3s;
+	color: $secondaryFontColor;
 	border: 3px solid rgba(255, 255, 255, 0.0);
+	border-radius: 4px;
 	outline: none;
 	background-color: rgba(255, 255, 255, 0.1);
-	@apply p-4 rounded;
+
 	&--area {
 		resize: none;
+	}
+
+	&::placeholder {
+		color: #a8a8a8;
 	}
 }
 
@@ -148,15 +177,20 @@
 
 
 .copyright-container {
+	position: relative;
 	z-index: 2;
-	@apply bg-gray-800 relative;
+	background-color: $tertiaryColor;
 }
 
 .copyright {
+	font-size: 0.75rem;
+	font-weight: 300;
+	line-height: 1rem;
+	display: block;
 	max-width: 1440px;
 	margin: 0 auto;
+	padding: 24px 0;
 	color: $secondaryFontColor;
-	@apply block py-6 text-xs font-light;
 }
 
 @media screen and (max-width: 1500px) {

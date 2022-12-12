@@ -27,16 +27,18 @@ gulp.task('js', () => {
 });
 
 gulp.task('style', () => {
-	return gulp
-		.src('public/stylesheets/style.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(
-			postcss([
-				tailwindcss('./tailwind.config.js'),
-				require('autoprefixer'),
-			])
-		)
-		.pipe(gulp.dest('public/stylesheets/'));
+	return (
+		gulp
+			.src('public/stylesheets/style.scss')
+			.pipe(sass().on('error', sass.logError))
+			// .pipe(
+			// 	postcss([
+			// 		tailwindcss('./tailwind.config.js'),
+			// 		require('autoprefixer'),
+			// 	])
+			// )
+			.pipe(gulp.dest('public/stylesheets/'))
+	);
 });
 
 gulp.task(

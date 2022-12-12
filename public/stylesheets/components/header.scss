@@ -10,8 +10,15 @@
 }
 
 .header-overlay {
-	@apply bg-black opacity-30 top-0 left-0 absolute h-full w-full pointer-events-none;
+	position: absolute;
 	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	opacity: 0.3;
+	background-color: $secondaryColor;
 }
 
 .main-navbar {
@@ -26,11 +33,13 @@
 
 .main-navbar__container {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 16px 0;
 	transition: all ease 0.5s;
-	@apply flex justify-between items-center relative;
 }
 
 .navbar {
@@ -38,11 +47,14 @@
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: center;
+	list-style: none;
 }
 
 .menu-link {
+	padding: 16px 32px;
 	transition: all ease 0.3s;
-	@apply text-white px-8 py-4 rounded block;
+	color: $secondaryFontColor;
+	border-radius: 4px;
 }
 
 
@@ -80,7 +92,7 @@
 	height: 60px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
-	@apply rounded;
+	border-radius: 4px;
 
 	&:hover {
 		background-color: $lightOverlayColor;
@@ -135,7 +147,7 @@
 
 
 .main-navbar--active .menu-link {
-	@apply text-gray-900;
+	color: $secondaryColor;
 }
 
 .main-navbar--active .menu-link:hover {
@@ -234,8 +246,8 @@
 	display: flex;
 	flex-direction: column;
 	padding: 12px;
+	border-radius: 4px;
 	background-color: $lightOverlayColor;
-	@apply rounded;
 }
 
 .language__flag-img {
@@ -267,8 +279,11 @@
 
 .language-title__tile {
 	font-size: 12px;
+	position: relative;
+	display: block;
+	padding: 8px 16px;
+	border-radius: 4px;
 	background-color: $primaryColor;
-	@apply px-4 py-2 relative block rounded;
 }
 
 .language-title__tile:after {
@@ -279,8 +294,8 @@
 	height: 15px;
 	content: '';
 	transform: rotate(45deg);
+	border-radius: 4px;
 	background-color: $primaryColor;
-	@apply rounded-sm;
 }
 
 @media screen and (max-width: 1500px) {
