@@ -26,13 +26,7 @@ const app = express();
 // app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(compression());
-app.use(
-	helmet.contentSecurityPolicy({
-		directives: {
-			...helmet.contentSecurityPolicy.getDefaultDirectives,
-		},
-	})
-);
+app.use(helmet());
 // DB setup
 
 mongoose.connect(process.env.DATABASE_URL, {

@@ -41,8 +41,6 @@ if (languageBar) {
 	});
 }
 
-//////////////////////////////////////////////////////////////////////////////////
-
 const header = document.querySelector('.header-container');
 
 if (header) {
@@ -96,9 +94,16 @@ if (header) {
 	};
 
 	const scrollHandler = (e) => {
+		const body = document.querySelector('body');
 		const targetItem = document.querySelector(`${e.target.dataset.target}`);
-		targetItem.scrollIntoView({ behavior: 'smooth' });
-		navbar.classList.remove('main-navbar--active');
+		const topOfItem = targetItem.offsetTop - 96;
+		console.log(body, topOfItem);
+		window.scrollTo({
+			top: topOfItem,
+			left: 0,
+			behavior: 'smooth',
+		});
+		// navbar.classList.remove('main-navbar--active');
 		// window.addEventListener('scroll', navbarScrollStyling);
 	};
 
@@ -114,8 +119,6 @@ if (header) {
 	window.addEventListener('scroll', navbarScrollStyling);
 }
 
-//////////////////////////////////////////////////////////////////////////////////
-
 const arrow = document.querySelector('.arrow-cont');
 
 if (arrow) {
@@ -125,8 +128,6 @@ if (arrow) {
 	};
 	arrow.addEventListener('click', arrowHandler);
 }
-
-//////////////////////////////////////////////////////////////////////////////////
 
 const form = document.querySelector('.form__body');
 

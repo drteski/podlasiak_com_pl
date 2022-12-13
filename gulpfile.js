@@ -8,8 +8,9 @@ const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
 const minify = require('gulp-js-minify');
 const sourcemaps = require('gulp-sourcemaps');
-const tailwindcss = require('tailwindcss');
 const rename = require('gulp-rename');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 gulp.task('js', () => {
 	return gulp
@@ -18,7 +19,18 @@ gulp.task('js', () => {
 		.pipe(sourcemaps.init())
 		.pipe(
 			babel({
-				presets: ['@babel/preset-env'],
+				presets: [
+					[
+						'@babel/preset-env',
+						{
+							bugfixes: true,
+							corejs: 3,
+							modules: false,
+							targets: 'safari > 13.1',
+							useBuiltIns: 'usage',
+						},
+					],
+				],
 			})
 		)
 		.pipe(minify())
@@ -27,18 +39,13 @@ gulp.task('js', () => {
 });
 
 gulp.task('style', () => {
-	return (
-		gulp
-			.src('public/stylesheets/style.scss')
-			.pipe(sass().on('error', sass.logError))
-			// .pipe(
-			// 	postcss([
-			// 		tailwindcss('./tailwind.config.js'),
-			// 		require('autoprefixer'),
-			// 	])
-			// )
-			.pipe(gulp.dest('public/stylesheets/'))
-	);
+	const plugins = [autoprefixer(), cssnano()];
+	return gulp
+		.src('public/stylesheets/style.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(postcss(plugins))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('public/stylesheets/'));
 });
 
 gulp.task(
