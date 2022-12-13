@@ -94,15 +94,8 @@ if (header) {
 	};
 
 	const scrollHandler = (e) => {
-		const body = document.querySelector('body');
 		const targetItem = document.querySelector(`${e.target.dataset.target}`);
-		const topOfItem = targetItem.offsetTop - 96;
-		console.log(body, topOfItem);
-		window.scrollTo({
-			top: topOfItem,
-			left: 0,
-			behavior: 'smooth',
-		});
+		targetItem.scrollIntoView({ behavior: 'smooth' });
 		// navbar.classList.remove('main-navbar--active');
 		// window.addEventListener('scroll', navbarScrollStyling);
 	};
