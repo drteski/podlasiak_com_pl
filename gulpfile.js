@@ -82,3 +82,4 @@ gulp.task(
 );
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+gulp.task('build', gulp.parallel('js', 'style'));

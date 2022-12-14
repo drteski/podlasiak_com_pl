@@ -63,47 +63,50 @@ if (header) {
 	};
 
 	const hamburgerAnimationHandler = () => {
-		nav.classList.toggle('navbar--active');
 		icon1.classList.toggle('a');
 		icon2.classList.toggle('c');
 		icon3.classList.toggle('b');
-		window.addEventListener('scroll', navbarScrollStyling);
 	};
 
-	const mobileMenuHandler = () => {
+	const mobileMenuHandler = (e) => {
 		window.removeEventListener('scroll', navbarScrollStyling);
 		const position = window.scrollY;
-		icon1.classList.toggle('a');
-		icon2.classList.toggle('c');
-		icon3.classList.toggle('b');
-		nav.classList.toggle('navbar--active');
+		hamburgerAnimationHandler();
+		if (
+			nav.classList.contains('navbar--active') &&
+			e.currentTarget === icon
+		) {
+			window.addEventListener('scroll', navbarScrollStyling);
+		}
 		if (
 			navbar.classList.contains('main-navbar--active') &&
 			position >= 30
 		) {
-			console.log('teraz');
+			nav.classList.toggle('navbar--active');
 			return;
 		}
-		if (navbar.classList.contains('main-navbar--active')) {
-			console.log('później');
-			navbar.classList.remove('main-navbar--active');
+		if (
+			navbar.classList.contains('main-navbar--active') &&
+			position <= 30
+		) {
+			navbar.classList.toggle('main-navbar--active');
+			nav.classList.toggle('navbar--active');
 			return;
 		}
-		console.log('najpóźniej');
-		navbar.classList.add('main-navbar--active');
+		nav.classList.toggle('navbar--active');
+		navbar.classList.toggle('main-navbar--active');
 	};
 
 	const scrollHandler = (e) => {
 		const targetItem = document.querySelector(`${e.target.dataset.target}`);
 		targetItem.scrollIntoView({ behavior: 'smooth' });
-		// navbar.classList.remove('main-navbar--active');
-		// window.addEventListener('scroll', navbarScrollStyling);
+		window.addEventListener('scroll', navbarScrollStyling);
 	};
 
 	icon.addEventListener('click', mobileMenuHandler);
 
 	menuItems.forEach((item) => {
-		item.addEventListener('click', hamburgerAnimationHandler);
+		item.addEventListener('click', mobileMenuHandler);
 	});
 
 	menuItems.forEach((item) => {
