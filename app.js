@@ -28,6 +28,9 @@ const app = express();
 app.use(compression());
 app.use(helmet());
 // DB setup
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 mongoose.connect(process.env.DATABASE_URL, {
 	useNewUrlParser: true,
@@ -37,10 +40,6 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection;
 db.on('error', (err) => console.log(err));
 db.once('open', () => console.log('connected to db'));
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 // Session setup
 
