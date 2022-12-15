@@ -1,3 +1,6 @@
+import smoothscroll from './smoothscroll.min.js';
+
+smoothscroll.polyfill();
 const mainWrapper = document.querySelector('.wrapper');
 if (mainWrapper) {
 	const render = () => {
@@ -30,9 +33,13 @@ if (languageBar) {
 				'style',
 				`top: ${flag.offsetTop + languageBarPosition - 10}px; right: ${
 					languageBar.getBoundingClientRect().right -
-					languageBar.getBoundingClientRect().right +
-					100
+					flag.getBoundingClientRect().x +
+					64
 				}px`
+			);
+			console.log(
+				languageBar.getBoundingClientRect().right,
+				tile.getBoundingClientRect().x
 			);
 		});
 		flag.addEventListener('mouseleave', (e) => {
@@ -70,6 +77,7 @@ if (header) {
 
 	const mobileMenuHandler = (e) => {
 		window.removeEventListener('scroll', navbarScrollStyling);
+
 		const position = window.scrollY;
 		hamburgerAnimationHandler();
 		if (

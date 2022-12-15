@@ -369,4 +369,24 @@
 		transform: translateX(32px);
 	}
 
+
+}
+
+@media screen and (max-height: 850px) {
+	.language-flag {
+		right: 48px;
+		display: grid;
+		align-items: center;
+		flex-direction: column;
+		justify-content: start;
+		padding: 12px;
+		border-radius: 4px;
+		background-color: $lightOverlayColor;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.language__flag-img--secondary {
+		margin: 4px;
+		padding: 0;
+	}
 }
