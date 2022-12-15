@@ -36,7 +36,7 @@ const mailClient = {
 		await transporter
 			.sendMail({
 				from: MAIL_SENDER,
-				to: 'drteski@gmail.com',
+				to: MAIL_SENDER,
 				subject: `Wiadomość od: ${email} - ${subject}`,
 				template: 'client',
 				context: {
@@ -64,7 +64,7 @@ const mailClient = {
 		await transporter
 			.sendMail({
 				from: MAIL_SENDER,
-				to: `${email}`,
+				to: email,
 				subject: `${senderSubject} - ${email}`,
 				template: 'reply',
 				context: {

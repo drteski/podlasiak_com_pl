@@ -29,20 +29,29 @@ if (languageBar) {
 			const countryName = flag.firstElementChild.getAttribute('alt');
 			tile.firstElementChild.innerHTML = `${countryName}`;
 			tile.classList.add('language-title--active');
-			tile.setAttribute(
-				'style',
-				`top: ${flag.offsetTop + languageBarPosition - 10}px; right: ${
+			const pageHeight = window.innerHeight;
+			let mobileWidthView;
+			let mobileHeightView;
+			console.log(pageHeight);
+			if (pageHeight < 850) {
+				mobileHeightView =
 					languageBar.getBoundingClientRect().right -
 					flag.getBoundingClientRect().x +
-					64
-				}px`
-			);
-			console.log(
-				languageBar.getBoundingClientRect().right,
-				tile.getBoundingClientRect().x
+					32;
+				mobileWidthView = flag.offsetTop + languageBarPosition;
+			} else {
+				mobileHeightView =
+					languageBar.getBoundingClientRect().right -
+					flag.getBoundingClientRect().x +
+					64;
+				mobileWidthView = flag.offsetTop + languageBarPosition - 10;
+			}
+			tile.setAttribute(
+				'style',
+				`top: ${mobileWidthView}px; right: ${mobileHeightView}px`
 			);
 		});
-		flag.addEventListener('mouseleave', (e) => {
+		flag.addEventListener('mouseleave', () => {
 			tile.classList.remove('language-title--active');
 		});
 	});

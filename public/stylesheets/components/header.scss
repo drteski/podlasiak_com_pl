@@ -374,7 +374,7 @@
 
 @media screen and (max-height: 850px) {
 	.language-flag {
-		right: 48px;
+		right: 24px;
 		display: grid;
 		align-items: center;
 		flex-direction: column;
@@ -386,6 +386,7 @@
 	}
 
 	.language__flag-img--secondary {
+		width: 32px;
 		margin: 4px;
 		padding: 0;
 	}
