@@ -6,7 +6,8 @@ const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const babel = require('gulp-babel');
-const minify = require('gulp-js-minify');
+const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');
@@ -33,6 +34,7 @@ gulp.task('js', () => {
 				],
 			})
 		)
+		.pipe(uglify())
 		.pipe(minify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('public/javascripts/'));
