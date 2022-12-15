@@ -32,7 +32,6 @@ if (languageBar) {
 			const pageHeight = window.innerHeight;
 			let mobileWidthView;
 			let mobileHeightView;
-			console.log(pageHeight);
 			if (pageHeight < 850) {
 				mobileHeightView =
 					languageBar.getBoundingClientRect().right -
