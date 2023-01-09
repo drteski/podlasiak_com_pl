@@ -4,123 +4,91 @@
 	<section class="contact-container">
 		<div class="address">
 			<h3 class="address__header">{{#if
-					translations.contact.details.title}}{{translations.contact.details.title}}{{else}}
-				translations.contact.details.title{{/if}}</h3>
-			<div class="address__row">
-				<div class="row__heading">
-					<span class="address__icon material-symbols-outlined">storefront</span>
-					<h4 class="address__subheader">{{#if
-							translations.contact.details.locations.[0].title}}{{translations.contact.details.locations.[0].title}}{{else}}
-						translations.contact.details.locations.[0].title {{/if}}:</h4>
+					serverLang.layout.contact.details.title}}{{serverLang.layout.contact.details.title}}{{else}}
+				serverLang.layout.contact.details.title{{/if}}</h3>
+			{{#each serverLang.layout.contact.details.locations}}
+				<div class="address__row">
+					<div class="row__heading">
+						<span class="address__icon material-symbols-outlined">{{#if
+								this.icon}}{{this.icon}}{{else}}
+							serverLang.layout.contact.details.locations.icon{{/if}}</span>
+						<h4 class="address__subheader">{{#if this.title}}{{this.title}}{{else}}
+							serverLang.layout.contact.details.locations.title{{/if}}:</h4>
+					</div>
+					<div class="row__content">
+						<p class="address__text">
+							<strong>{{#if this.subTitle}}{{this.subTitle}}{{else}}
+								serverLang.layout.contact.details.locations.subTitle{{/if}}</strong>
+						</p>
+						<p class="address__text">
+							<strong>{{#if
+									../serverLang.layout.contact.details.labels.email}}{{../serverLang.layout.contact.details.labels.email}}{{else}}
+								serverLang.layout.contact.details.labels.email{{/if}}:</strong> <a
+								href="mailto:{{this.email}}">{{#if
+								this.email}}{{this.email}}{{else}}
+							serverLang.layout.contact.details.locations.[0].email{{/if}}</a></p>
+						{{#if this.website}}<p class="address__text"><strong>{{#if
+								../serverLang.layout.contact.details.labels.website}}{{../serverLang.layout.contact.details.labels.website}}{{else}}
+							serverLang.layout.contact.details.labels.website{{/if}}:</strong> <a
+								href="{{this.website}}">{{#if
+								this.website}}{{this.website}}{{else}}
+							serverLang.layout.contact.details.locations.[0].phone{{/if}}</a>
+						</p>{{else}}<p class="address__text"><strong>{{#if
+								../serverLang.layout.contact.details.labels.phone}}{{../serverLang.layout.contact.details.labels.phone}}{{else}}
+							serverLang.layout.contact.details.labels.phone{{/if}}:</strong> <a
+								href="tel:{{this.phone}}">{{#if
+								this.phone}}{{this.phone}}{{else}}
+							serverLang.layout.contact.details.locations.[0].phone{{/if}}</a>
+						</p>{{/if}}
+					</div>
 				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.locations.[0].subTitle}}{{translations.contact.details.locations.[0].subTitle}}{{else}}
-						translations.contact.details.locations.[0].subTitle{{/if}}</strong></p>
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.labels.email}}{{translations.contact.details.labels.email}}{{else}}
-						translations.contact.details.labels.email{{/if}}:</strong> <a
-							href="mailto:{{translations.contact.details.locations.[0].email}}">{{#if
-							translations.contact.details.locations.[0].email}}{{translations.contact.details.locations.[0].email}}{{else}}
-						translations.contact.details.locations.[0].email{{/if}}</a></p>
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.labels.phone}}{{translations.contact.details.labels.phone}}{{else}}
-						translations.contact.details.labels.phone{{/if}}:</strong> <a
-							href="tel:{{translations.contact.details.locations.[0].phone}}">{{#if
-							translations.contact.details.locations.[0].phone}}{{translations.contact.details.locations.[0].phone}}{{else}}
-						translations.contact.details.locations.[0].phone{{/if}}</a></p>
-				</div>
-			</div>
-			<div class="address__row">
-				<div class="row__heading">
-					<span class="address__icon material-symbols-outlined">public</span>
-					<h4 class="address__subheader">{{#if
-							translations.contact.details.locations.[1].title}}{{translations.contact.details.locations.[1].title}}{{else}}
-						translations.contact.details.locations.[1].title {{/if}}:</h4>
-				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.locations.[1].subTitle}}{{translations.contact.details.locations.[1].subTitle}}{{else}}
-						translations.contact.details.locations.[1].subTitle{{/if}}</strong></p>
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.labels.phone}}{{translations.contact.details.labels.phone}}{{else}}
-						translations.contact.details.labels.phone{{/if}}:</strong> <a
-							href="tel:{{translations.contact.details.locations.[1].phone}}">{{#if
-							translations.contact.details.locations.[1].phone}}{{translations.contact.details.locations.[1].phone}}{{else}}
-						translations.contact.details.locations.[1].phone{{/if}}</a></p>
-				</div>
-			</div>
-			<div class="address__row">
-				<div class="row__heading">
-
-					<span class="address__icon material-symbols-outlined">apartment</span>
-					<h4 class="address__subheader">{{#if
-							translations.contact.details.locations.[2].title}}{{translations.contact.details.locations.[2].title}}{{else}}
-						translations.contact.details.locations.[2].title {{/if}}:</h4>
-				</div>
-				<div class="row__content">
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.locations.[2].subTitle}}{{translations.contact.details.locations.[2].subTitle}}{{else}}
-						translations.contact.details.locations.[2].subTitle{{/if}}</strong></p>
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.labels.email}}{{translations.contact.details.labels.email}}{{else}}
-						translations.contact.details.labels.email{{/if}}:</strong> <a
-							href="mailto:{{translations.contact.details.locations.[2].email}}">{{#if
-							translations.contact.details.locations.[2].email}}{{translations.contact.details.locations.[2].email}}{{else}}
-						translations.contact.details.locations.[2].email{{/if}}</a></p>
-					<p class="address__text"><strong>{{#if
-							translations.contact.details.labels.website}}{{translations.contact.details.labels.website}}{{else}}
-						translations.contact.details.labels.website{{/if}}:</strong> <a
-							href="{{translations.contact.details.locations.[2].website}}"
-							target="_blank">{{#if
-							translations.contact.details.locations.[2].website}}{{translations.contact.details.locations.[2].website}}{{else}}
-						translations.contact.details.locations.[2].website{{/if}}</a></p>
-				</div>
-			</div>
+			{{/each}}
 		</div>
 		<div class="contact-form">
 			<h3 class="address__header">{{#if
-					translations.contact.form.title}}{{translations.contact.form.title}}{{else}}
-				translations.contact.form.title{{/if}}</h3>
-			<form action="/send" class="form__body">
+					serverLang.layout.contact.form.title}}{{serverLang.layout.contact.form.title}}{{else}}
+				serverLang.layout.contact.form.title{{/if}}</h3>
+			<form class="form__body">
 				<div class="body__input-container">
-					<label for="name" class="form-input__label">{{#if
-							translations.contact.form.layout.content.[0].label}}{{translations.contact.form.layout.content.[0].label}}{{else}}
-						translations.contact.form.layout.content.[0].label{{/if}}</label>
-					<input type="text" id="name"
-							placeholder="{{translations.contact.form.layout.content.[0].placeholder}}"
-							class="form-input__field" required>
+					<label for="userName" class="form-input__label">{{#if
+							serverLang.layout.contact.form.layout.content.[0].label}}{{serverLang.layout.contact.form.layout.content.[0].label}}{{else}}
+						serverLang.layout.contact.form.layout.content.[0].label{{/if}}</label>
+					<input type="text" id="userName"
+							placeholder="{{serverLang.layout.contact.form.layout.content.[0].placeholder}}"
+							class="form-input__field"/>
 				</div>
 				<div class="body__input-container">
 					<label for="email" class="form-input__label">{{#if
-							translations.contact.form.layout.content.[1].label}}{{translations.contact.form.layout.content.[1].label}}{{else}}
-						translations.contact.form.layout.content.[1].label{{/if}}</label>
-					<input type="text" id="email"
-							placeholder="{{translations.contact.form.layout.content.[1].placeholder}}"
-							class="form-input__field" required>
+							serverLang.layout.contact.form.layout.content.[1].label}}{{serverLang.layout.contact.form.layout.content.[1].label}}{{else}}
+						serverLang.layout.contact.form.layout.content.[1].label{{/if}}</label>
+					<input type="email" id="email"
+							placeholder="{{serverLang.layout.contact.form.layout.content.[1].placeholder}}"
+							class="form-input__field"
+					/>
 				</div>
 				<div class="body__input-container">
 					<label for="subject" class="form-input__label">{{#if
-							translations.contact.form.layout.content.[2].label}}{{translations.contact.form.layout.content.[2].label}}{{else}}
-						translations.contact.form.layout.content.[2].label{{/if}}</label>
+							serverLang.layout.contact.form.layout.content.[2].label}}{{serverLang.layout.contact.form.layout.content.[2].label}}{{else}}
+						serverLang.layout.contact.form.layout.content.[2].label{{/if}}</label>
 					<input type="text" id="subject"
-							placeholder="{{translations.contact.form.layout.content.[2].placeholder}}"
-							class=form-input__field
-							required>
+							placeholder="{{serverLang.layout.contact.form.layout.content.[2].placeholder}}"
+							class="form-input__field"
+					/>
 				</div>
 				<div class="body__input-container">
-					<label for="content" class="form-input__label">{{#if
-							translations.contact.form.layout.content.[3].label}}{{translations.contact.form.layout.content.[3].label}}{{else}}
-						translations.contact.form.layout.content.[3].label{{/if}}</label>
-					<textarea name="content" id="content"
+					<label for="text" class="form-input__label">{{#if
+							serverLang.layout.contact.form.layout.content.[3].label}}{{serverLang.layout.contact.form.layout.content.[3].label}}{{else}}
+						serverLang.layout.contact.form.layout.content.[3].label{{/if}}</label>
+					<textarea name="content" id="text"
 							class="form-input__field form-input__field--area"
 							rows="5"
-							placeholder="{{translations.contact.form.layout.content.[3].placeholder}}"
-							required></textarea>
+							placeholder="{{serverLang.layout.contact.form.layout.content.[3].placeholder}}"
+
+					></textarea>
 				</div>
-				<button class="contact-cta button--secondary">{{#if
-						translations.contact.form.layout.button}}{{translations.contact.form.layout.button}}{{else}}
-					translations.contact.form.layout.button{{/if}}</button>
+				<button class="contact-cta button--secondary" type="submit">{{#if
+						serverLang.layout.contact.form.layout.button}}{{serverLang.layout.contact.form.layout.button}}{{else}}
+					serverLang.layout.contact.form.layout.button{{/if}}</button>
 			</form>
 		</div>
 	</section>

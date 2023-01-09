@@ -1,22 +1,36 @@
 require('dotenv').config();
 
 const mongoose = require('mongoose');
-const createError = require('http-errors');
+// const morgan = require('morgan');
+const compression = require('compression');
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
+// const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const handlebars = require('express-handlebars');
-const helpersPack = require('handlebars-helpers')();
 const session = require('express-session');
 const MongoDBStore = require('express-mongodb-session')(session);
 
 const indexRouter = require('./routes/index');
+const mailerRouter = require('./routes/mail');
 
 const app = express();
 
+// const accessLogStream = fs.createWriteStream(
+// 	path.join(__dirname, 'access.log'),
+// 	{ flags: 'a' }
+// );
+// app.use(morgan('combined', { stream: accessLogStream }));
+
+app.use(compression());
+app.use(helmet());
 // DB setup
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 mongoose.connect(process.env.DATABASE_URL, {
 	useNewUrlParser: true,
@@ -26,10 +40,6 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection;
 db.on('error', (err) => console.log(err));
 db.once('open', () => console.log('connected to db'));
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 // Session setup
 
@@ -43,7 +53,7 @@ const oneDay = 1000 * 60 * 60 * 24;
 app.use(
 	session({
 		secret: process.env.SECRET,
-		saveUninitialized: true,
+		saveUninitialized: false,
 		cookie: { maxAge: oneDay },
 		resave: false,
 		store: Session,
@@ -64,25 +74,6 @@ app.engine(
 			allowProtoPropertiesByDefault: true,
 			allowProtoMethodsByDefault: true,
 		},
-		helpers: {
-			pagination(all, limit) {
-				return Math.ceil(all / limit);
-			},
-			count(all, limit, page) {
-				const itemsCount = parseInt(all);
-				const itemsLimit = parseInt(limit);
-				const pageCount = parseInt(page);
-				const pages = Math.ceil(itemsCount / itemsLimit);
-				const remaining = itemsCount % itemsLimit;
-				const lowerItems = itemsLimit * pageCount - itemsLimit + 1;
-				const higherItems = itemsLimit * pageCount;
-				return `${
-					pageCount === pages ? itemsCount - remaining : lowerItems
-				} - ${
-					pageCount === pages ? itemsCount : higherItems
-				} z ${all} produktów`;
-			},
-		},
 	})
 );
 
@@ -93,14 +84,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
+app.use('/send', mailerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-	next(createError(404));
+	res.status(404).render('404', { layout: 'error' });
+	// next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get('env') === 'development' ? err : {};

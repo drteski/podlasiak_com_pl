@@ -1,17 +1,18 @@
 <!doctype html>
-<html class='no-js' lang=''>
+<html class='no-js' lang='{{lang}}'>
 {{>head}}
 <body>
 <div class="onload-logo-container">
-	<object id="onload-logo" data="/images/podlasiak.svg" type="image/svg+xml"></object>
+	<img id="onload-logo" src="/images/logos/podlasiak.svg" type="image/svg+xml">
 </div>
 <div class="wrapper wrapper--active" style="display: none;">
 	{{>header}}
 	{{{body}}}
 	{{>footer}}
 </div>
-<script src='/javascripts/index.js'></script>
+<script type="module" src='/javascripts/index.js'></script>
 </body>
 </html>
+
 
 
