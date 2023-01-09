@@ -88,6 +88,9 @@ if (header) {
 
 		const position = window.scrollY;
 		hamburgerAnimationHandler();
+		if (menuItems[0] === e.target && window.innerWidth >= 1024) {
+			return;
+		}
 		if (
 			nav.classList.contains('navbar--active') &&
 			e.currentTarget === icon
